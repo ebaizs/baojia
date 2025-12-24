@@ -98,15 +98,19 @@ const quickAddExamples = [
     { "name": "炉灶", "price": 1500, "unit": "台", "category": "furniture", "description": "燃气灶具，含安装" },
     { "name": "热水器", "price": 2900, "unit": "套", "category": "furniture", "description": "含安装" },
     { "name": "小厨宝", "price": 455, "unit": "项", "category": "furniture", "description": "小厨宝370元，安装及配件费85元" },
-    { "name": "洗衣机", "price": 1799, "unit": "项", "category": "furniture", "description": "米家智能洗烘一体洗衣机" },
+    { "name": "洗衣机", "price": 1799, "unit": "项", "category": "furniture", "description": "智能洗烘一体洗衣机" },
     { "name": "冰箱", "price": 4599, "unit": "项", "category": "furniture", "description": "海尔智能零距离冰箱" },
     { "name": "家具", "price": 20000, "unit": "套", "category": "furniture", "description": "4张卧室床，床头柜4只，三人沙发，单人沙发，沙发凳2个，茶几，电视柜，岛台餐桌，餐椅6把，书桌椅2把，负1F大板桌（配6把椅）" },
     { "name": "窗帘", "price": 4900, "unit": "项", "category": "furniture", "description": "预估" },
     { "name": "装饰画", "price": 3150, "unit": "项", "category": "furniture", "description": "据实结算" },
     { "name": "配饰", "price": 2150, "unit": "项", "category": "furniture", "description": "配饰，摆件等" },
-    { "name": "管理费", "price": 0, "unit": "项", "category": "other", "description": "象征性收取" },
+    { "name": "管理费", "price": 0, "unit": "项", "category": "other", "description": "按项目总金额百分比收取" },
     { "name": "设计费", "price": 6000, "unit": "项", "category": "other", "description": "象征性收取" },
+    { "name": "垃圾清运费", "price": 500, "unit": "项", "category": "other", "description": "搬运到小区内物业指定地点，不含外运" },
+    { "name": "开关插座安装费", "price": 500, "unit": "项", "category": "other", "description": "按项收费或按个收费，5元/个" },
+    { "name": "安全措施费", "price": 0, "unit": "项", "category": "other", "description": "按项目总金额百分比收取" },
     { "name": "成品保护费", "price": 6, "unit": "平米", "category": "other", "description": "按建筑面积收取，地面防刮保护及成品柜防尘保护" }
+    
 ];
 
 // 空间产品库（用于快速模板）
@@ -125,11 +129,11 @@ const kongjianchanpin = {
         { space: "家电设备", name: ["中央空调", "普通空调"] },
         { space: "厨房电器", name: ["烟机", "炉灶"] },
         { space: "其它家电", name: ["热水器", "小厨宝", "洗衣机", "冰箱"] },
-        { space: "全屋", name: [ "管理费", "设计费","成品保护费", ] }  
+        { space: "全屋", name: [ "管理费", "设计费","开关插座安装费","成品保护费","垃圾清运费","安全措施费" ]}  
     ],
     commercial: [
         { space: "办公空间", name: ["墙面乳胶漆", "顶面乳胶漆"] },
-        { space: "全屋", name: [ "管理费", "设计费","成品保护费", ] }  
+        { space: "全屋", name: [ "管理费", "设计费","开关插座安装费","成品保护费","垃圾清运费","安全措施费" ] }  
     ]
 };
 
