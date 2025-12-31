@@ -1,3 +1,4 @@
+
 // 项目数据结构
 let projectData = {
     projectName: "",
@@ -35,6 +36,99 @@ let currentCategory = 'base';
 
 // 项目示例库
 const quickAddExamples = [
+    // ... (原有家装项目保持不变)
+
+    // ====== 新增工装项目 ======
+    
+    // 基础装修类
+    { "name": "办公区隔墙", "price": 320, "unit": "平米", "category": "base", "description": "75型轻钢龙骨隔墙，双面双层石膏板封墙，内填岩棉隔音" },
+    { "name": "接待台基础制作", "price": 2500, "unit": "项", "category": "base", "description": "钢结构基层，木工板打底，高级饰面处理" },
+    { "name": "会议室背景墙", "price": 2800, "unit": "项", "category": "base", "description": "木龙骨基层，吸音板饰面，内藏LED灯带，企业LOGO展示位" },
+    { "name": "吊顶系统", "price": 185, "unit": "平米", "category": "base", "description": "轻钢龙骨石膏板吊顶，包含检修口，空调风口收口" },
+    { "name": "矿棉板吊顶", "price": 95, "unit": "平米", "category": "base", "description": "600x600mm矿棉板，T型龙骨系统，含检修口" },
+    { "name": "铝方通吊顶", "price": 180, "unit": "平米", "category": "base", "description": "100mm宽铝方通，间距80mm，包含专用龙骨系统" },
+    { "name": "玻璃隔断", "price": 450, "unit": "平米", "category": "base", "description": "12mm钢化玻璃隔断，不锈钢边框，天地轴安装" },
+    { "name": "防火隔断", "price": 680, "unit": "平米", "category": "base", "description": "防火石膏板隔断，达到国家防火等级要求" },
+    { "name": "墙面找平", "price": 38, "unit": "平米", "category": "base", "description": "冲筋找平工艺，确保墙面平整度达到施工标准" },
+    { "name": "顶面找平", "price": 42, "unit": "平米", "category": "base", "description": "冲筋找平工艺，确保顶面平整度" },
+    { "name": "墙面乳胶漆", "price": 22, "unit": "平米", "category": "base", "description": "多乐士专业工程乳胶漆，一底两面，防霉防潮" },
+    { "name": "顶面乳胶漆", "price": 24, "unit": "平米", "category": "base", "description": "多乐士专业工程乳胶漆，一底两面，防霉防潮" },
+    { "name": "办公室电路改造", "price": 65, "unit": "米", "category": "base", "description": "国标阻燃电线，PVC阻燃线管，包含开槽、布线、封槽" },
+    { "name": "网络综合布线", "price": 45, "unit": "点", "category": "base", "description": "超六类网线，含模块、面板、配线架整理" },
+    { "name": "电话布线", "price": 35, "unit": "点", "category": "base", "description": "4芯电话线，含模块、面板" },
+    { "name": "监控布线", "price": 55, "unit": "点", "category": "base", "description": "视频线+电源线，PVC管保护" },
+    { "name": "办公室水路改造", "price": 85, "unit": "米", "category": "base", "description": "PPR热水管，含开槽、布管、试压、封槽" },
+    { "name": "卫生间防水", "price": 85, "unit": "平米", "category": "base", "description": "柔性防水涂料，墙面1.8米高，地面全做，48小时闭水试验" },
+    { "name": "消防改造报备", "price": 8000, "unit": "项", "category": "base", "description": "消防图纸设计、报备、验收手续" },
+    { "name": "喷淋头移位", "price": 280, "unit": "个", "category": "base", "description": "专业消防公司施工，包含报验手续" },
+    { "name": "烟感移位", "price": 220, "unit": "个", "category": "base", "description": "专业消防公司施工，包含报验手续" },
+    { "name": "应急照明系统", "price": 180, "unit": "套", "category": "base", "description": "双头应急灯，含电池，自动切换" },
+    
+    // 主材类
+    { "name": "办公区地砖", "price": 85, "unit": "平米", "category": "auxiliary", "description": "800x800mm通体大理石瓷砖，耐磨等级PEI4级，含损耗及运输" },
+    { "name": "前台区地砖", "price": 120, "unit": "平米", "category": "auxiliary", "description": "600x1200mm进口岩板，含加工、铺贴、美缝" },
+    { "name": "卫生间地砖", "price": 95, "unit": "平米", "category": "auxiliary", "description": "300x300mm防滑地砖，含损耗及铺贴" },
+    { "name": "卫生间墙砖", "price": 88, "unit": "平米", "category": "auxiliary", "description": "300x600mm瓷片，含损耗及铺贴，墙压地工艺" },
+    { "name": "办公室地毯", "price": 160, "unit": "平米", "category": "auxiliary", "description": "方块地毯，含专用胶水及安装" },
+    { "name": "地毯铺装费", "price": 18, "unit": "平米", "category": "auxiliary", "description": "专用胶水、地毯衬垫、收边条" },
+    { "name": "PVC地板", "price": 220, "unit": "平米", "category": "auxiliary", "description": "2.0mm商用PVC卷材，含专用胶水及安装" },
+    { "name": "自流平地面", "price": 45, "unit": "平米", "category": "auxiliary", "description": "水泥自流平，保证地面平整度" },
+    { "name": "环氧地坪漆", "price": 180, "unit": "平米", "category": "auxiliary", "description": "环氧树脂地坪，含打磨、底涂、中涂、面涂" },
+    { "name": "铝扣板吊顶", "price": 110, "unit": "平米", "category": "auxiliary", "description": "300x600mm铝扣板，0.7mm厚度，含龙骨及安装" },
+    { "name": "卫生间集成吊顶", "price": 95, "unit": "平米", "category": "auxiliary", "description": "300x300mm铝扣板，含龙骨、浴霸、灯具安装位" },
+    { "name": "办公室门", "price": 1950, "unit": "樘", "category": "auxiliary", "description": "钢木复合门，含门锁、门吸、合页" },
+    { "name": "防火门", "price": 2800, "unit": "樘", "category": "auxiliary", "description": "甲级防火门，含闭门器、顺位器" },
+    { "name": "玻璃地弹门", "price": 3200, "unit": "樘", "category": "auxiliary", "description": "12mm钢化玻璃，不锈钢地弹簧，含安装调试" },
+    { "name": "办公室窗户", "price": 680, "unit": "平米", "category": "auxiliary", "description": "断桥铝窗，中空钢化玻璃，含安装" },
+    { "name": "百叶窗帘", "price": 180, "unit": "平米", "category": "auxiliary", "description": "铝合金百叶帘，含轨道及安装" },
+    { "name": "电动卷帘", "price": 420, "unit": "平米", "category": "auxiliary", "description": "遮光电动卷帘，含电机、控制器、安装" },
+    { "name": "开关插座", "price": 25, "unit": "个", "category": "auxiliary", "description": "西门子系列，五孔插座、单开双控" },
+    { "name": "网络面板", "price": 45, "unit": "个", "category": "auxiliary", "description": "超六类网络面板，含模块" },
+    { "name": "不锈钢踢脚线", "price": 85, "unit": "米", "category": "auxiliary", "description": "8cm高不锈钢踢脚线，含安装" },
+    { "name": "PVC踢脚线", "price": 28, "unit": "米", "category": "auxiliary", "description": "8cm高PVC踢脚线，含安装" },
+    { "name": "瓷砖美缝", "price": 25, "unit": "米", "category": "auxiliary", "description": "环氧彩砂美缝，防霉防水" },
+    { "name": "玻璃隔断", "price": 550, "unit": "平米", "category": "auxiliary", "description": "10+10mm夹胶钢化玻璃，含型材及安装" },
+    
+    // 设备家具类
+    { "name": "中央空调系统", "price": 850, "unit": "平米", "category": "furniture", "description": "大金VRV多联机系统，含室内机、室外机、安装" },
+    { "name": "分体空调", "price": 4500, "unit": "台", "category": "furniture", "description": "格力3匹柜机，含安装及铜管" },
+    { "name": "新风系统", "price": 280, "unit": "平米", "category": "furniture", "description": "松下全热交换新风系统，含管道、风口、安装" },
+    { "name": "办公桌椅", "price": 1800, "unit": "套", "category": "furniture", "description": "1.6米办公桌+人体工学椅，含安装" },
+    { "name": "经理办公桌", "price": 3800, "unit": "套", "category": "furniture", "description": "2.2米实木办公桌+高背椅，含安装" },
+    { "name": "会议桌", "price": 2200, "unit": "米", "category": "furniture", "description": "实木会议桌，含配套会议椅" },
+    { "name": "培训桌椅", "price": 580, "unit": "套", "category": "furniture", "description": "培训桌+培训椅，可折叠收纳" },
+    { "name": "文件柜", "price": 850, "unit": "组", "category": "furniture", "description": "1.8米高钢制文件柜，五节柜" },
+    { "name": "储物柜", "price": 680, "unit": "组", "category": "furniture", "description": "1.2米高储物柜，含隔板" },
+    { "name": "前台接待台", "price": 9800, "unit": "套", "category": "furniture", "description": "大理石台面，实木柜体，含LOGO灯箱" },
+    { "name": "等候区沙发", "price": 2800, "unit": "组", "category": "furniture", "description": "3+1+1沙发组合，含茶几" },
+    { "name": "茶水柜", "price": 2500, "unit": "套", "category": "furniture", "description": "不锈钢台面，下柜储物，含电源插座" },
+    { "name": "微波炉", "price": 800, "unit": "台", "category": "furniture", "description": "美的微波炉" },
+    { "name": "冰箱", "price": 2800, "unit": "台", "category": "furniture", "description": "海尔双门冰箱" },
+    { "name": "饮水机", "price": 1200, "unit": "台", "category": "furniture", "description": "直饮机，含安装" },
+    { "name": "投影仪", "price": 6800, "unit": "套", "category": "furniture", "description": "明基投影仪，含幕布、安装" },
+    { "name": "音响系统", "price": 8500, "unit": "套", "category": "furniture", "description": "会议室音响系统，含功放、音箱、话筒" },
+    { "name": "视频会议系统", "price": 28000, "unit": "套", "category": "furniture", "description": "华为视频会议系统，含摄像头、麦克风、主机" },
+    { "name": "监控系统", "price": 1200, "unit": "点", "category": "furniture", "description": "海康威视400万摄像头，含录像机、安装调试" },
+    { "name": "门禁系统", "price": 2800, "unit": "套", "category": "furniture", "description": "指纹+刷卡门禁，含电锁、安装" },
+    { "name": "网络交换机", "price": 2500, "unit": "台", "category": "furniture", "description": "24口千兆交换机" },
+    { "name": "服务器机柜", "price": 3800, "unit": "套", "category": "furniture", "description": "42U标准机柜，含PDU、风扇" },
+    { "name": "打印机", "price": 4500, "unit": "台", "category": "furniture", "description": "柯尼卡美能达A3彩色打印机" },
+    { "name": "碎纸机", "price": 1200, "unit": "台", "category": "furniture", "description": "科密碎纸机" },
+    { "name": "白板", "price": 850, "unit": "套", "category": "furniture", "description": "磁性白板，2.4x1.2米，含支架" },
+    
+    // 其它项
+    { "name": "项目管理费", "price": 0, "unit": "项", "category": "other", "description": "按工程总价8%收取，包含现场管理、协调" },
+    { "name": "设计费", "price": 15000, "unit": "项", "category": "other", "description": "全套施工图+效果图+现场交底" },
+    { "name": "垃圾清运费", "price": 800, "unit": "项", "category": "other", "description": "建筑垃圾外运至指定地点" },
+    { "name": "成品保护费", "price": 8, "unit": "平米", "category": "other", "description": "地面保护膜、门窗保护、成品家具保护" },
+    { "name": "保洁费", "price": 12, "unit": "平米", "category": "other", "description": "开荒保洁，达到入住标准" },
+    { "name": "材料搬运费", "price": 3000, "unit": "项", "category": "other", "description": "材料上楼及现场搬运" },
+    { "name": "脚手架租赁", "price": 1800, "unit": "项", "category": "other", "description": "脚手架租赁及搭设" },
+    { "name": "临时水电费", "price": 2000, "unit": "项", "category": "other", "description": "施工期间临时水电费用" },
+    { "name": "消防报验费", "price": 5000, "unit": "项", "category": "other", "description": "消防设计审查、验收手续" },
+    { "name": "质保金", "price": 0, "unit": "项", "category": "other", "description": "工程总价5%，质保期满后支付" },
+    
+    // ... (原有家装项目保持不变)
     { "name": "平面吊顶", "price": 160, "unit": "平米", "category": "base", "description": "橙色加厚型轻钢龙骨框架，泰山石膏板贴面" },
     { "name": "直线吊顶", "price": 115, "unit": "米", "category": "base", "description": "橙色加厚型轻钢龙骨框架，泰山石膏板贴面" },
     { "name": "双层叠级石膏线", "price": 35, "unit": "米", "category": "base", "description": "3层石膏板带叠级造型" },
@@ -110,7 +204,6 @@ const quickAddExamples = [
     { "name": "开关插座安装费", "price": 500, "unit": "项", "category": "other", "description": "按项收费或按个收费，5元/个" },
     { "name": "安全措施费", "price": 0, "unit": "项", "category": "other", "description": "按项目总金额百分比收取" },
     { "name": "成品保护费", "price": 6, "unit": "平米", "category": "other", "description": "按建筑面积收取，地面防刮保护及成品柜防尘保护" }
-    
 ];
 
 // 空间产品库（用于快速模板）
@@ -132,8 +225,68 @@ const kongjianchanpin = {
         { space: "全屋", name: [ "管理费", "设计费","开关插座安装费","成品保护费","垃圾清运费","安全措施费" ]}  
     ],
     commercial: [
-        { space: "办公空间", name: ["墙面乳胶漆", "顶面乳胶漆"] },
-        { space: "全屋", name: [ "管理费", "设计费","开关插座安装费","成品保护费","垃圾清运费","安全措施费" ] }  
+        // 前台区域
+        { space: "前台", name: ["接待台基础制作", "前台背景墙", "前台区地砖", "玻璃地弹门", "前台接待台", "等候区沙发", "开关插座", "监控系统", "门禁系统"] },
+        
+        // 办公区域
+        { space: "办公区", name: ["办公区隔墙", "吊顶系统", "办公区地砖", "办公室地毯", "办公室门", "办公室窗户", "百叶窗帘", "办公桌椅", "文件柜", "开关插座", "网络面板"] },
+        
+        // 会议室
+        { space: "会议室", name: ["会议室背景墙", "矿棉板吊顶", "会议室地毯", "会议桌", "培训桌椅", "投影仪", "音响系统", "视频会议系统", "白板", "开关插座", "网络面板"] },
+        
+        // 经理办公室
+        { space: "经理室", name: ["玻璃隔断", "铝方通吊顶", "PVC地板", "经理办公桌", "文件柜", "储物柜", "空调系统", "百叶窗帘", "开关插座", "网络面板"] },
+        
+        // 财务室
+        { space: "财务室", name: ["防火隔断", "防火门", "监控系统", "文件柜", "储物柜", "碎纸机", "开关插座", "网络面板"] },
+        
+        // 茶水间
+        { space: "茶水间", name: ["铝扣板吊顶", "防滑地砖", "墙砖", "茶水柜", "微波炉", "冰箱", "饮水机", "开关插座", "水路改造"] },
+        
+        // 卫生间
+        { space: "卫生间", name: ["卫生间集成吊顶", "卫生间地砖", "卫生间墙砖", "卫生间防水", "多合一浴霸", "嵌入式平板灯", "地漏", "开关插座"] },
+        
+        // 走廊通道
+        { space: "走廊", name: ["吊顶系统", "地砖", "墙面乳胶漆", "顶面乳胶漆", "应急照明系统", "开关插座", "不锈钢踢脚线"] },
+        
+        // 楼梯间
+        { space: "楼梯间", name: ["墙面乳胶漆", "顶面乳胶漆", "地砖", "应急照明系统", "扶手栏杆", "开关插座"] },
+        
+        // 电梯厅
+        { space: "电梯厅", name: ["大理石墙面", "铝方通吊顶", "地砖", "镜面不锈钢装饰", "开关插座", "监控摄像头"] },
+        
+        // 展示区域
+        { space: "展厅", name: ["环氧地坪漆", "轨道射灯", "展示柜", "玻璃展柜", "企业文化墙", "开关插座", "监控系统"] },
+        
+        // 仓库
+        { space: "仓库", name: ["自流平地面", "墙面乳胶漆", "LED照明", "货架系统", "开关插座", "监控系统"] },
+        
+        // 机房
+        { space: "机房", name: ["防静电地板", "防火隔断", "防火门", "服务器机柜", "空调系统", "UPS电源", "网络交换机", "监控系统"] },
+        
+        // 档案室
+        { space: "档案室", name: ["密集架系统", "防火隔断", "防火门", "温湿度控制系统", "消防系统", "监控系统"] },
+        
+        // 休息区
+        { space: "休息区", name: ["地毯", "沙发组合", "茶几", "书架", "绿植", "饮水机", "开关插座"] },
+        
+        // 培训室
+        { space: "培训室", name: ["吸音墙面", "矿棉板吊顶", "培训桌椅", "投影仪", "音响系统", "白板", "开关插座", "网络面板"] },
+        
+        // 接待室
+        { space: "接待室", name: ["高级地毯", "沙发组合", "茶几", "装饰画", "绿植", "饮水机", "开关插座"] },
+        
+        // 总经理办公室
+        { space: "总经理办公室", name: ["实木地板", "高级墙面装饰", "集成吊顶", "实木办公桌", "真皮沙发", "书柜", "休息区", "独立卫生间", "空调系统", "电动窗帘"] },
+        
+        // 开放办公区
+        { space: "开放办公区", name: ["办公区隔墙", "矿棉板吊顶", "办公室地毯", "办公桌椅", "文件柜", "空调系统", "新风系统", "网络布线", "开关插座"] },
+        
+        // 工程改造部分
+        { space: "改造部分", name: ["办公室电路改造", "网络综合布线", "电话布线", "监控布线", "办公室水路改造", "消防改造报备", "喷淋头移位", "烟感移位"] },
+        
+        // 全屋项目
+        { space: "全屋", name: ["中央空调系统", "新风系统", "监控系统", "门禁系统", "项目管理费", "设计费", "垃圾清运费", "成品保护费", "保洁费", "材料搬运费", "消防报验费", "质保金"] }
     ]
 };
 
