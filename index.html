@@ -11,21 +11,76 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-                <div>
-                    <h1><i class="fas fa-home"></i> 立诺装饰项目清单报价系统  by清扬 15662061321</h1>
-                    <div class="header-subtitle"></div>
+    <!-- 登录界面 -->
+    <div id="login-container">
+        <div class="login-box">
+            <div class="login-logo">
+                <h2><i class="fas fa-home"></i> 立诺装饰报价系统</h2>
+                <p>请登录以继续使用</p>
+            </div>
+            
+            <div id="login-loading" class="loading-spinner"></div>
+            
+            <div id="login-form">
+                <div class="login-input-group">
+                    <label for="username"><i class="fas fa-user"></i> 用户名</label>
+                    <input type="text" id="username" class="login-input" placeholder="请输入用户名" autocomplete="username">
                 </div>
-                <div class="desktop-actions">
-                    <button class="btn btn-info" onclick="importData()">
-                        <i class="fas fa-file-import"></i> 数据导入
-                    </button>
-                    <button class="btn btn-info" onclick="exportData()">
-                        <i class="fas fa-file-export"></i> 数据导出
-                    </button>
+                
+                <div class="login-input-group">
+                    <label for="password"><i class="fas fa-lock"></i> 密码</label>
+                    <input type="password" id="password" class="login-input" placeholder="请输入密码" autocomplete="current-password">
                 </div>
+                
+                <div id="login-error" class="login-error"></div>
+                
+                <button id="login-button" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> 登录
+                </button>
+                
+                <div class="login-footer">
+                    <p>系统版本 1.0 | 技术支持: 清扬 15662061321</p>
+                    <p>© 2023 立诺装饰 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    <!-- 原页面内容 -->
+    <div id="main-container" style="display: none;">
+        <div class="container">
+           <header>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+            <h1><i class="fas fa-home"></i> 立诺装饰项目清单报价系统</h1>
+            <div class="header-subtitle"></div>
+        </div>
+        <div class="desktop-actions">
+            <button class="btn btn-info" onclick="importData()">
+                <i class="fas fa-file-import"></i> 数据导入
+            </button>
+            <button class="btn btn-info" onclick="exportData()">
+                <i class="fas fa-file-export"></i> 数据导出
+            </button>
+            <button class="btn btn-warning" onclick="logout()" title="退出登录">
+                <i class="fas fa-sign-out-alt"></i> 退出
+            </button>
+        </div>
+    </div>
+            
+            <!-- 添加折叠控制按钮 -->
+            <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                <button class="btn btn-sm btn-outline" onclick="collapseAllCategories()">
+                    <i class="fas fa-angle-double-up"></i> 全部折叠
+                </button>
+                <button class="btn btn-sm btn-outline" onclick="expandAllCategories()">
+                    <i class="fas fa-angle-double-down"></i> 全部展开
+                </button>
+                <button class="btn btn-sm btn-outline" onclick="deleteEmptySpaces()">
+                    <i class="fas fa-broom"></i> 清理空空间
+                </button>
             </div>
         </header>
         
@@ -74,27 +129,32 @@
             <!-- 基础装修 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('home', 'base')">
                         <i class="fas fa-hammer"></i> 基础装修
                         <span class="badge" id="home-base-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'base')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-home-base"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'base')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="home-base-total">¥0.00</span>
+                <div id="home-base-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="home-base-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="home-base-space-filter" onchange="filterProjectsBySpace('home', 'base')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="home-base-space-filter" onchange="filterProjectsBySpace('home', 'base')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="home-base-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="home-base-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,27 +162,32 @@
             <!-- 主材 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('home', 'auxiliary')">
                         <i class="fas fa-tools"></i> 主要材料
                         <span class="badge" id="home-auxiliary-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'auxiliary')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-home-auxiliary"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'auxiliary')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="home-auxiliary-total">¥0.00</span>
+                <div id="home-auxiliary-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="home-auxiliary-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="home-auxiliary-space-filter" onchange="filterProjectsBySpace('home', 'auxiliary')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="home-auxiliary-space-filter" onchange="filterProjectsBySpace('home', 'auxiliary')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="home-auxiliary-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="home-auxiliary-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,27 +195,32 @@
             <!-- 家具家电 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('home', 'furniture')">
                         <i class="fas fa-couch"></i> 家具家电及配饰
                         <span class="badge" id="home-furniture-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'furniture')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-home-furniture"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'furniture')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="home-furniture-total">¥0.00</span>
+                <div id="home-furniture-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="home-furniture-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="home-furniture-space-filter" onchange="filterProjectsBySpace('home', 'furniture')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="home-furniture-space-filter" onchange="filterProjectsBySpace('home', 'furniture')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="home-furniture-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="home-furniture-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,27 +228,32 @@
             <!-- 其它项 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('home', 'other')">
                         <i class="fas fa-ellipsis-h"></i> 其它项
                         <span class="badge" id="home-other-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'other')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-home-other"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('home', 'other')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="home-other-total">¥0.00</span>
+                <div id="home-other-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="home-other-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="home-other-space-filter" onchange="filterProjectsBySpace('home', 'other')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="home-other-space-filter" onchange="filterProjectsBySpace('home', 'other')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="home-other-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="home-other-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,27 +333,32 @@
             <!-- 基础装修 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('commercial', 'base')">
                         <i class="fas fa-hard-hat"></i> 基础装修
                         <span class="badge" id="commercial-base-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'base')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-commercial-base"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'base')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="commercial-base-total">¥0.00</span>
+                <div id="commercial-base-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="commercial-base-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="commercial-base-space-filter" onchange="filterProjectsBySpace('commercial', 'base')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="commercial-base-space-filter" onchange="filterProjectsBySpace('commercial', 'base')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="commercial-base-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="commercial-base-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,27 +366,32 @@
             <!-- 辅材 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
-                        <i class="fas fa-box-open"></i> 主要材料
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('commercial', 'auxiliary')">
+                        <i class="fas fa-box-open"></i> 辅材
                         <span class="badge" id="commercial-auxiliary-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'auxiliary')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-commercial-auxiliary"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'auxiliary')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="commercial-auxiliary-total">¥0.00</span>
+                <div id="commercial-auxiliary-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="commercial-auxiliary-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="commercial-auxiliary-space-filter" onchange="filterProjectsBySpace('commercial', 'auxiliary')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="commercial-auxiliary-space-filter" onchange="filterProjectsBySpace('commercial', 'auxiliary')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="commercial-auxiliary-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="commercial-auxiliary-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,27 +399,32 @@
             <!-- 设备家具 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
-                        <i class="fas fa-desktop"></i> 设备家具及配饰
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('commercial', 'furniture')">
+                        <i class="fas fa-desktop"></i> 设备家具
                         <span class="badge" id="commercial-furniture-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'furniture')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-commercial-furniture"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'furniture')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="commercial-furniture-total">¥0.00</span>
+                <div id="commercial-furniture-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="commercial-furniture-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="commercial-furniture-space-filter" onchange="filterProjectsBySpace('commercial', 'furniture')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="commercial-furniture-space-filter" onchange="filterProjectsBySpace('commercial', 'furniture')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="commercial-furniture-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="commercial-furniture-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,27 +432,32 @@
             <!-- 公装其它项 -->
             <div class="section-card category-section">
                 <div class="section-header">
-                    <div class="section-title">
+                    <div class="section-title collapsible" onclick="toggleCategoryCollapse('commercial', 'other')">
                         <i class="fas fa-ellipsis-h"></i> 其它项
                         <span class="badge" id="commercial-other-count">0个项目</span>
-                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'other')" style="margin-left:10px;">
+                        <i class="fas fa-chevron-down collapse-icon" id="collapse-commercial-other"></i>
+                    </div>
+                    <div class="section-actions">
+                        <button class="btn btn-primary btn-sm" onclick="openAddMultiModal('commercial', 'other')">
                             <i class="fas fa-plus"></i> 添加项目
                         </button>
                     </div>
                 </div>
-                <div class="category-summary">
-                    <div class="category-total">
-                        总计: <span id="commercial-other-total">¥0.00</span>
+                <div id="commercial-other-content" class="category-content">
+                    <div class="category-summary">
+                        <div class="category-total">
+                            总计: <span id="commercial-other-total">¥0.00</span>
+                        </div>
+                        <div class="space-filter">
+                            <select class="form-select-sm" id="commercial-other-space-filter" onchange="filterProjectsBySpace('commercial', 'other')">
+                                <option value="">全部空间</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="space-filter">
-                        <select class="form-select-sm" id="commercial-other-space-filter" onchange="filterProjectsBySpace('commercial', 'other')">
-                            <option value="">全部空间</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="item-list-scroll">
-                    <div class="item-list" id="commercial-other-list">
-                        <div class="empty-state">暂无项目，请添加</div>
+                    <div class="item-list-scroll">
+                        <div class="item-list" id="commercial-other-list">
+                            <div class="empty-state">暂无项目，请添加</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -383,13 +478,13 @@
                     </div>
                     <div class="summary-row">
                         <div class="summary-label">
-                            <i class="fas fa-box-open"></i> 主要材料
+                            <i class="fas fa-box-open"></i> 辅材
                         </div>
                         <div class="summary-value" id="commercial-auxiliary-summary">¥0.00</div>
                     </div>
                     <div class="summary-row">
                         <div class="summary-label">
-                            <i class="fas fa-desktop"></i> 设备家具及配饰
+                            <i class="fas fa-desktop"></i> 设备家具
                         </div>
                         <div class="summary-value" id="commercial-furniture-summary">¥0.00</div>
                     </div>
@@ -497,17 +592,17 @@
                             <label class="form-label">单价 (¥)</label>
                             <input type="number" class="form-input" id="manualProjectPrice" placeholder="0.00" min="0" step="0.01">
                         </div>
-                   <div class="form-group half">
-    <label class="form-label">工艺说明</label>
-    <div class="search-box" style="margin-bottom:0;">
-        <input type="text" class="form-input search-input" 
-               id="manualProjectDescription" 
-               placeholder="输入或搜索工艺说明..."
-               onkeyup="searchProjectDescription(this.value)">
-        <i class="fas fa-search search-icon"></i>
-    </div>
-</div>
-</div>
+                        <div class="form-group half">
+                            <label class="form-label">工艺说明</label>
+                            <div class="search-box" style="margin-bottom:0;">
+                                <input type="text" class="form-input search-input" 
+                                       id="manualProjectDescription" 
+                                       placeholder="输入或搜索工艺说明..."
+                                       onkeyup="searchProjectDescription(this.value)">
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </div>
+                    </div>
                     <button class="btn btn-primary btn-sm" onclick="addManualProject()" style="width: 100%; margin-top: 8px;">
                         <i class="fas fa-plus"></i> 添加到当前列表
                     </button>
@@ -613,4 +708,36 @@
         </button>
     </div>
 </body>
+        <!-- 原页面的所有内容保持不变 -->
+        <!-- 这里是你原有的所有HTML内容 -->
+        
+        <!-- 通知区域 -->
+        <div id="notification-area"></div>
+        
+        <!-- 移动端底部工具栏 -->
+        <div class="mobile-bottom-bar">
+            <button class="mobile-bottom-btn active" onclick="switchToTab('home')">
+                <i class="fas fa-house"></i>
+                <span class="mobile-btn-text">家装</span>
+            </button>
+            <button class="mobile-bottom-btn" onclick="switchToTab('commercial')">
+                <i class="fas fa-building"></i>
+                <span class="mobile-btn-text">公装</span>
+            </button>
+            <button class="mobile-bottom-btn" onclick="switchToTab('space')">
+                <i class="fas fa-layer-group"></i>
+                <span class="mobile-btn-text">空间库</span>
+            </button>
+            <button class="mobile-bottom-btn" onclick="exportToExcel()">
+                <i class="fas fa-file-excel"></i>
+                <span class="mobile-btn-text">导出</span>
+            </button>
+        </div>
+    </div> <!-- 关闭main-container -->
+    
+    <script>
+       
+    </script>
+</body>
+
 </html>

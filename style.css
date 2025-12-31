@@ -87,6 +87,35 @@ h1 {
     justify-content: center;
     gap: 6px;
 }
+/* 在 style.css 末尾添加以下样式 */
+
+/* 折叠相关样式 */
+.collapsible {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.collapse-icon {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    color: #666;
+}
+
+.collapse-icon.collapsed {
+    transform: rotate(-90deg);
+}
+
+.section-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.category-content.collapsed {
+    display: none;
+}
 
 .btn-warning {
     background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
@@ -335,8 +364,8 @@ h1 {
 
 .btn-outline {
     background: transparent;
-    color: #4f6df5;
-    border: 1px solid #4f6df5;
+    color: #f9f9f9;
+    border: 1px solid #253b99;
     padding: 8px 12px;
 }
 
@@ -421,9 +450,309 @@ h1 {
     color: #666;
 }
 
+.space-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 2px solid #dee2e6;
+    border-radius: 6px 6px 0 0;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
 .space-name {
-    font-weight: 500;
-    color: #4f6df5;
+    font-weight: 700; /* 加粗 */
+    font-size: 1.1em;
+    color: #2c3e50;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f8ff 100%);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db; /* 左侧蓝色边框作为强调 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 添加空间名称前的图标 */
+.space-name::before {
+    content: "📍"; /* 或使用 font-awesome 图标：\f015 */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.9em;
+    color: #3498db;
+}
+
+/* 或者使用 font-awesome 图标的版本 */
+.space-name i {
+    color: #3498db;
+    font-size: 0.9em;
+}
+
+.space-total {
+    font-weight: 600;
+    color: #e74c3c;
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #e74c3c;
+    box-shadow: 0 1px 3px rgba(231, 76, 60, 0.2);
+}
+
+.space-delete-btn {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.space-delete-btn:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+}
+
+.space-delete-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(231, 76, 60, 0.3);
+}
+
+/* 添加空间组的整体样式增强 */
+.space-group {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    background: white;
+}
+
+/* 空间组内的项目行样式调整 */
+.space-group .item-row {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+/* 添加空间组出现动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 登录界面样式 */
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: loginSlideIn 0.6s ease-out;
+}
+
+@keyframes loginSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-logo {
+    margin-bottom: 30px;
+}
+
+.login-logo h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.login-logo p {
+    color: #666;
+    font-size: 14px;
+}
+
+.login-input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 20px;
+    text-align: center;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.login-footer a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.loading-spinner {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 15px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.space-group {
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* 为每个空间组添加延迟动画，创建级联效果 */
+.space-group:nth-child(1) { animation-delay: 0.05s; }
+.space-group:nth-child(2) { animation-delay: 0.1s; }
+.space-group:nth-child(3) { animation-delay: 0.15s; }
+.space-group:nth-child(4) { animation-delay: 0.2s; }
+.space-group:nth-child(5) { animation-delay: 0.25s; }
+.space-group:nth-child(6) { animation-delay: 0.3s; }
+.space-group:nth-child(7) { animation-delay: 0.35s; }
+.space-group:nth-child(8) { animation-delay: 0.4s; }
+
+/* 空间删除按钮的加载动画 */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+.space-delete-btn {
+    animation: pulse 2s infinite;
+}
+
+/* 悬停时暂停动画 */
+.space-delete-btn:hover {
+    animation: none;
+}
+
+/* 空间名称的悬停效果 */
+.space-name:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+.space-group .item-row:hover {
+    background-color: #f9f9f9;
+}
+
+.space-group .item-row:last-child {
+    border-bottom: none;
+}
+
+/* 空间组内表头样式 */
+.space-group .item-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
 }
 
 .space-total {
