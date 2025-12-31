@@ -30,9 +30,7 @@ let projectData = {
     }
 };
 
-// 当前选中的类型和类别
-let currentType = 'home';
-let currentCategory = 'base';
+
 
 // 项目示例库
 const quickAddExamples = [
@@ -390,3 +388,4 @@ function initializeData() {
 
 // 立即初始化
 initializeData();
+

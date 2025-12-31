@@ -96,7 +96,29 @@ h1 {
     align-items: center;
     gap: 10px;
 }
+/* 添加超小型通知样式 */
+.notification.compact {
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    min-height: 25px;
+    
+    animation: compactNotificationSlideIn 0.2s ease-out;
+}
 
+.notification.compact i {
+    font-size: 0.7rem;
+}
+
+@keyframes compactNotificationSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 .collapse-icon {
     transition: transform 0.3s ease;
     font-size: 14px;
@@ -1560,4 +1582,85 @@ h1 {
 /* 确保搜索框有相对定位 */
 .search-box {
     position: relative;
+}
+/* 修复桌面按钮显示 */
+.desktop-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.desktop-btn-text {
+    display: inline;
+}
+
+/* 移动端隐藏桌面按钮文本 */
+@media (max-width: 767px) {
+    .desktop-btn-text {
+        display: none;
+    }
+    
+    .desktop-actions .btn {
+        padding: 8px;
+        min-width: 40px;
+        justify-content: center;
+    }
+}
+
+/* 确保移动工具栏正确显示 */
+@media (max-width: 767px) {
+    .mobile-bottom-bar {
+        display: flex !important;
+    }
+    
+    .tabs-container {
+        display: none !important;
+    }
+    
+    .desktop-actions {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-bottom-bar {
+        display: none !important;
+    }
+    
+    .tabs-container {
+        display: block !important;
+    }
+    
+    .desktop-actions {
+        display: flex !important;
+    }
+}
+
+/* 修复标签页布局 */
+.tabs {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tab {
+    flex: 1;
+    min-width: 0; /* 防止溢出 */
+}
+
+/* 防止按钮换行 */
+header > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+/* 确保项目名称输入框适配 */
+.project-name-input {
+    flex: 1;
+    min-width: 150px;
+    max-width: 300px;
 }

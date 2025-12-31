@@ -1,189 +1,5 @@
-
-
-// 登录功能脚本
-document.addEventListener('DOMContentLoaded', function() {
-    // 检查是否已登录
-    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-    if (isLoggedIn === 'true') {
-        showMainApp();
-        return;
-    }
-    
-    // 显示登录界面
-    document.getElementById('login-container').style.display = 'flex';
-    
-    // 绑定登录按钮事件
-    document.getElementById('login-button').addEventListener('click', handleLogin);
-    
-    // 绑定回车键登录
-    document.getElementById('password').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            handleLogin();
-        }
-    });
-    
-    // 绑定用户名输入框的回车键
-    document.getElementById('username').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            document.getElementById('password').focus();
-        }
-    });
-});
-
-// 处理登录
-async function handleLogin() {
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
-    
-    // 验证输入
-    if (!username || !password) {
-        showLoginError('请输入用户名和密码');
-        return;
-    }
-    
-    // 显示加载中
-    const loginButton = document.getElementById('login-button');
-    const loginLoading = document.getElementById('login-loading');
-    const loginError = document.getElementById('login-error');
-    
-    loginButton.style.display = 'none';
-    loginLoading.style.display = 'block';
-    loginError.textContent = '';
-    
-    try {
-        // 从远程URL获取用户数据
-        const response = await fetch('https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/497d788d52a86b4718c0263b16a31e9174c661a1/zhanghao.js');
-        
-        if (!response.ok) {
-            throw new Error('无法获取用户数据');
-        }
-        
-        const jsContent = await response.text();
-        
-        // 提取用户数组 - 需要从JavaScript代码中提取
-        let users = [];
-        
-        // 尝试解析JavaScript代码中的const builtInUsers数组
-        const match = jsContent.match(/const builtInUsers\s*=\s*(\[.*?\])/s);
-        if (match && match[1]) {
-            try {
-                // 使用Function来安全地执行代码片段获取数组
-                const getUsers = new Function(`
-                    const builtInUsers = ${match[1]};
-                    return builtInUsers;
-                `);
-                users = getUsers();
-            } catch (e) {
-                console.error('解析用户数据失败:', e);
-                // 使用内置的默认用户作为后备
-                users = [
-                    {
-                        "username": "123",
-                        "password": "123",
-                        "name": "测试",
-                        "isLocal": true,
-                        "isAdmin": false
-                    },
-                    {
-                        "username": "qiyu",
-                        "password": "8418",
-                        "name": "系统管理员",
-                        "isLocal": true,
-                        "isAdmin": true
-                    }
-                ];
-            }
-        } else {
-            // 如果没有匹配到，使用内置用户
-            users = [
-                {
-                    "username": "123",
-                    "password": "123",
-                    "name": "测试",
-                    "isLocal": true,
-                    "isAdmin": false
-                },
-                {
-                    "username": "qiyu",
-                    "password": "8418",
-                    "name": "系统管理员",
-                    "isLocal": true,
-                    "isAdmin": true
-                }
-            ];
-        }
-        
-        // 验证用户
-        const user = users.find(u => u.username === username && u.password === password);
-        
-        if (user) {
-            // 登录成功
-            sessionStorage.setItem('isLoggedIn', 'true');
-            sessionStorage.setItem('userName', user.name);
-            sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
-            
-            // 显示成功消息
-            showLoginError('登录成功，正在进入系统...', 'success');
-            
-            // 延迟后显示主应用
-            setTimeout(() => {
-                showMainApp();
-            }, 1000);
-        } else {
-            // 登录失败
-            showLoginError('用户名或密码错误');
-            loginButton.style.display = 'block';
-            loginLoading.style.display = 'none';
-        }
-    } catch (error) {
-        console.error('登录错误:', error);
-        showLoginError('登录失败，请检查网络连接');
-        loginButton.style.display = 'block';
-        loginLoading.style.display = 'none';
-    }
-}
-
-// 显示登录错误
-function showLoginError(message, type = 'error') {
-    const errorElement = document.getElementById('login-error');
-    errorElement.textContent = message;
-    errorElement.style.color = type === 'success' ? '#27ae60' : '#e74c3c';
-}
-
-// 显示主应用
-function showMainApp() {
-    // 获取用户信息
-    const userName = sessionStorage.getItem('userName') || '用户';
-    const userRole = sessionStorage.getItem('userRole') || 'user';
-    
-    // 在标题中显示用户信息
-    const header = document.querySelector('header h1');
-    if (header) {
-        header.innerHTML = `<i class="fas fa-home"></i> 立诺装饰项目清单报价系统 <small style="font-size: 14px; color: #666;">欢迎, ${userName} (${userRole === 'admin' ? '管理员' : '普通用户'})</small>`;
-    }
-    
-    // 隐藏登录界面，显示主应用
-    document.getElementById('login-container').style.opacity = '0';
-    setTimeout(() => {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('main-container').style.display = 'block';
-        
-        // 初始化主应用
-        if (typeof initPage === 'function') {
-            initPage();
-        }
-    }, 500);
-}
-
-// 退出登录功能
-function logout() {
-    if (confirm('确定要退出登录吗？')) {
-        sessionStorage.clear();
-        location.reload();
-    }
-}
-
-// 在 script.js 文件开头，添加以下变量
+let currentType = 'home';
+let currentCategory = 'base';
 let collapseStates = {
     home: {
         base: false,      // false=展开，true=折叠
@@ -198,10 +14,36 @@ let collapseStates = {
         other: false
     }
 };
-// ... 以下是你原有的 script.js 代码
-// 初始化页面
+
+// 在 script.js 开头添加这个函数，确保在 initPage 之前执行
+function ensureProjectData() {
+    // 确保 projectData 存在
+    if (typeof projectData === 'undefined') {
+        projectData = {
+            projectName: "",
+            home: { base: [], auxiliary: [], furniture: [], other: [] },
+            commercial: { base: [], auxiliary: [], furniture: [], other: [] },
+            library: [],
+            spaces: { home: [], commercial: [] }
+        };
+    }
+}
+
 function initPage() {
     console.log('页面初始化开始...');
+    
+    // 确保数据存在
+    ensureProjectData();
+    
+    // 先加载本地数据
+    if (typeof loadDataFromStorage === 'function') {
+        loadDataFromStorage();
+    }
+    
+    // 只需要确保数据已经初始化
+    if (typeof initializeData === 'function') {
+        initializeData();
+    }
     
     // 检测设备类型并设置初始显示
     detectDeviceAndSetDisplay();
@@ -248,6 +90,285 @@ function initPage() {
     
     console.log('页面初始化完成');
 }
+
+// 从本地存储加载数据
+function loadDataFromStorage() {
+    const saved = localStorage.getItem('decorProjectData');
+    if (saved) {
+        try {
+            const parsed = JSON.parse(saved);
+            // 合并保存的数据，确保所有必要的字段都存在
+            projectData = {
+                ...projectData,
+                ...parsed,
+                home: { ...projectData.home, ...(parsed.home || {}) },
+                commercial: { ...projectData.commercial, ...(parsed.commercial || {}) },
+                spaces: { ...projectData.spaces, ...(parsed.spaces || {}) }
+            };
+        } catch (e) {
+            console.error('加载数据失败:', e);
+        }
+    }
+}
+
+// 保存数据到本地存储
+function saveDataToStorage() {
+    try {
+        localStorage.setItem('decorProjectData', JSON.stringify(projectData));
+    } catch (e) {
+        console.error('保存数据失败:', e);
+    }
+}
+
+// 生成项目ID
+function generateProjectId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+
+
+
+
+// 登录功能脚本
+document.addEventListener('DOMContentLoaded', function() {
+    // 检查是否已登录
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+        showMainApp();
+        return;
+    }
+    
+    // 显示登录界面
+    document.getElementById('login-container').style.display = 'flex';
+    
+    // 绑定登录按钮事件
+    document.getElementById('login-button').addEventListener('click', handleLogin);
+    
+    // 绑定回车键登录
+    document.getElementById('password').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleLogin();
+        }
+    });
+    
+    // 绑定用户名输入框的回车键
+    document.getElementById('username').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            document.getElementById('password').focus();
+        }
+    });
+});
+
+// 最终版本的登录处理函数
+async function handleLogin() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+    const loginButton = document.getElementById('login-button');
+    const loginLoading = document.getElementById('login-loading');
+    const loginError = document.getElementById('login-error');
+    
+    // 验证输入
+    if (!username || !password) {
+        loginError.textContent = '请输入用户名和密码';
+        loginError.style.color = '#fa8c16';
+        return;
+    }
+    
+    // 显示加载中
+    loginButton.style.display = 'none';
+    loginLoading.style.display = 'block';
+    loginError.textContent = '';
+    
+    try {
+        // ... 获取用户数据的代码保持不变 ...
+        
+        if (user) {
+            // 登录成功
+            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('userName', user.name);
+            sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
+            
+            // 显示加载中消息
+            loginError.textContent = '登录成功，正在进入系统...';
+            loginError.style.color = '#52c41a';
+            
+            // 延迟后刷新
+            setTimeout(() => {
+                location.reload();
+            }, 800);
+        } else {
+            // 登录失败
+            loginError.textContent = '用户名或密码错误';
+            loginError.style.color = '#ff4d4f';
+            loginButton.style.display = 'block';
+            loginLoading.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('登录错误:', error);
+        // 网络错误时使用默认用户
+        const defaultUsers = getDefaultUsers();
+        const user = defaultUsers.find(u => u.username === username && u.password === password);
+        
+        if (user) {
+            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('userName', user.name);
+            sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
+            
+            // 显示加载中消息
+            loginError.textContent = '登录成功，正在进入系统...';
+            loginError.style.color = '#52c41a';
+            
+            // 延迟后刷新
+            setTimeout(() => {
+                location.reload();
+            }, 800);
+        } else {
+            loginError.textContent = '登录失败，请检查网络连接';
+            loginError.style.color = '#ff4d4f';
+            loginButton.style.display = 'block';
+            loginLoading.style.display = 'none';
+        }
+    }
+}
+// 修改登录成功提示
+function handleLoginSuccess(user) {
+    sessionStorage.setItem('isLoggedIn', 'true');
+    sessionStorage.setItem('userName', user.name);
+    sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
+    
+    // 显示紧凑的成功消息
+    showLoginError('登录成功，正在刷新页面...', 'success');
+    
+    // 在主应用区域显示小通知
+    setTimeout(() => {
+        // 提前在主应用中显示通知
+        const mainApp = document.getElementById('main-container');
+        if (mainApp) {
+            const tempNotification = document.createElement('div');
+            tempNotification.className = 'notification compact info';
+            tempNotification.innerHTML = `
+                <i class="fas fa-sync-alt fa-spin"></i>
+                <div style="flex: 1;">正在刷新页面...</div>
+            `;
+            mainApp.appendChild(tempNotification);
+        }
+    }, 500);
+    
+    // 延迟后刷新页面
+    setTimeout(() => {
+        location.reload(); // 自动刷新页面
+    }, 1000); // 1秒后刷新
+}
+
+// 修改显示主应用函数，添加更快的初始化
+function showMainApp() {
+    // 获取用户信息
+    const userName = sessionStorage.getItem('userName') || '用户';
+    const userRole = sessionStorage.getItem('userRole') || 'user';
+    
+    // 立即显示主应用
+    document.getElementById('login-container').style.opacity = '0';
+    document.getElementById('login-container').style.display = 'none';
+    document.getElementById('main-container').style.display = 'block';
+    
+    // 在标题中显示用户信息
+    const header = document.querySelector('header h1');
+    if (header) {
+        header.innerHTML = `<i class="fas fa-home"></i> 立诺装饰项目清单报价系统 <small style="font-size: 10px; color: #302a2aff;">用户： ${userName}</small>`;
+    }
+    
+    // 显示快速加载提示
+    showNotification('系统加载中...', 'info');
+    
+    // 快速初始化页面
+    setTimeout(() => {
+        if (typeof initPage === 'function') {
+            initPage();
+            showNotification('加载完成！', 'success');
+        }
+    }, 300);
+}
+// 获取默认用户
+function getDefaultUsers() {
+    return [
+        {
+            "username": "123",
+            "password": "123",
+            "name": "测试组",
+            "isLocal": true,
+            "isAdmin": true
+        },
+        {
+            "username": "qiyu",
+            "password": "8418",
+            "name": "系统管理员",
+            "isLocal": true,
+            "isAdmin": true
+        }
+    ];
+}
+
+// 折叠所有空间组
+function collapseAllSpaces() {
+    const spaceGroups = document.querySelectorAll('.space-group');
+    let collapsedCount = 0;
+    
+    spaceGroups.forEach(group => {
+        const spaceContent = group.querySelector('.space-content');
+        if (spaceContent && spaceContent.style.display !== 'none') {
+            spaceContent.style.display = 'none';
+            
+            // 更新折叠按钮图标
+            const collapseBtn = group.querySelector('.space-collapse-btn');
+            if (collapseBtn) {
+                collapseBtn.innerHTML = '<i class="fas fa-plus-circle"></i>';
+                collapseBtn.title = '展开此空间';
+            }
+            
+            collapsedCount++;
+        }
+    });
+    
+    if (collapsedCount > 0) {
+        showNotification(`已折叠 ${collapsedCount} 个空间组`, 'info', {compact: true});
+    } else {
+        showNotification('所有空间组已经处于折叠状态', 'info', {compact: true});
+    }
+}
+
+// 显示主应用
+function showMainApp() {
+    // 获取用户信息
+    const userName = sessionStorage.getItem('userName') || '用户';
+    const userRole = sessionStorage.getItem('userRole') || 'user';
+    
+    // 在标题中显示用户信息
+    const header = document.querySelector('header h1');
+    if (header) {
+        header.innerHTML = `<i class="fas fa-home"></i> 立诺装饰项目清单报价系统 <small style="font-size: 16px; color: #635858ff;">用户： ${userName}</small>`;
+    }
+    
+    // 隐藏登录界面，显示主应用
+    document.getElementById('login-container').style.opacity = '0';
+    setTimeout(() => {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('main-container').style.display = 'block';
+        
+        // 初始化主应用
+        if (typeof initPage === 'function') {
+            initPage();
+        }
+    }, 500);
+}
+
+// 退出登录功能
+function logout() {
+    if (confirm('确定要退出登录吗？')) {
+        sessionStorage.clear();
+        location.reload();
+    }
+}
+
 // 折叠所有类别
 function collapseAllCategories() {
     Object.keys(collapseStates).forEach(type => {
@@ -771,14 +892,6 @@ function addMultiProjects() {
     showNotification(message, 'success');
 }
 
-// 增强的去重检查函数
-function isProjectDuplicateEnhanced(type, category, space, projectName) {
-    const projects = projectData[type][category];
-    return projects.some(project => 
-        project.space === space && 
-        project.name === projectName
-    );
-}
 
 // 在添加项目后调用此函数刷新空间筛选器
 function refreshSpaceFiltersAfterAdd(type, category) {
@@ -1211,10 +1324,23 @@ function renderSpaceLibrary() {
         commercialSpaceList.appendChild(spaceItem);
     });
 }
-
 // 快速添加家装项目
 function quickAddHomeProject() {
+    // 确保数据已加载
+    if (!kongjianchanpin || !kongjianchanpin.home || kongjianchanpin.home.length === 0) {
+        // 如果没有数据，加载默认数据
+        if (kongjianchanpin.home.length === 0) {
+            setDefaultExampleData();
+        }
+        
+        if (kongjianchanpin.home.length === 0) {
+            showNotification('未找到示例数据，请手动添加项目', 'warning');
+            return;
+        }
+    }
+    
     let addedCount = 0;
+    let duplicateCount = 0;
     
     // 确保数据结构存在
     if (!projectData.home.other) {
@@ -1223,7 +1349,7 @@ function quickAddHomeProject() {
     
     kongjianchanpin.home.forEach(spaceData => {
         const space = spaceData.space;
-        const projectNames = spaceData.name;
+        const projectNames = spaceData.name || [];
         
         projectNames.forEach(projectName => {
             const projectInfo = getProjectInfoByName(projectName);
@@ -1251,6 +1377,8 @@ function quickAddHomeProject() {
                 if (!isProjectDuplicate('home', category, space, projectInfo.name)) {
                     projectData.home[category].push(projectObj);
                     addedCount++;
+                } else {
+                    duplicateCount++;
                 }
             }
         });
@@ -1265,12 +1393,29 @@ function quickAddHomeProject() {
     
     updateSummary('home');
     
-    showNotification(`已添加 ${addedCount} 个家装示例项目`, 'success');
+    let message = `已添加 ${addedCount} 个家装示例项目`;
+    if (duplicateCount > 0) {
+        message += `，跳过 ${duplicateCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
 }
-
 // 快速添加公装项目
 function quickAddCommercialProject() {
+    // 确保数据已加载
+    if (!kongjianchanpin || !kongjianchanpin.commercial || kongjianchanpin.commercial.length === 0) {
+        // 如果没有数据，加载默认数据
+        if (kongjianchanpin.commercial.length === 0) {
+            setDefaultExampleData();
+        }
+        
+        if (kongjianchanpin.commercial.length === 0) {
+            showNotification('未找到示例数据，请手动添加项目', 'warning');
+            return;
+        }
+    }
+    
     let addedCount = 0;
+    let duplicateCount = 0;
     
     // 确保数据结构存在
     if (!projectData.commercial.other) {
@@ -1279,7 +1424,7 @@ function quickAddCommercialProject() {
     
     kongjianchanpin.commercial.forEach(spaceData => {
         const space = spaceData.space;
-        const projectNames = spaceData.name;
+        const projectNames = spaceData.name || [];
         
         projectNames.forEach(projectName => {
             const projectInfo = getProjectInfoByName(projectName);
@@ -1307,6 +1452,8 @@ function quickAddCommercialProject() {
                 if (!isProjectDuplicate('commercial', category, space, projectInfo.name)) {
                     projectData.commercial[category].push(projectObj);
                     addedCount++;
+                } else {
+                    duplicateCount++;
                 }
             }
         });
@@ -1321,10 +1468,12 @@ function quickAddCommercialProject() {
     
     updateSummary('commercial');
     
-    showNotification(`已添加 ${addedCount} 个工装示例项目`, 'success');
+    let message = `已添加 ${addedCount} 个公装示例项目`;
+    if (duplicateCount > 0) {
+        message += `，跳过 ${duplicateCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
 }
-
-// 清空所有项目
 // 清空所有项目
 function clearAllProjects(type) {
     if (confirm(`确定要清空所有${type === 'home' ? '家装' : '工装'}项目吗？此操作不可撤销。`)) {
@@ -1603,12 +1752,20 @@ function closeAllModals() {
 }
 
 // 显示通知
-function showNotification(message, type = 'success') {
+// 修改 showNotification 函数
+function showNotification(message, type = 'success', options = {}) {
     const notificationArea = document.getElementById('notification-area');
     if (!notificationArea) return;
     
     const notification = document.createElement('div');
+    
+    // 检查是否需要紧凑模式
+    const compact = options.compact || type === 'info';
+    
     notification.className = `notification ${type}`;
+    if (compact) {
+        notification.classList.add('compact');
+    }
     
     let icon = 'fas fa-check-circle';
     if (type === 'error') icon = 'fas fa-exclamation-circle';
@@ -1617,19 +1774,24 @@ function showNotification(message, type = 'success') {
     
     notification.innerHTML = `
         <i class="${icon}"></i>
-        <div>${message}</div>
+        <div style="flex: 1;">${message}</div>
     `;
     
     notificationArea.appendChild(notification);
     
+    // 设置不同的显示时间
+    const duration = compact ? 3000 : 5000;
+    
     setTimeout(() => {
-        notification.style.animation = 'notificationSlideOut 0.3s ease-out forwards';
+        notification.style.animation = compact ? 
+            'compactNotificationSlideIn 0.3s ease-out reverse forwards' : 
+            'notificationSlideOut 0.3s ease-out forwards';
         setTimeout(() => {
             if (notificationArea.contains(notification)) {
                 notificationArea.removeChild(notification);
             }
         }, 300);
-    }, 5000);
+    }, duration);
 }
 
 // Excel导出功能
@@ -2000,7 +2162,36 @@ function convertCurrency(money) {
     
     return chineseStr;
 }
+// 检查项目是否重复
+function isProjectDuplicate(type, category, space, name) {
+    const projects = projectData[type][category] || [];
+    return projects.some(project => 
+        project.space === space && 
+        project.name === name
+    );
+}
 
+// 获取项目信息
+function getProjectInfoByName(name) {
+    // 从 quickAddExamples 或 kongjianchanpin 中查找
+    let project = quickAddExamples.find(p => p.name === name);
+    if (!project && typeof kongjianchanpin !== 'undefined') {
+        // 从空间产品数据中查找
+        for (let type in kongjianchanpin) {
+            for (let spaceData of kongjianchanpin[type]) {
+                if (spaceData.name.includes(name)) {
+                    return {
+                        name: name,
+                        unit: "项",
+                        price: 0,
+                        category: "base"
+                    };
+                }
+            }
+        }
+    }
+    return project;
+}
 // 获取类别名称
 function getCategoryName(category) {
     const categoryNames = {
