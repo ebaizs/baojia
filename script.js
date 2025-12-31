@@ -158,8 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-// 最终版本的登录处理函数
+// 修改后的登录处理函数
 async function handleLogin() {
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
@@ -180,7 +179,11 @@ async function handleLogin() {
     loginError.textContent = '';
     
     try {
-        // ... 获取用户数据的代码保持不变 ...
+        // 从云端加载账号信息
+        const cloudUsers = await loadCloudUsers();
+        
+        // 在云端用户中查找匹配的用户
+        const user = cloudUsers.find(u => u.username === username && u.password === password);
         
         if (user) {
             // 登录成功
@@ -188,7 +191,7 @@ async function handleLogin() {
             sessionStorage.setItem('userName', user.name);
             sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
             
-            // 显示加载中消息
+            // 显示成功消息
             loginError.textContent = '登录成功，正在进入系统...';
             loginError.style.color = '#52c41a';
             
@@ -204,8 +207,9 @@ async function handleLogin() {
             loginLoading.style.display = 'none';
         }
     } catch (error) {
-        console.error('登录错误:', error);
-        // 网络错误时使用默认用户
+        console.error('加载云端账号失败:', error);
+        
+        // 作为备用方案，使用本地默认用户
         const defaultUsers = getDefaultUsers();
         const user = defaultUsers.find(u => u.username === username && u.password === password);
         
@@ -214,21 +218,100 @@ async function handleLogin() {
             sessionStorage.setItem('userName', user.name);
             sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
             
-            // 显示加载中消息
             loginError.textContent = '登录成功，正在进入系统...';
             loginError.style.color = '#52c41a';
             
-            // 延迟后刷新
             setTimeout(() => {
                 location.reload();
             }, 800);
         } else {
-            loginError.textContent = '登录失败，请检查网络连接';
+            loginError.textContent = '登录失败，请检查网络连接或联系管理员';
             loginError.style.color = '#ff4d4f';
             loginButton.style.display = 'block';
             loginLoading.style.display = 'none';
         }
     }
+}
+
+// 从云端加载账号信息
+async function loadCloudUsers() {
+    const cloudUrl = 'https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/zhanghao.js';
+    
+    try {
+        // 获取云端文件内容
+        const response = await fetch(cloudUrl);
+        const jsContent = await response.text();
+        
+        // 解析JS文件内容，提取 builtInUsers 数组
+        const users = parseUsersFromJS(jsContent);
+        return users || [];
+    } catch (error) {
+        console.error('加载云端账号失败:', error);
+        throw error;
+    }
+}
+
+// 从JS文件内容中解析用户数据
+function parseUsersFromJS(jsContent) {
+    try {
+        // 尝试通过多种方式提取 builtInUsers 数据
+        const patterns = [
+            // 匹配 const builtInUsers = [...]
+            /const\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 var builtInUsers = [...]
+            /var\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 let builtInUsers = [...]
+            /let\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 builtInUsers = [...]
+            /builtInUsers\s*=\s*(\[[\s\S]*?\]);/
+        ];
+        
+        let usersArray = null;
+        
+        for (const pattern of patterns) {
+            const match = jsContent.match(pattern);
+            if (match) {
+                try {
+                    // 安全地解析JSON数组
+                    usersArray = JSON.parse(match[1].replace(/(\w+):/g, '"$1":'));
+                    break;
+                } catch (parseError) {
+                    console.warn('使用正则匹配失败，尝试eval方式:', parseError);
+                    continue;
+                }
+            }
+        }
+        
+        // 如果正则失败，尝试使用eval提取（仅在可信源情况下）
+        if (!usersArray) {
+            try {
+                // 创建一个安全的执行环境
+                const jsWithReturn = jsContent + '; return builtInUsers || [];';
+                const getUsers = new Function(jsWithReturn);
+                usersArray = getUsers();
+            } catch (evalError) {
+                console.error('eval方式也失败了:', evalError);
+            }
+        }
+        
+        return usersArray || [];
+    } catch (error) {
+        console.error('解析用户数据失败:', error);
+        return [];
+    }
+}
+
+// 保留本地默认用户作为备用
+function getDefaultUsers() {
+    return [
+        {
+            "username": "qiyu",
+            "password": "8418",
+            "name": "系统管理员",
+            "isLocal": true,
+            "isAdmin": true
+        }
+    ];
 }
 // 修改登录成功提示
 function handleLoginSuccess(user) {
@@ -288,25 +371,7 @@ function showMainApp() {
         }
     }, 300);
 }
-// 获取默认用户
-function getDefaultUsers() {
-    return [
-        {
-            "username": "123",
-            "password": "123",
-            "name": "测试组",
-            "isLocal": true,
-            "isAdmin": true
-        },
-        {
-            "username": "qiyu",
-            "password": "8418",
-            "name": "系统管理员",
-            "isLocal": true,
-            "isAdmin": true
-        }
-    ];
-}
+
 
 // 折叠所有空间组
 function collapseAllSpaces() {
