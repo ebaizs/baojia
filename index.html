@@ -13,7 +13,7 @@
     <div id="login-container">
         <div class="login-box">
             <div class="login-logo">
-                <h2><i class="fas fa-home"></i> 装饰报价系统</h2>
+                <h2><i class="fas fa-home"></i> 工程项目报价系统</h2>
                 <p>请登录以继续使用</p>
             </div>
             
@@ -37,8 +37,8 @@
                 </button>
                 
                 <div class="login-footer">
-                    <p>系统版本 1.0 | 技术支持: 13515383180</p>
-                    <p>© 2026 山东睿岩网络 版权所有</p>
+                    <p>系统版本 1.0 | 技术支持:  13515383180</p>
+                    <p>© 2026 山东睿岩网络</p>
                 </div>
             </div>
         </div>
@@ -50,21 +50,23 @@
            <header>
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
         <div>
-            <h1><i class="fas fa-home"></i> 装饰项目清单报价系统</h1>
+            <h1><i class="fas fa-home"></i> 项目清单报价系统</h1>
             <div class="header-subtitle"></div>
         </div>
     </div>
-           <!-- 修改顶部按钮布局 -->
+         <!-- 修改顶部按钮布局 -->
 <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 15px;">
     <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        <button class="btn btn-sm btn-outline" onclick="collapseAllCategories()">
-            <i class="fas fa-angle-double-up"></i> 全部折叠
+        <!-- 修改为乒乓开关 -->
+        <button class="btn btn-sm btn-outline" id="toggleAllCategoriesBtn" onclick="toggleAllCategories()">
+            <i class="fas fa-angle-double-down"></i> 
+            <span class="btn-text">全部展开</span>
         </button>
-        <button class="btn btn-sm btn-outline" onclick="expandAllCategories()">
-            <i class="fas fa-angle-double-down"></i> 全部展开
-        </button>
-        <button class="btn btn-sm btn-outline" onclick="collapseAllSpaces()">
-            <i class="fas fa-layer-group"></i> 空间折叠
+        
+        <!-- 修改为乒乓开关 -->
+        <button class="btn btn-sm btn-outline" id="toggleAllSpacesBtn" onclick="toggleAllSpaces()">
+            <i class="fas fa-layer-group"></i> 
+            <span class="btn-text">空间折叠</span>
         </button>
     </div>
     
