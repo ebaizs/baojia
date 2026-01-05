@@ -532,6 +532,10 @@ h1 {
     gap: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex: 1;
+    overflow: hidden;
+    min-width: 90px;
+    max-width: 150px;
 }
 
 .space-name:hover {
@@ -548,8 +552,9 @@ h1 {
     border-radius: 4px;
     border: 1px solid #ef4444;
     box-shadow: 0 1px 3px rgba(239, 68, 68, 0.2);
+    white-space: nowrap;
+    margin: 0 10px;
 }
-
 .space-content {
     max-height: 1000px;
     overflow: hidden;
@@ -761,33 +766,6 @@ h1 {
     background-color: #f8fafc;
 }
 
-/* 修复空间删除按钮颜色 */
-.space-delete-btn {
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.space-delete-btn:hover {
-    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
-}
-
-.space-delete-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 2px rgba(239, 68, 68, 0.3);
-}
 
 .space-group .item-row:hover {
     background-color: #f8fafc;
@@ -808,7 +786,96 @@ h1 {
     font-weight: 500;
     color: #4361ee;
 }
+/* 空间按钮容器 */
+.space-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 
+/* 空间复制按钮样式 */
+.space-copy-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.space-copy-btn:hover {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+}
+
+.space-copy-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(16, 185, 129, 0.3);
+}
+
+/* 空间转移按钮样式 */
+.space-move-btn {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.space-move-btn:hover {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
+}
+
+.space-move-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(245, 158, 11, 0.3);
+}
+
+/* 空间删除按钮样式 */
+.space-delete-btn {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.space-delete-btn:hover {
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
+}
+
+.space-delete-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(239, 68, 68, 0.3);
+}
 .item-row {
     display: grid;
     grid-template-columns: 2fr 0.8fr 0.8fr 1fr 1fr 0.8fr;

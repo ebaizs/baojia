@@ -1,158 +1,3411 @@
-var _0x6e53d=(691041^691040)+(215599^215593);let allCategoriesCollapsed=false;_0x6e53d=205516^205516;let allSpacesCollapsed=false;let currentType="\u0068\u006F\u006D\u0065";let currentCategory="esab".split("").reverse().join("");var _0x11db2f=(168530^168532)+(978602^978607);let collapseStates={'\u0068\u006F\u006D\u0065':{'\u0062\u0061\u0073\u0065':false,"auxiliary":false,'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065':false,"other":false},"commercial":{'\u0062\u0061\u0073\u0065':false,'\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079':false,"furniture":false,'\u006F\u0074\u0068\u0065\u0072':false}};_0x11db2f=106343^106351;function ensureProjectData(){if(typeof projectData==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){projectData={"projectName":"","home":{"base":[],'\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079':[],'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065':[],'\u006F\u0074\u0068\u0065\u0072':[]},'\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C':{"base":[],'\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079':[],'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065':[],'\u006F\u0074\u0068\u0065\u0072':[]},'\u006C\u0069\u0062\u0072\u0061\u0072\u0079':[],"spaces":{'\u0068\u006F\u006D\u0065':[],"commercial":[]}};}}function initPage(){console['\u006C\u006F\u0067']("\u9875\u9762\u521D\u59CB\u5316\u5F00\u59CB\u002E\u002E\u002E");ensureProjectData();if(typeof loadDataFromStorage==="\u0066\u0075\u006E\u0063\u0074\u0069\u006F\u006E"){loadDataFromStorage();}if(typeof initializeData==="\u0066\u0075\u006E\u0063\u0074\u0069\u006F\u006E"){initializeData();}detectDeviceAndSetDisplay();window['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("eziser".split("").reverse().join(""),detectDeviceAndSetDisplay);if(!projectData['\u0068\u006F\u006D\u0065']['\u006F\u0074\u0068\u0065\u0072'])projectData['\u0068\u006F\u006D\u0065']['\u006F\u0074\u0068\u0065\u0072']=[];if(!projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006F\u0074\u0068\u0065\u0072'])projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006F\u0074\u0068\u0065\u0072']=[];setupTabs();bindEventListeners();renderSpaceLibrary();updateAllSummaries();const _0x15286c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074");var _0xg5b71c;const _0xa75g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074\u0032");_0xg5b71c=(384782^384781)+(695092^695093);if(_0x15286c)_0x15286c['\u0076\u0061\u006C\u0075\u0065']=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||'';if(_0xa75g)_0xa75g['\u0076\u0061\u006C\u0075\u0065']=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||'';renderProjectList("\u0068\u006F\u006D\u0065","esab".split("").reverse().join(""));renderProjectList("emoh".split("").reverse().join(""),"\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079");renderProjectList("\u0068\u006F\u006D\u0065","\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065");renderProjectList("emoh".split("").reverse().join(""),"\u006F\u0074\u0068\u0065\u0072");setTimeout(()=>{initializeAllSpaceFilters();},818044^817744);setTimeout(()=>{initTableEditing();console['\u006C\u006F\u0067']("\u8868\u683C\u7F16\u8F91\u529F\u80FD\u5DF2\u542F\u7528");},136355^136535);setTimeout(()=>{initializeCollapseStates();},103597^103625);console['\u006C\u006F\u0067']("\u6210\u5B8C\u5316\u59CB\u521D\u9762\u9875".split("").reverse().join(""));setTimeout(()=>{const _0x523ff=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ntBseirogetaCllAelggot".split("").reverse().join(""));var _0x43d;const _0x7b467f=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0067\u0067\u006C\u0065\u0041\u006C\u006C\u0053\u0070\u0061\u0063\u0065\u0073\u0042\u0074\u006E");_0x43d=(481664^481672)+(152737^152744);if(_0x523ff){_0x523ff['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0062\u0074\u006E\u002D\u0074\u0065\u0078\u0074")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=allCategoriesCollapsed?"\u5168\u90E8\u6298\u53E0":"\u5F00\u5C55\u90E8\u5168".split("").reverse().join("");_0x523ff['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0069")['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']=allCategoriesCollapsed?"\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0061\u006E\u0067\u006C\u0065\u002D\u0064\u006F\u0075\u0062\u006C\u0065\u002D\u0075\u0070":"nwod-elbuod-elgna-af saf".split("").reverse().join("");}if(_0x7b467f){_0x7b467f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0062\u0074\u006E\u002D\u0074\u0065\u0078\u0074")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=allSpacesCollapsed?"\u7A7A\u95F4\u6253\u5F00":"\u7A7A\u95F4\u6298\u53E0";_0x7b467f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0069")['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']=allSpacesCollapsed?"\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0065\u0078\u0070\u0061\u006E\u0064":"puorg-reyal-af saf".split("").reverse().join("");}},513442^513478);}function loadDataFromStorage(){const _0xc21b=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0064\u0065\u0063\u006F\u0072\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0044\u0061\u0074\u0061");if(_0xc21b){try{const _0xg99afd=JSON['\u0070\u0061\u0072\u0073\u0065'](_0xc21b);projectData={...projectData,..._0xg99afd,"home":{...projectData['\u0068\u006F\u006D\u0065'],...(_0xg99afd['\u0068\u006F\u006D\u0065']||{})},'\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C':{...projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'],...(_0xg99afd['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']||{})},'\u0073\u0070\u0061\u0063\u0065\u0073':{...projectData['\u0073\u0070\u0061\u0063\u0065\u0073'],...(_0xg99afd['\u0073\u0070\u0061\u0063\u0065\u0073']||{})}};}catch(e){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u6570\u636E\u5931\u8D25\u003A",e);}}}function saveDataToStorage(){try{localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("ataDtcejorProced".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](projectData));}catch(e){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u636E\u6570\u5B58\u4FDD".split("").reverse().join(""),e);}}function generateProjectId(){return Date['\u006E\u006F\u0077']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067'](402161^402133)+Math['\u0072\u0061\u006E\u0064\u006F\u006D']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067'](990244^990208)['\u0073\u0075\u0062\u0073\u0074\u0072'](956200^956202);}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",function(){console['\u006C\u006F\u0067']("\u9875\u9762\u52A0\u8F7D\u5B8C\u6210\uFF0C\u68C0\u67E5\u767B\u5F55\u72B6\u6001");const _0xacg=sessionStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0069\u0073\u004C\u006F\u0067\u0067\u0065\u0064\u0049\u006E");console['\u006C\u006F\u0067']("\u767B\u5F55\u72B6\u6001\u003A",_0xacg);if(_0xacg==="eurt".split("").reverse().join("")){console['\u006C\u006F\u0067']("\u5DF2\u767B\u5F55\uFF0C\u663E\u793A\u4E3B\u5E94\u7528");showMainApp();}else{console['\u006C\u006F\u0067']("\u9762\u754C\u5F55\u767B\u793A\u663E\uFF0C\u5F55\u767B\u672A".split("").reverse().join(""));document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("reniatnoc-nigol".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";var _0xd84da=(454141^454133)+(757074^757077);const _0xaf3c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("nottub-nigol".split("").reverse().join(""));_0xd84da='\u0070\u0066\u0066\u006E\u0069\u0068';if(_0xaf3c){_0xaf3c['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",handleLogin);}var _0x68ac3b;const _0xa_0x66a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064");_0x68ac3b=(785834^785827)+(281621^281629);if(_0xa_0x66a){_0xa_0x66a['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("sserpyek".split("").reverse().join(""),function(e){if(e['\u006B\u0065\u0079']==="\u0045\u006E\u0074\u0065\u0072"){handleLogin();}});}const _0xgg6ac=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065");if(_0xgg6ac){_0xgg6ac['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("sserpyek".split("").reverse().join(""),function(e){if(e['\u006B\u0065\u0079']==="\u0045\u006E\u0074\u0065\u0072"){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064")['\u0066\u006F\u0063\u0075\u0073']();}});}}});async function loadCloudUsers(_0x8fg){_0x8fg="\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0067\u0069\u0073\u0074\u002E\u0067\u0069\u0074\u0068\u0075\u0062\u0075\u0073\u0065\u0072\u0063\u006F\u006E\u0074\u0065\u006E\u0074\u002E\u0063\u006F\u006D\u002F\u0065\u0062\u0061\u0069\u007A\u0073\u002F\u0032\u0037\u0036\u0039\u0061\u0039\u0065\u0032\u0038\u0039\u0039\u0035\u0066\u0032\u0033\u0063\u0066\u0039\u0062\u0065\u0036\u0030\u0064\u0064\u0038\u0066\u0032\u0038\u0039\u0031\u0063\u0061\u002F\u0072\u0061\u0077\u002F\u006D\u0079\u002D\u007A\u0068\u0061\u006E\u0067\u0068\u0061\u006F\u002E\u006A\u0073";try{var _0xef_0x162=(691693^691690)+(540028^540021);const _0x398ddg=await fetch(_0x8fg);_0xef_0x162=842912^842917;var _0x421g=(377685^377686)+(350197^350193);const _0x4_0xbcb=await _0x398ddg['\u0074\u0065\u0078\u0074']();_0x421g=(138968^138961)+(866122^866115);var _0x09e9f;const _0x704a=parseUsersFromJS(_0x4_0xbcb);_0x09e9f=766598^766592;return _0x704a||[];}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u53F7\u8D26\u7AEF\u4E91\u8F7D\u52A0".split("").reverse().join(""),error);throw error;}}async function handleLogin(){console['\u006C\u006F\u0067']("...\u5F55\u767B\u7406\u5904".split("").reverse().join(""));var _0xd1749b;const _0x27aa=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0xd1749b=(487936^487939)+(752290^752298);const _0x788c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("drowssap".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];var _0x8f81ge;const _0xbb1g5e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u002D\u0062\u0075\u0074\u0074\u006F\u006E");_0x8f81ge=(219797^219799)+(427676^427669);var _0x787ee;const _0x1cd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u002D\u006C\u006F\u0061\u0064\u0069\u006E\u0067");_0x787ee=(499891^499899)+(841475^841478);var _0xdc032f;const _0x804a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("rorre-nigol".split("").reverse().join(""));_0xdc032f=638254^638252;if(!_0x27aa||!_0x788c){_0x804a['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u8BF7\u8F93\u5165\u7528\u6237\u540D\u548C\u5BC6\u7801";_0x804a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u006F\u006C\u006F\u0072']="\u0023\u0066\u0035\u0039\u0065\u0030\u0062";return;}if(_0xbb1g5e)_0xbb1g5e['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";if(_0x1cd)_0x1cd['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";if(_0x804a){_0x804a['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']='';_0x804a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u006F\u006C\u006F\u0072']='';}try{let _0xgd5a9b=[];try{_0xgd5a9b=await loadCloudUsers();console['\u006C\u006F\u0067'](":\u529F\u6210\u6237\u7528\u8F7D\u52A0\u7AEF\u4E91\u4ECE".split("").reverse().join(""),_0xgd5a9b['\u006C\u0065\u006E\u0067\u0074\u0068']);}catch(cloudError){console['\u0077\u0061\u0072\u006E']("\u4E91\u7AEF\u7528\u6237\u52A0\u8F7D\u5931\u8D25\uFF0C\u4F7F\u7528\u672C\u5730\u7528\u6237\u003A",cloudError);_0xgd5a9b=[];}const _0x324deg=[{'\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065':"\u0031\u0032\u0033",'\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064':'123','\u006E\u0061\u006D\u0065':"\u777F\u5CA9\u7F51\u7EDC",'\u0069\u0073\u0041\u0064\u006D\u0069\u006E':!![]},{"username":'qiyu','\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064':"\u0038\u0034\u0031\u0038",'\u006E\u0061\u006D\u0065':'系统管理员',"isAdmin":!![]}];var _0xd_0xcea=(159822^159819)+(356395^356396);const _0x7a9d=[..._0xgd5a9b,..._0x324deg];_0xd_0xcea="hmhmkm".split("").reverse().join("");const _0x838c=_0x7a9d['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===_0x27aa&&u['\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064']===_0x788c);if(_0x838c){console['\u006C\u006F\u0067'](":\u529F\u6210\u5F55\u767B".split("").reverse().join(""),_0x838c['\u006E\u0061\u006D\u0065']);sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0069\u0073\u004C\u006F\u0067\u0067\u0065\u0064\u0049\u006E","eurt".split("").reverse().join(""));sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u004E\u0061\u006D\u0065",_0x838c['\u006E\u0061\u006D\u0065']);sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u0052\u006F\u006C\u0065",_0x838c['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']?"\u0061\u0064\u006D\u0069\u006E":"\u0075\u0073\u0065\u0072");if(_0x804a){_0x804a['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u767B\u5F55\u6210\u529F\uFF0C\u6B63\u5728\u8DF3\u8F6C\u002E\u002E\u002E";_0x804a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u006F\u006C\u006F\u0072']="\u0023\u0031\u0030\u0062\u0039\u0038\u0031";}setTimeout(()=>{showMainApp();},444554^445354);}else{console['\u006C\u006F\u0067']("\u767B\u5F55\u5931\u8D25\uFF1A\u7528\u6237\u540D\u6216\u5BC6\u7801\u9519\u8BEF");if(_0x804a){_0x804a['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u8BEF\u9519\u7801\u5BC6\u6216\u540D\u6237\u7528".split("").reverse().join("");_0x804a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u006F\u006C\u006F\u0072']="\u0023\u0065\u0066\u0034\u0034\u0034\u0034";}if(_0xbb1g5e)_0xbb1g5e['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";if(_0x1cd)_0x1cd['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u767B\u5F55\u5931\u8D25\u003A",error);if(_0x804a){_0x804a['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u767B\u5F55\u5931\u8D25\uFF0C\u8BF7\u91CD\u8BD5";_0x804a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u006F\u006C\u006F\u0072']="\u0023\u0065\u0066\u0034\u0034\u0034\u0034";}if(_0xbb1g5e)_0xbb1g5e['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";if(_0x1cd)_0x1cd['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}}async function loadCloudUsers(_0xa5b1cg){var _0x7dd=(420775^420770)+(336980^336979);_0xa5b1cg="sj.oahgnahz-ym/war/ac1982f8dd06eb9fc32f59982e9a9672/sziabe/moc.tnetnocresubuhtig.tsig//:sptth".split("").reverse().join("");_0x7dd=137052^137048;try{const _0xd5969e=await fetch(_0xa5b1cg);const _0x4eed8e=await _0xd5969e['\u0074\u0065\u0078\u0074']();const _0x78a=parseUsersFromJS(_0x4eed8e);if(_0x78a&&_0x78a['\u006C\u0065\u006E\u0067\u0074\u0068']>(572809^572809)){console['\u006C\u006F\u0067'](":\u6237\u7528\u8F7D\u52A0\u7AEF\u4E91\u4ECE\u529F\u6210".split("").reverse().join(""),_0x78a);return _0x78a;}console['\u006C\u006F\u0067']("\u6237\u7528\u8BA4\u9ED8\u5730\u672C\u7528\u4F7F\uFF0C\u636E\u6570\u6237\u7528\u65E0\u7AEF\u4E91".split("").reverse().join(""));return getDefaultUsers();}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u4E91\u7AEF\u8D26\u53F7\u5931\u8D25\u003A",error);return getDefaultUsers();}}function parseUsersFromJS(jsContent){try{let _0xddcb=null;var _0x6ec=(929367^929374)+(324498^324497);const _0x729eec=[new RegExp('\u0063\u006F\u006E\u0073\u0074\u005C\u0073\u002B\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u005C\u0073\u002A\u003B',""),new RegExp(";*s\\)]\\?*]S\\s\\[[\\(*s\\=*s\\sresUnItliub+s\\rav".split("").reverse().join(""),""),new RegExp(";*s\\)]\\?*]S\\s\\[[\\(*s\\=*s\\sresUnItliub+s\\tel".split("").reverse().join(""),""),new RegExp('\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u005C\u0073\u002A\u003B',"")];_0x6ec=(759891^759895)+(621344^621346);for(const _0x43f of _0x729eec){const _0xb2_0xfc7=jsContent['\u006D\u0061\u0074\u0063\u0068'](_0x43f);if(_0xb2_0xfc7){console['\u006C\u006F\u0067']("\u627E\u5230\u7528\u6237\u6570\u7EC4\u5339\u914D\u003A",_0xb2_0xfc7[955730^955730]['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](153253^153253,926547^926519));try{let _0x8cge=_0xb2_0xfc7[131260^131261]['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u0028\u005C\u0077\u002B\u0029\u003A','\u0067'),"\u0022\u0024\u0031\u0022\u003A")['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u002C\u005C\u0073\u002A\u005C\u005D','\u0067'),"\u005D")['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("}\\*s\\,".split("").reverse().join(""),'\u0067'),"\u007D");_0xddcb=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x8cge);break;}catch(parseError){console['\u0077\u0061\u0072\u006E']("\u004A\u0053\u004F\u004E\u89E3\u6790\u5931\u8D25\u003A",parseError);}}}if(!_0xddcb){try{const _0x9e_0x769={};const _0xaba41e=new Function(jsContent+";sresUnItliub nruter ;".split("").reverse().join(""));_0xddcb=_0xaba41e['\u0063\u0061\u006C\u006C'](_0x9e_0x769);}catch(evalError){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u884C\u6267tpircSavaJ".split("").reverse().join(""),evalError);}}return Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](_0xddcb)?_0xddcb:[];}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u89E3\u6790\u7528\u6237\u6570\u636E\u5931\u8D25\u003A",error);return[];}}function getDefaultUsers(){return[{"username":"\u0071\u0069\u0079\u0075","\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064":"\u0038\u0034\u0031\u0038","\u006E\u0061\u006D\u0065":"\u7CFB\u7EDF\u7BA1\u7406\u5458","\u0069\u0073\u004C\u006F\u0063\u0061\u006C":!![],"\u0069\u0073\u0041\u0064\u006D\u0069\u006E":!![]},{"\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065":"123","\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064":"\u0031\u0032\u0033","\u006E\u0061\u006D\u0065":"睿岩网络","\u0069\u0073\u004C\u006F\u0063\u0061\u006C":!![],"isAdmin":!![]},{"\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065":"\u0031","\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064":"\u0031\u0032\u0033\u0034","\u006E\u0061\u006D\u0065":"测试","\u0069\u0073\u004C\u006F\u0063\u0061\u006C":!![],"\u0069\u0073\u0041\u0064\u006D\u0069\u006E":false}];}function parseUsersFromJS(jsContent){try{const _0xea5b9b=[new RegExp('\u0063\u006F\u006E\u0073\u0074\u005C\u0073\u002B\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u003B',""),new RegExp('\u0076\u0061\u0072\u005C\u0073\u002B\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u003B',""),new RegExp('\u006C\u0065\u0074\u005C\u0073\u002B\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u003B',""),new RegExp('\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u005B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u005D\u0029\u003B',"")];let _0xb2a3dd=null;for(const _0xffe77c of _0xea5b9b){const _0x9025f=jsContent['\u006D\u0061\u0074\u0063\u0068'](_0xffe77c);if(_0x9025f){try{_0xb2a3dd=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x9025f[524531^524530]['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u0028\u005C\u0077\u002B\u0029\u003A','\u0067'),"\u0022\u0024\u0031\u0022\u003A"));break;}catch(parseError){console['\u0077\u0061\u0072\u006E'](":\u5F0F\u65B9lave\u8BD5\u5C1D\uFF0C\u8D25\u5931\u914D\u5339\u5219\u6B63\u7528\u4F7F".split("").reverse().join(""),parseError);continue;}}}if(!_0xb2a3dd){try{const _0x8ffb6e=jsContent+"\u003B\u0020\u0072\u0065\u0074\u0075\u0072\u006E\u0020\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073\u0020\u007C\u007C\u0020\u005B\u005D\u003B";const _0x3fa47e=new Function(_0x8ffb6e);_0xb2a3dd=_0x3fa47e();}catch(evalError){console['\u0065\u0072\u0072\u006F\u0072'](":\u4E86\u8D25\u5931\u4E5F\u5F0F\u65B9lave".split("").reverse().join(""),evalError);}}return _0xb2a3dd||[];}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u89E3\u6790\u7528\u6237\u6570\u636E\u5931\u8D25\u003A",error);return[];}}function getDefaultUsers(){return[{"username":"qiyu","password":"\u0038\u0034\u0031\u0038","\u006E\u0061\u006D\u0065":"\u7CFB\u7EDF\u7BA1\u7406\u5458","isLocal":!![],"\u0069\u0073\u0041\u0064\u006D\u0069\u006E":!![]}];}function handleLoginSuccess(user){sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("nIdeggoLsi".split("").reverse().join(""),"\u0074\u0072\u0075\u0065");sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u004E\u0061\u006D\u0065",user['\u006E\u0061\u006D\u0065']);sessionStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u0052\u006F\u006C\u0065",user['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']?"nimda".split("").reverse().join(""):"\u0075\u0073\u0065\u0072");showLoginError("\u767B\u5F55\u6210\u529F\uFF0C\u6B63\u5728\u5237\u65B0\u9875\u9762\u002E\u002E\u002E","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");setTimeout(()=>{const _0x9f0c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u0069\u006E\u002D\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072");if(_0x9f0c){var _0x57c8d;const _0xafg9fe=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x57c8d=778731^778735;_0xafg9fe['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="ofni tcapmoc noitacifiton".split("").reverse().join("");_0xafg9fe['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-                <i class="fas fa-sync-alt fa-spin"></i>
-                <div style="flex: 1;">正在刷新页面...</div>
-            `;_0x9f0c['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xafg9fe);}},154576^154148);setTimeout(()=>{location['\u0072\u0065\u006C\u006F\u0061\u0064']();},437947^437587);}function showMainApp(){console['\u006C\u006F\u0067']("\u663E\u793A\u4E3B\u5E94\u7528");var _0xbfb5ea=(692994^692992)+(174269^174266);const _0x0dgc8c=sessionStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u004E\u0061\u006D\u0065")||"\u6237\u7528".split("").reverse().join("");_0xbfb5ea=(635012^635013)+(371650^371653);var _0xc_0xd87=(212930^212939)+(547872^547881);const _0x72884e=sessionStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0075\u0073\u0065\u0072\u0052\u006F\u006C\u0065")||"\u0075\u0073\u0065\u0072";_0xc_0xd87=738319^738310;const _0x6ce=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u002D\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072");if(_0x6ce){_0x6ce['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0070\u0061\u0063\u0069\u0074\u0079']="\u0030";_0x6ce['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}var _0x8eafa;const _0x2cae4a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u0069\u006E\u002D\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072");_0x8eafa=(243457^243462)+(144561^144565);if(_0x2cae4a){_0x2cae4a['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");_0x2cae4a['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0070\u0061\u0063\u0069\u0074\u0079']="\u0031";}var _0x27b1fc;const _0xbced=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0068\u0065\u0061\u0064\u0065\u0072\u0020\u0068\u0031");_0x27b1fc="oidfpb".split("").reverse().join("");if(_0xbced){_0xbced['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`<i class="fas fa-home"></i> 装饰项目清单报价系统 <small style="font-size: 12px; color: #cbd5e1; margin-left: 10px;">用户: ${_0x0dgc8c}</small>`;}setTimeout(()=>{if(typeof initPage==="\u0066\u0075\u006E\u0063\u0074\u0069\u006F\u006E"){console['\u006C\u006F\u0067']("\u9762\u9875\u5316\u59CB\u521D\u59CB\u5F00".split("").reverse().join(""));initPage();showNotification("\u6B22\u8FCE\u56DE\u6765\uFF01","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}else{console['\u0065\u0072\u0072\u006F\u0072']("\u0069\u006E\u0069\u0074\u0050\u0061\u0067\u0065\u0020\u51FD\u6570\u672A\u5B9A\u4E49");}},242830^242922);}function logout(){if(confirm("\u786E\u5B9A\u8981\u9000\u51FA\u767B\u5F55\u5417\uFF1F")){sessionStorage['\u0063\u006C\u0065\u0061\u0072']();location['\u0072\u0065\u006C\u006F\u0061\u0064']();}}function initializeCollapseStates(){Object['\u006B\u0065\u0079\u0073'](collapseStates)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](type=>{Object['\u006B\u0065\u0079\u0073'](collapseStates[type])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{const _0xegcgdg=`${type}-${category}-content`;var _0x3f8abe;const _0x7a2bgd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0xegcgdg);_0x3f8abe=541188^541185;const _0x93b1d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`collapse-${type}-${category}`);if(_0x7a2bgd&&_0x93b1d){if(collapseStates[type][category]){_0x7a2bgd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0x93b1d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("thgir-norvehc-af".split("").reverse().join(""));_0x93b1d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("nwod-norvehc-af".split("").reverse().join(""));}else{_0x7a2bgd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0x93b1d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0072\u0069\u0067\u0068\u0074");_0x93b1d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0064\u006F\u0077\u006E");}}});});}function toggleCategoryCollapse(type,category){var _0x9471bb;const _0xb3_0x23e=`${type}-${category}-content`;_0x9471bb=(115727^115718)+(641898^641899);var _0x644b3b=(890856^890858)+(837549^837547);const _0x9g033g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0xb3_0x23e);_0x644b3b=951038^951034;const _0x030gcd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`collapse-${type}-${category}`);if(!_0x9g033g||!_0x030gcd)return;collapseStates[type][category]=!collapseStates[type][category];if(collapseStates[type][category]){_0x9g033g['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0x030gcd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("nwod-norvehc-af".split("").reverse().join(""));_0x030gcd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("thgir-norvehc-af".split("").reverse().join(""));}else{_0x9g033g['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0x030gcd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("thgir-norvehc-af".split("").reverse().join(""));_0x030gcd['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0064\u006F\u0077\u006E");}saveDataToStorage();}function toggleAllCategories(){var _0x9070c;const _0x622a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0067\u0067\u006C\u0065\u0041\u006C\u006C\u0043\u0061\u0074\u0065\u0067\u006F\u0072\u0069\u0065\u0073\u0042\u0074\u006E");_0x9070c="inmdcg".split("").reverse().join("");const icon=_0x622a['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0069");var _0x544a;const _0x85fc4d=_0x622a['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("txet-ntb.".split("").reverse().join(""));_0x544a=(983750^983746)+(830352^830361);allCategoriesCollapsed=!allCategoriesCollapsed;Object['\u006B\u0065\u0079\u0073'](collapseStates)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](type=>{Object['\u006B\u0065\u0079\u0073'](collapseStates[type])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{collapseStates[type][category]=allCategoriesCollapsed;var _0xb3b7f=(234482^234485)+(896092^896091);const _0xa2_0xcb2=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-content`);_0xb3b7f=(486758^486754)+(688908^688910);const icon=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`collapse-${type}-${category}`);if(_0xa2_0xcb2&&icon){if(allCategoriesCollapsed){_0xa2_0xcb2['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("despalloc".split("").reverse().join(""));icon['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0064\u006F\u0077\u006E");icon['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("thgir-norvehc-af".split("").reverse().join(""));}else{_0xa2_0xcb2['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");icon['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0072\u0069\u0067\u0068\u0074");icon['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("nwod-norvehc-af".split("").reverse().join(""));}}});});if(allCategoriesCollapsed){icon['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0061\u006E\u0067\u006C\u0065\u002D\u0064\u006F\u0075\u0062\u006C\u0065\u002D\u0075\u0070";_0x85fc4d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u53E0\u6298\u90E8\u5168".split("").reverse().join("");showNotification("\u6240\u6709\u7C7B\u522B\u5DF2\u6298\u53E0","ofni".split("").reverse().join(""));}else{icon['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="nwod-elbuod-elgna-af saf".split("").reverse().join("");_0x85fc4d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u5168\u90E8\u5C55\u5F00";showNotification("\u6240\u6709\u7C7B\u522B\u5DF2\u5C55\u5F00","\u0069\u006E\u0066\u006F");}saveDataToStorage();}function toggleAllSpaces(_0x48f){const _0x94d6g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ntBsecapSllAelggot".split("").reverse().join(""));var _0xb8942d;const _0x72eb=_0x94d6g['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0069");_0xb8942d=(500616^500608)+(868818^868817);const _0xfdd92b=_0x94d6g['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("txet-ntb.".split("").reverse().join(""));allSpacesCollapsed=!allSpacesCollapsed;var _0x993e9e=(682202^682204)+(110891^110892);const _0x6b48c=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0067\u0072\u006F\u0075\u0070");_0x993e9e=(162639^162635)+(725133^725131);var _0xag_0x6e5;_0x48f=836619^836619;_0xag_0x6e5="cpimge".split("").reverse().join("");_0x6b48c['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](group=>{var _0xa9762d;const _0x70d4c=group['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0063\u006F\u006E\u0074\u0065\u006E\u0074");_0xa9762d=(594996^595005)+(422619^422616);var _0x7479ad=(407913^407917)+(755296^755296);const _0xe22cc=group['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u002D\u0069\u0063\u006F\u006E");_0x7479ad=(840629^840636)+(452741^452736);if(_0x70d4c&&_0xe22cc){if(allSpacesCollapsed){if(!_0x70d4c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064")){_0x70d4c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("despalloc".split("").reverse().join(""));_0xe22cc['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("nwod-norvehc-af".split("").reverse().join(""));_0xe22cc['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("thgir-norvehc-af".split("").reverse().join(""));_0x48f++;}}else{if(_0x70d4c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064")){_0x70d4c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0xe22cc['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("thgir-norvehc-af".split("").reverse().join(""));_0xe22cc['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("nwod-norvehc-af".split("").reverse().join(""));_0x48f++;}}}});if(allSpacesCollapsed){_0x72eb['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="dnapxe-af saf".split("").reverse().join("");_0xfdd92b['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u5F00\u6253\u95F4\u7A7A".split("").reverse().join("");showNotification(`${_0x48f} 个空间组已折叠`,"\u0069\u006E\u0066\u006F");}else{_0x72eb['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u006C\u0061\u0079\u0065\u0072\u002D\u0067\u0072\u006F\u0075\u0070";_0xfdd92b['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u53E0\u6298\u95F4\u7A7A".split("").reverse().join("");showNotification(`${_0x48f} 个空间组已展开`,"\u0069\u006E\u0066\u006F");}}function detectDeviceAndSetDisplay(){const _0x03e9f=window['\u0069\u006E\u006E\u0065\u0072\u0057\u0069\u0064\u0074\u0068'];var _0x765f4e;const _0x2g6db=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0074\u0061\u0062\u0073\u002D\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072");_0x765f4e="bfdnnn".split("").reverse().join("");const _0x4da15b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("rab-mottob-elibom.".split("").reverse().join(""));const _0x2af5fd=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u006D\u006F\u0062\u0069\u006C\u0065\u002D\u0062\u006F\u0074\u0074\u006F\u006D\u002D\u0062\u0074\u006E");const _0x997ag=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u0061\u0062\u003A\u006E\u006F\u0074\u0028\u002E\u0074\u0061\u0062\u002D\u0065\u0078\u0070\u006F\u0072\u0074\u002D\u0062\u0074\u006E\u0029");if(_0x4da15b){_0x4da15b['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=_0x03e9f<=(237122^236733)?"\u0066\u006C\u0065\u0078":"enon".split("").reverse().join("");}if(_0x2g6db){_0x2g6db['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=_0x03e9f>(131198^131713)?"\u0062\u006C\u006F\u0063\u006B":"\u006E\u006F\u006E\u0065";}if(_0x03e9f<=(570425^571078)&&_0x2af5fd['\u006C\u0065\u006E\u0067\u0074\u0068']>(762843^762843)){_0x2af5fd['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((tab,index)=>{tab['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("evitca".split("").reverse().join(""));if(index===(690557^690557)){tab['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("evitca".split("").reverse().join(""));}});}if(_0x03e9f>(450507^449844)&&_0x997ag['\u006C\u0065\u006E\u0067\u0074\u0068']>(408825^408825)){_0x997ag['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((tab,index)=>{tab['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("evitca".split("").reverse().join(""));if(index===(257332^257332)){tab['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");}});}}function updateProjectNameFromInput(inputElement){const _0xbac6dc=inputElement['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']=_0xbac6dc;saveDataToStorage();const _0x1bgc=inputElement['\u0069\u0064']==="\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074"?"\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074\u0032":"\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074";var _0x_0x744=(418006^418006)+(797030^797039);const _0xgf17f=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0x1bgc);_0x_0x744='\u0061\u0064\u006B\u0062\u006F\u006A';if(_0xgf17f&&_0xgf17f['\u0076\u0061\u006C\u0075\u0065']!==_0xbac6dc){_0xgf17f['\u0076\u0061\u006C\u0075\u0065']=_0xbac6dc;}showNotification(`项目名称已更新: ${_0xbac6dc}`,"ofni".split("").reverse().join(""));}function setupTabs(){detectDeviceAndSetDisplay();const _0x7646c=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u0061\u0062\u003A\u006E\u006F\u0074\u0028\u002E\u0074\u0061\u0062\u002D\u0065\u0078\u0070\u006F\u0072\u0074\u002D\u0062\u0074\u006E\u0029");const _0x4ag64e=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u0061\u0062\u002D\u0063\u006F\u006E\u0074\u0065\u006E\u0074");var _0x999g=(998599^998595)+(881045^881044);const _0xd6bbdc=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u006D\u006F\u0062\u0069\u006C\u0065\u002D\u0062\u006F\u0074\u0074\u006F\u006D\u002D\u0062\u0074\u006E");_0x999g=(495942^495951)+(562216^562219);if(_0x7646c['\u006C\u0065\u006E\u0067\u0074\u0068']>(565862^565862)&&_0x4ag64e['\u006C\u0065\u006E\u0067\u0074\u0068']>(903987^903987)){_0x7646c['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](t=>t['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("evitca".split("").reverse().join("")));_0x4ag64e['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](c=>c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0061\u0063\u0074\u0069\u0076\u0065"));_0xd6bbdc['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](b=>b['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0061\u0063\u0074\u0069\u0076\u0065"));_0x7646c[307868^307868]['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("evitca".split("").reverse().join(""));_0xd6bbdc[823312^823312]['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");var _0x27a=(862991^862990)+(973695^973691);const _0xfdf=_0x7646c[327100^327100]['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062");_0x27a=(598989^598988)+(497554^497559);var _0x6fb=(691377^691381)+(239962^239963);const _0x2b2d3c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${_0xfdf}-tab`);_0x6fb=(421715^421722)+(940052^940055);if(_0x2b2d3c){_0x2b2d3c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");currentType=_0xfdf;}}_0x7646c['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](tab=>{tab['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",function(){var _0x5f1d;const _0x46b41d=this['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("bat-atad".split("").reverse().join(""));_0x5f1d=451672^451676;switchToTab(_0x46b41d);});});var _0x2bb11d;let _0xdaa09d=false;_0x2bb11d=856356^856353;function _0xf2324a(){if(_0xdaa09d){return;}_0xdaa09d=!![];var _0x3e73g;const _0xb7de9d=Object['\u0076\u0061\u006C\u0075\u0065\u0073'](projectData['\u0068\u006F\u006D\u0065'])['\u0073\u006F\u006D\u0065'](arr=>arr['\u006C\u0065\u006E\u0067\u0074\u0068']>(940491^940491));_0x3e73g='\u0066\u0068\u0070\u0071\u0061\u0062';var _0x0e35ed=(226195^226195)+(216646^216646);const _0xfe55c=Object['\u0076\u0061\u006C\u0075\u0065\u0073'](projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'])['\u0073\u006F\u006D\u0065'](arr=>arr['\u006C\u0065\u006E\u0067\u0074\u0068']>(801859^801859));_0x0e35ed=930503^930498;if(!_0xb7de9d&&!_0xfe55c){showNotification("\u76EE\u9879\u52A0\u6DFB\u5148\u8BF7\uFF0C\u636E\u6570\u7684\u51FA\u5BFC\u53EF\u6709\u6CA1".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");_0xdaa09d=false;return;}const _0xbd_0x1c7=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0062\u006F\u006F\u006B\u005F\u006E\u0065\u0077']();var _0xg84c2d=(866770^866778)+(562278^562273);const _0xe_0x9ge=prepareSheetData();_0xg84c2d=191999^191994;const _0x4a_0xe01=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0061\u006F\u0061\u005F\u0074\u006F\u005F\u0073\u0068\u0065\u0065\u0074'](_0xe_0x9ge);applySheetStyles(_0x4a_0xe01,_0xe_0x9ge);XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0062\u006F\u006F\u006B\u005F\u0061\u0070\u0070\u0065\u006E\u0064\u005F\u0073\u0068\u0065\u0065\u0074'](_0xbd_0x1c7,_0x4a_0xe01,"\u88C5\u9970\u9879\u76EE\u62A5\u4EF7\u5355");const _0x7e6eb=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||"\u76EE\u9879\u540D\u547D\u672A".split("").reverse().join("");var _0x47g4fd=(669731^669728)+(622560^622563);const _0xc1b41d=`${_0x7e6eb}_装饰项目报价单_${new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u006C\u0069\u0063\u0065'](343533^343533,177318^177324)}.xlsx`;_0x47g4fd="gcbikl".split("").reverse().join("");XLSX['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065'](_0xbd_0x1c7,_0xc1b41d);showNotification("\u0045\u0078\u0063\u0065\u006C\u8868\u683C\u5BFC\u51FA\u6210\u529F\uFF01","sseccus".split("").reverse().join(""));setTimeout(()=>{_0xdaa09d=false;},238794^239394);}}function switchToTab(tabName){var _0xbc464a=(473838^473838)+(993730^993731);const _0x9_0x0f6=window['\u0069\u006E\u006E\u0065\u0072\u0057\u0069\u0064\u0074\u0068'];_0xbc464a=(682771^682769)+(361242^361244);document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u0061\u0062\u003A\u006E\u006F\u0074\u0028\u002E\u0074\u0061\u0062\u002D\u0065\u0078\u0070\u006F\u0072\u0074\u002D\u0062\u0074\u006E\u0029")['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](t=>t['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0061\u0063\u0074\u0069\u0076\u0065"));document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u0061\u0062\u002D\u0063\u006F\u006E\u0074\u0065\u006E\u0074")['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](c=>c['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("evitca".split("").reverse().join("")));document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u006D\u006F\u0062\u0069\u006C\u0065\u002D\u0062\u006F\u0074\u0074\u006F\u006D\u002D\u0062\u0074\u006E")['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](b=>b['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0061\u0063\u0074\u0069\u0076\u0065"));if(_0x9_0x0f6<=(464955^465604)){const _0x22g39a=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("ntb-mottob-elibom.".split("").reverse().join(""));_0x22g39a['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((btn,index)=>{if(index===(tabName==="\u0068\u006F\u006D\u0065"?372957^372957:tabName==="laicremmoc".split("").reverse().join("")?171203^171202:463481^463483)){btn['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");}});}else{const _0x8e8d=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](`.tab[data-tab="${tabName}"]`);if(_0x8e8d){_0x8e8d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");}}const _0xe2ed=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${tabName}-tab`);if(_0xe2ed){_0xe2ed['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");if(tabName==="ecaps".split("").reverse().join("")){renderSpaceLibrary();}if(tabName==="\u0068\u006F\u006D\u0065"||tabName==="laicremmoc".split("").reverse().join("")){currentType=tabName;}}}function openAddMultiModal(type,category){currentType=type;currentCategory=category;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u0073\u002D\u006C\u0069\u0073\u0074")['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0065\u006D\u0070\u0074\u0079\u002D\u0073\u0074\u0061\u0074\u0065\u0022\u003E\u672A\u9009\u62E9\u4EFB\u4F55\u9879\u76EE\u003C\u002F\u0064\u0069\u0076\u003E";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u0053\u0070\u0061\u0063\u0065\u0041\u0072\u0065\u0061")['\u0076\u0061\u006C\u0075\u0065']='';loadMultiSpaceOptions();openMultiSelectProjectLibrary();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMitluMdda".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";}function closeMultiModal(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u004D\u0075\u006C\u0074\u0069\u004D\u006F\u0064\u0061\u006C")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");}function loadMultiSpaceOptions(){var _0x549d6c=(720026^720031)+(868945^868951);const _0xdfc=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("aerAecapSitlum".split("").reverse().join(""));_0x549d6c=(328685^328681)+(843526^843526);if(!_0xdfc)return;_0xdfc['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u006F\u0070\u0074\u0069\u006F\u006E\u0020\u0076\u0061\u006C\u0075\u0065\u003D\u0022\u0022\u003E\u8BF7\u9009\u62E9\u7A7A\u95F4\u003C\u002F\u006F\u0070\u0074\u0069\u006F\u006E\u003E";const _0x9gf3ff=projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][currentType]||[];_0x9gf3ff['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{const _0x10_0x682=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0x10_0x682['\u0076\u0061\u006C\u0075\u0065']=space;_0x10_0x682['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=space;_0xdfc['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x10_0x682);});}function addManualProject(){var _0x7579aa=(567538^567539)+(341244^341245);const _0x6a1egd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("emaNtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0x7579aa=(111567^111558)+(495518^495513);var _0xb6b=(878712^878716)+(212561^212567);const _0x8a15e=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ecirPtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||545926^545926;_0xb6b=580840^580846;var _0x7b9fd=(974596^974593)+(339210^339202);const _0x11_0xf8b=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tinUtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0x7b9fd='\u0070\u006D\u006C\u006A\u006D\u006D';const _0x43cd=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ytitnauQtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||693222^693223;const _0x7cecb=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0044\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();var _0x685f=(724459^724458)+(730790^730790);const _0x36396a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u0053\u0070\u0061\u0063\u0065\u0041\u0072\u0065\u0061")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0x685f=(260727^260727)+(639859^639867);var _0xc14b6c=(259469^259460)+(268988^268986);const _0x0f_0x3af=_0x36396a||'';_0xc14b6c=(797149^797150)+(789076^789076);if(!_0x6a1egd||!_0x11_0xf8b||_0x8a15e<=(219269^219269)){showNotification("\u8BF7\u586B\u5199\u9879\u76EE\u540D\u79F0\u3001\u5355\u4F4D\u548C\u5355\u4EF7","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}if(!_0x0f_0x3af){showNotification("\u8BF7\u9009\u62E9\u7A7A\u95F4\u533A\u57DF","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}if(isProjectDuplicate(currentType,currentCategory,_0x0f_0x3af,_0x6a1egd)){showNotification(`"${_0x0f_0x3af}"中已存在项目"${_0x6a1egd}"，请勿重复添加`,"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}const _0xf93a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsil-stcejorp-detceles".split("").reverse().join(""));const _0xabd1fa={'\u0069\u0064':generateProjectId(),"name":_0x6a1egd,"space":_0x0f_0x3af,'\u0075\u006E\u0069\u0074':_0x11_0xf8b,"quantity":_0x43cd,'\u0070\u0072\u0069\u0063\u0065':_0x8a15e,'\u0074\u006F\u0074\u0061\u006C':_0x8a15e*_0x43cd,'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':_0x7cecb};addProjectToSelectedList(_0xabd1fa);document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("emaNtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0050\u0072\u0069\u0063\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("noitpircseDtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';showNotification("\u8868\u5217\u5230\u52A0\u6DFB\u5DF2\u76EE\u9879".split("").reverse().join(""),"sseccus".split("").reverse().join(""));}function addProjectToSelectedList(project){const _0xeb4be=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u0073\u002D\u006C\u0069\u0073\u0074");if(_0xeb4be['\u0066\u0069\u0072\u0073\u0074\u0043\u0068\u0069\u006C\u0064']&&_0xeb4be['\u0066\u0069\u0072\u0073\u0074\u0043\u0068\u0069\u006C\u0064']['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("etats-ytpme".split("").reverse().join(""))){_0xeb4be['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';}const _0x2f2=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x2f2['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0069\u0074\u0065\u006D";_0x2f2['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+let allCategoriesCollapsed = false;  // false=已全部展开, true=已全部折叠
+let allSpacesCollapsed = false;      // false=已全部展开, true=已全部折叠
+let currentType = 'home';
+let currentCategory = 'base';
+let collapseStates = {
+    home: {
+        base: false,      // false=展开，true=折叠
+        auxiliary: false,
+        furniture: false,
+        other: false
+    },
+    commercial: {
+        base: false,
+        auxiliary: false,
+        furniture: false,
+        other: false
+    }
+};
+
+
+
+function ensureProjectData() {
+    // 确保基本结构存在即可
+    if (!projectData.spaces) {
+        projectData.spaces = { home: [], commercial: [] };
+    }
+    if (!projectData.library) {
+        projectData.library = [];
+    }
+}
+
+function initPage() {
+    console.log('页面初始化开始...');
+    
+    // 确保数据存在
+    ensureProjectData();
+    
+    // 先加载本地数据
+    if (typeof loadDataFromStorage === 'function') {
+        loadDataFromStorage();
+    }
+    
+    // 只需要确保数据已经初始化
+    if (typeof initializeData === 'function') {
+        initializeData();
+    }
+    
+    // 检测设备类型并设置初始显示
+    detectDeviceAndSetDisplay();
+    
+    // 监听窗口大小变化，调整显示
+    window.addEventListener('resize', detectDeviceAndSetDisplay);
+    
+    // 确保数据正确初始化
+    if (!projectData.home.other) projectData.home.other = [];
+    if (!projectData.commercial.other) projectData.commercial.other = [];
+    
+    setupTabs();
+    bindEventListeners();
+    renderSpaceLibrary();
+    updateAllSummaries();
+    
+    // 初始化项目名称输入框
+    const projectNameInput1 = document.getElementById('projectNameInput');
+    const projectNameInput2 = document.getElementById('projectNameInput2');
+    if (projectNameInput1) projectNameInput1.value = projectData.projectName || '';
+    if (projectNameInput2) projectNameInput2.value = projectData.projectName || '';
+    
+    // 渲染初始项目列表
+    renderProjectList('home', 'base');
+    renderProjectList('home', 'auxiliary');
+    renderProjectList('home', 'furniture');
+    renderProjectList('home', 'other');
+    
+    // 延迟初始化空间筛选器
+    setTimeout(() => {
+        initializeAllSpaceFilters();
+    }, 300);
+    
+    // 初始化表格编辑功能
+    setTimeout(() => {
+        initTableEditing();
+        console.log('表格编辑功能已启用');
+    }, 500);
+    
+    // 添加：初始化折叠状态
+    setTimeout(() => {
+        initializeCollapseStates();
+        
+        // 初始化按钮状态
+        const toggleAllBtn = document.getElementById('toggleAllCategoriesBtn');
+        const toggleSpaceBtn = document.getElementById('toggleAllSpacesBtn');
+        
+        if (toggleAllBtn) {
+            const icon = toggleAllBtn.querySelector('i');
+            const text = toggleAllBtn.querySelector('.btn-text');
+            if (icon && text) {
+                icon.className = allCategoriesCollapsed ? 'fas fa-angle-double-down' : 'fas fa-angle-double-up';
+                text.textContent = allCategoriesCollapsed ? '全部展开' : '全部折叠';
+            }
+        }
+        
+        if (toggleSpaceBtn) {
+            const icon = toggleSpaceBtn.querySelector('i');
+            const text = toggleSpaceBtn.querySelector('.btn-text');
+            if (icon && text) {
+                icon.className = allSpacesCollapsed ? 'fas fa-layer-group' : 'fas fa-expand';
+                text.textContent = allSpacesCollapsed ? '空间打开' : '空间折叠';
+            }
+        }
+    }, 100);
+    
+    console.log('页面初始化完成');
+    
+    // === 关键修复：确保键盘事件绑定在页面完全加载后 ===
+    setTimeout(() => {
+        console.log('绑定键盘快捷键监听器...');
+        setupKeyboardShortcuts();
+    }, 500);
+}
+
+// 新的独立键盘快捷键设置函数
+function setupKeyboardShortcuts() {
+    // 移除可能存在的旧监听器
+    document.removeEventListener('keydown', handleKeyboardShortcuts);
+    window.removeEventListener('keydown', handleKeyboardShortcuts);
+    
+    // 添加新的监听器到window对象
+    window.addEventListener('keydown', handleKeyboardShortcuts, true); // 使用捕获阶段
+    
+    console.log('键盘快捷键监听器已设置');
+}
+// 从本地存储加载数据
+function loadDataFromStorage() {
+    const saved = localStorage.getItem('decorProjectData');
+    if (saved) {
+        try {
+            const parsed = JSON.parse(saved);
+            // 合并保存的数据，确保所有必要的字段都存在
+            projectData = {
+                ...projectData,
+                ...parsed,
+                home: { ...projectData.home, ...(parsed.home || {}) },
+                commercial: { ...projectData.commercial, ...(parsed.commercial || {}) },
+                spaces: { ...projectData.spaces, ...(parsed.spaces || {}) }
+            };
+        } catch (e) {
+            console.error('加载数据失败:', e);
+        }
+    }
+}
+
+// 保存数据到本地存储
+function saveDataToStorage() {
+    try {
+        localStorage.setItem('decorProjectData', JSON.stringify(projectData));
+    } catch (e) {
+        console.error('保存数据失败:', e);
+    }
+}
+
+// 生成项目ID
+function generateProjectId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+
+
+
+
+// 登录功能脚本
+// 登录功能脚本
+document.addEventListener('DOMContentLoaded', function() {
+    // 添加调试信息
+    console.log('页面加载完成，检查登录状态');
+    
+    // 检查是否已登录
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    console.log('登录状态:', isLoggedIn);
+    
+    if (isLoggedIn === 'true') {
+        console.log('已登录，显示主应用');
+        showMainApp();
+    } else {
+        console.log('未登录，显示登录界面');
+        // 显示登录界面
+        document.getElementById('login-container').style.display = 'flex';
+        
+        // 绑定登录按钮事件
+        const loginButton = document.getElementById('login-button');
+        if (loginButton) {
+            loginButton.addEventListener('click', handleLogin);
+        }
+        
+        // 绑定回车键登录
+        const passwordInput = document.getElementById('password');
+        if (passwordInput) {
+            passwordInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleLogin();
+                }
+            });
+        }
+        
+        // 绑定用户名输入框的回车键
+        const usernameInput = document.getElementById('username');
+        if (usernameInput) {
+            usernameInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('password').focus();
+                }
+            });
+        }
+    }
+});
+// 修改后的登录处理函数
+async function handleLogin() {
+    console.log('处理登录...');
+    
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+    const loginButton = document.getElementById('login-button');
+    const loginLoading = document.getElementById('login-loading');
+    const loginError = document.getElementById('login-error');
+    
+    // 验证输入
+    if (!username || !password) {
+        loginError.textContent = '请输入用户名和密码';
+        loginError.style.color = '#f59e0b';
+        return;
+    }
+    
+    // 显示加载中
+    if (loginButton) loginButton.style.display = 'none';
+    if (loginLoading) loginLoading.style.display = 'block';
+    if (loginError) {
+        loginError.textContent = '';
+        loginError.style.color = '';
+    }
+    
+    try {
+        let cloudUsers = [];
+        try {
+            // 尝试从云端加载用户数据
+            cloudUsers = await loadCloudUsers();
+            console.log('从云端加载用户成功');
+        } catch (cloudError) {
+            console.warn('云端用户加载失败，使用本地用户:', cloudError);
+            cloudUsers = [];
+        }
+        
+        // 本地默认用户作为后备
+        const localUsers = [
+            
+            { username: 'qiyu', password: '8418', name: '系统管理员', isAdmin: true },
+            
+        ];
+        
+        // 合并用户列表（云端用户优先）
+        const validUsers = [...cloudUsers, ...localUsers];
+        
+        // 查找匹配的用户
+        const user = validUsers.find(u => u.username === username && u.password === password);
+        
+        if (user) {
+            console.log('登录成功:', user.name);
+            
+            // 设置登录状态
+            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('userName', user.name);
+            sessionStorage.setItem('userRole', user.isAdmin ? 'admin' : 'user');
+            
+            // 显示成功消息
+            if (loginError) {
+                loginError.textContent = '登录成功，正在跳转...';
+                loginError.style.color = '#10b981';
+            }
+            
+            // 延迟后显示主应用
+            setTimeout(() => {
+                showMainApp();
+            }, 800);
+        } else {
+            console.log('登录失败：用户名或密码错误');
+            if (loginError) {
+                loginError.textContent = '用户名或密码错误';
+                loginError.style.color = '#ef4444';
+            }
+            if (loginButton) loginButton.style.display = 'block';
+            if (loginLoading) loginLoading.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('登录失败:', error);
+        if (loginError) {
+            loginError.textContent = '登录失败，请重试';
+            loginError.style.color = '#ef4444';
+        }
+        if (loginButton) loginButton.style.display = 'block';
+        if (loginLoading) loginLoading.style.display = 'none';
+    }
+}
+
+// 优化 loadCloudUsers 函数，确保能正确提取用户数据
+async function loadCloudUsers() {
+    const cloudUrl = 'https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/my-zhanghao.js';
+    
+    try {
+        // 获取云端文件内容
+        const response = await fetch(cloudUrl);
+        const jsContent = await response.text();
+        
+        // 解析JS文件内容，提取 builtInUsers 数组
+        const users = parseUsersFromJS(jsContent);
+        
+        // 如果从云端成功获取用户，则返回
+        if (users && users.length > 0) {
+            console.log('成功从云端加载用户');
+            return users;
+        }
+        
+        // 如果云端没有用户数据，返回本地默认用户
+        console.log('云端无用户数据，使用本地默认用户');
+        return getDefaultUsers();
+        
+    } catch (error) {
+        console.error('加载云端账号失败:', error);
+        // 失败时返回本地默认用户
+        return getDefaultUsers();
+    }
+}
+
+
+
+
+
+// 从JS文件内容中解析用户数据
+function parseUsersFromJS(jsContent) {
+    try {
+        // 尝试通过多种方式提取 builtInUsers 数据
+        const patterns = [
+            // 匹配 const builtInUsers = [...]
+            /const\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 var builtInUsers = [...]
+            /var\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 let builtInUsers = [...]
+            /let\s+builtInUsers\s*=\s*(\[[\s\S]*?\]);/,
+            // 匹配 builtInUsers = [...]
+            /builtInUsers\s*=\s*(\[[\s\S]*?\]);/
+        ];
+        
+        let usersArray = null;
+        
+        for (const pattern of patterns) {
+            const match = jsContent.match(pattern);
+            if (match) {
+                try {
+                    // 安全地解析JSON数组
+                    usersArray = JSON.parse(match[1].replace(/(\w+):/g, '"$1":'));
+                    break;
+                } catch (parseError) {
+                    console.warn('使用正则匹配失败，尝试eval方式:', parseError);
+                    continue;
+                }
+            }
+        }
+        
+        // 如果正则失败，尝试使用eval提取（仅在可信源情况下）
+        if (!usersArray) {
+            try {
+                // 创建一个安全的执行环境
+                const jsWithReturn = jsContent + '; return builtInUsers || [];';
+                const getUsers = new Function(jsWithReturn);
+                usersArray = getUsers();
+            } catch (evalError) {
+                console.error('eval方式也失败了:', evalError);
+            }
+        }
+        
+        return usersArray || [];
+    } catch (error) {
+        console.error('解析用户数据失败:', error);
+        return [];
+    }
+}
+
+// 保留本地默认用户作为备用
+function getDefaultUsers() {
+    return [
+        {
+            "username": "qiyu",
+            "password": "8418",
+            "name": "系统管理员",
+            "isLocal": true,
+            "isAdmin": true
+        }
+    ];
+}
+
+// 修改显示主应用函数，添加更快的初始化
+function showMainApp() {
+    console.log('显示主应用');
+    
+    // 获取用户信息
+    const userName = sessionStorage.getItem('userName') || '用户';
+    const userRole = sessionStorage.getItem('userRole') || 'user';
+    
+    // 确保登录界面完全隐藏
+    const loginContainer = document.getElementById('login-container');
+    if (loginContainer) {
+        loginContainer.style.opacity = '0';
+        loginContainer.style.display = 'none';
+    }
+    
+    // 确保主应用显示
+    const mainContainer = document.getElementById('main-container');
+    if (mainContainer) {
+        mainContainer.style.display = 'block';
+        mainContainer.style.opacity = '1';
+    }
+    
+    // 在标题中显示用户信息
+    const header = document.querySelector('header h1');
+    if (header) {
+        header.innerHTML = `<i class="fas fa-home"></i> 装饰项目清单报价系统 <small style="font-size: 12px; color: #cbd5e1; margin-left: 10px;">用户: ${userName}</small>`;
+    }
+    
+    // 延迟初始化页面
+    setTimeout(() => {
+        if (typeof initPage === 'function') {
+            console.log('开始初始化页面');
+            initPage();
+            showNotification('欢迎回来！', 'success');
+        } else {
+            console.error('initPage 函数未定义');
+        }
+        
+        // 添加：确保键盘事件监听器已绑定
+        setTimeout(() => {
+            console.log('绑定键盘事件监听器');
+            // 重新绑定事件监听器
+            if (typeof bindEventListeners === 'function') {
+                // 移除可能存在的重复监听器
+                document.removeEventListener('keydown', handleKeyDown);
+                // 重新绑定
+                bindEventListeners();
+            }
+        }, 200);
+    }, 100);
+}
+
+// 退出登录功能
+function logout() {
+    if (confirm('确定要退出登录吗？')) {
+        sessionStorage.clear();
+        location.reload();
+    }
+}
+// 初始化折叠状态
+function initializeCollapseStates() {
+    Object.keys(collapseStates).forEach(type => {
+        Object.keys(collapseStates[type]).forEach(category => {
+            const contentId = `${type}-${category}-content`;
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById(`collapse-${type}-${category}`);
+            
+            if (content && icon) {
+                if (collapseStates[type][category]) {
+                    content.classList.add('collapsed');
+                    
+                    icon.classList.remove('fa-chevron-down');
+                } else {
+                    content.classList.remove('collapsed');
+                   
+                    icon.classList.add('fa-chevron-down');
+                }
+            }
+        });
+    });
+}
+
+// 切换类别折叠状态
+function toggleCategoryCollapse(type, category) {
+    const contentId = `${type}-${category}-content`;
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(`collapse-${type}-${category}`);
+    
+    if (!content || !icon) return;
+    
+    // 切换状态
+    collapseStates[type][category] = !collapseStates[type][category];
+    
+    // 更新显示
+    if (collapseStates[type][category]) {
+        content.classList.add('collapsed');
+        icon.classList.remove('fa-chevron-down');
+       
+    } else {
+        content.classList.remove('collapsed');
+        
+        icon.classList.add('fa-chevron-down');
+    }
+    
+    saveDataToStorage();
+}
+// 修正 toggleAllCategories 函数
+function toggleAllCategories() {
+    console.log('toggleAllCategories 被调用, 当前状态:', allCategoriesCollapsed);
+    
+    const btn = document.getElementById('toggleAllCategoriesBtn');
+    if (!btn) {
+        console.error('找不到按钮: toggleAllCategoriesBtn');
+        return;
+    }
+    
+    const icon = btn.querySelector('i');
+    const text = btn.querySelector('.btn-text');
+    
+    // 切换状态
+    allCategoriesCollapsed = !allCategoriesCollapsed;
+    console.log('切换后状态:', allCategoriesCollapsed);
+    
+    // 更新所有分类的折叠状态
+    Object.keys(collapseStates).forEach(type => {
+        Object.keys(collapseStates[type]).forEach(category => {
+            collapseStates[type][category] = allCategoriesCollapsed;
+            const contentId = `${type}-${category}-content`;
+            const content = document.getElementById(contentId);
+            const collapseIcon = document.getElementById(`collapse-${type}-${category}`);
+            
+            console.log(`处理: ${contentId}, 内容元素:`, content, '图标元素:', collapseIcon);
+            
+            if (content && collapseIcon) {
+                if (allCategoriesCollapsed) {
+                    // 折叠状态
+                    content.classList.add('collapsed');
+                    content.style.display = 'none';
+                    collapseIcon.className = 'fas fa-chevron-right';
+                } else {
+                    // 展开状态
+                    content.classList.remove('collapsed');
+                    content.style.display = 'block';
+                    collapseIcon.className = 'fas fa-chevron-down';
+                }
+            }
+        });
+    });
+    
+    // 更新按钮文本和图标
+    if (btn && icon && text) {
+        if (allCategoriesCollapsed) {
+            icon.className = 'fas fa-angle-double-down';
+            text.textContent = '全部展开';
+            showNotification('所有类别已折叠', 'success');
+        } else {
+            icon.className = 'fas fa-angle-double-up';
+            text.textContent = '全部折叠';
+            showNotification('所有类别已展开', 'success');
+        }
+    }
+    
+    saveDataToStorage();
+}
+function toggleAllSpaces() {
+    console.log('toggleAllSpaces 被调用, 当前状态:', allSpacesCollapsed);
+    
+    const btn = document.getElementById('toggleAllSpacesBtn');
+    if (!btn) {
+        console.error('找不到按钮: toggleAllSpacesBtn');
+        return;
+    }
+    
+    const icon = btn.querySelector('i');
+    const text = btn.querySelector('.btn-text');
+    
+    // 切换状态
+    allSpacesCollapsed = !allSpacesCollapsed;
+    console.log('切换后状态:', allSpacesCollapsed);
+    
+    // 获取当前活跃的标签页
+    const activeTab = document.querySelector('.tab-content.active');
+    if (!activeTab) return;
+    
+    let changedCount = 0;
+    
+    // 在活跃标签页内查找空间组
+    const spaceGroups = activeTab.querySelectorAll('.space-group');
+    console.log('找到空间组数量:', spaceGroups.length);
+    
+    spaceGroups.forEach(group => {
+        const spaceContent = group.querySelector('.space-content');
+        const collapseIcon = group.querySelector('.space-collapse-icon');
+        
+        if (spaceContent && collapseIcon) {
+            if (allSpacesCollapsed) {
+                // 折叠所有空间
+                if (!spaceContent.classList.contains('collapsed')) {
+                    spaceContent.classList.add('collapsed');
+                    spaceContent.style.display = 'none';
+                    collapseIcon.className = 'fas fa-chevron-right';
+                    changedCount++;
+                }
+            } else {
+                // 展开所有空间
+                if (spaceContent.classList.contains('collapsed')) {
+                    spaceContent.classList.remove('collapsed');
+                    spaceContent.style.display = 'block';
+                    collapseIcon.className = 'fas fa-chevron-down';
+                    changedCount++;
+                }
+            }
+        }
+    });
+    
+    // 更新按钮文本和图标
+    if (btn && icon && text) {
+        if (allSpacesCollapsed) {
+            icon.className = 'fas fa-layer-group';
+            text.textContent = '空间打开';
+            showNotification(`${changedCount} 个空间组已折叠`, 'success');
+        } else {
+            icon.className = 'fas fa-expand';
+            text.textContent = '空间折叠';
+            showNotification(`${changedCount} 个空间组已展开`, 'success');
+        }
+    }
+}
+// 检测设备并设置显示
+function detectDeviceAndSetDisplay() {
+    const width = window.innerWidth;
+    const tabsContainer = document.querySelector('.tabs-container');
+    const mobileBottomBar = document.querySelector('.mobile-bottom-bar');
+    const mobileTabs = document.querySelectorAll('.mobile-bottom-btn');
+    const desktopTabs = document.querySelectorAll('.tab:not(.tab-export-btn)');
+    
+    // 确保移动工具栏初始显示正确
+    if (mobileBottomBar) {
+        mobileBottomBar.style.display = width <= 767 ? 'flex' : 'none';
+    }
+    
+    // 确保桌面标签页容器初始显示正确
+    if (tabsContainer) {
+        tabsContainer.style.display = width > 767 ? 'block' : 'none';
+    }
+    
+    // 如果移动工具栏显示，确保第一个按钮为激活状态
+    if (width <= 767 && mobileTabs.length > 0) {
+        mobileTabs.forEach((tab, index) => {
+            tab.classList.remove('active');
+            if (index === 0) {
+                tab.classList.add('active');
+            }
+        });
+    }
+    
+    // 如果桌面标签页显示，确保第一个标签为激活状态
+    if (width > 767 && desktopTabs.length > 0) {
+        desktopTabs.forEach((tab, index) => {
+            tab.classList.remove('active');
+            if (index === 0) {
+                tab.classList.add('active');
+            }
+        });
+    }
+}
+
+// 更新项目名称从输入框
+function updateProjectNameFromInput(inputElement) {
+    const value = inputElement.value.trim();
+    projectData.projectName = value;
+    saveDataToStorage();
+    
+    // 同步另一个输入框
+    const otherInputId = inputElement.id === 'projectNameInput' ? 'projectNameInput2' : 'projectNameInput';
+    const otherInput = document.getElementById(otherInputId);
+    if (otherInput && otherInput.value !== value) {
+        otherInput.value = value;
+    }
+    
+    showNotification(`项目名称已更新: ${value}`, 'info');
+}
+
+// 设置标签切换
+function setupTabs() {
+    // 首先确保移动工具栏和标签页容器的初始显示状态
+    detectDeviceAndSetDisplay();
+    
+    // 移除之前的标签事件监听器（避免重复绑定）
+    const tabs = document.querySelectorAll('.tab:not(.tab-export-btn)');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const mobileBtns = document.querySelectorAll('.mobile-bottom-btn');
+    
+    // 设置第一个标签页为激活状态
+    if (tabs.length > 0 && tabContents.length > 0) {
+        // 移除所有active类
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        mobileBtns.forEach(b => b.classList.remove('active'));
+        
+        // 设置第一个标签页为激活
+        tabs[0].classList.add('active');
+        mobileBtns[0].classList.add('active');
+        const firstTabName = tabs[0].getAttribute('data-tab');
+        const firstTabContent = document.getElementById(`${firstTabName}-tab`);
+        if (firstTabContent) {
+            firstTabContent.classList.add('active');
+            currentType = firstTabName;
+        }
+    }
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tabName = this.getAttribute('data-tab');
+            switchToTab(tabName);
+        });
+    });
+    
+    // 为导出按钮添加单独的事件处理
+  // 修改为：
+let isExporting = false; // 在文件顶部添加这个变量
+
+function exportToExcel() {
+    // 防止重复导出
+    if (isExporting) {
+        return;
+    }
+    
+    isExporting = true;
+    
+    // 检查是否有数据
+    const hasHomeData = Object.values(projectData.home).some(arr => arr.length > 0);
+    const hasCommercialData = Object.values(projectData.commercial).some(arr => arr.length > 0);
+    
+    if (!hasHomeData && !hasCommercialData) {
+        showNotification('没有可导出的数据，请先添加项目', 'warning');
+        isExporting = false;
+        return;
+    }
+    
+    // 只创建一个工作表
+    const wb = XLSX.utils.book_new();
+    const data = prepareSheetData();
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    applySheetStyles(ws, data);
+    XLSX.utils.book_append_sheet(wb, ws, '装饰项目报价单');
+    
+    // 生成文件名
+    const projectName = projectData.projectName || '未命名项目';
+    const fileName = `${projectName}_装饰项目报价单_${new Date().toISOString().slice(0, 10)}.xlsx`;
+    
+    // 导出文件
+    XLSX.writeFile(wb, fileName);
+    
+    showNotification('Excel表格导出成功！', 'success');
+    
+    // 设置定时器，防止短时间内重复点击
+    setTimeout(() => {
+        isExporting = false;
+    }, 1000);
+}
+}
+// 切换标签页
+function switchToTab(tabName) {
+    const width = window.innerWidth;
+    
+    // 移除所有active类
+    document.querySelectorAll('.tab:not(.tab-export-btn)').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.mobile-bottom-btn').forEach(b => b.classList.remove('active'));
+    
+    // 根据设备类型设置对应的标签为激活状态
+    if (width <= 767) {
+        // 移动端：设置移动工具栏按钮为激活状态
+        const mobileBtns = document.querySelectorAll('.mobile-bottom-btn');
+        mobileBtns.forEach((btn, index) => {
+            if (index === (tabName === 'home' ? 0 : tabName === 'commercial' ? 1 : 2)) {
+                btn.classList.add('active');
+            }
+        });
+    } else {
+        // 桌面端：设置桌面标签页为激活状态
+        const desktopTab = document.querySelector(`.tab[data-tab="${tabName}"]`);
+        if (desktopTab) {
+            desktopTab.classList.add('active');
+        }
+    }
+    
+    // 显示对应的内容
+    const targetTab = document.getElementById(`${tabName}-tab`);
+    if (targetTab) {
+        targetTab.classList.add('active');
+        
+        // 根据标签页类型执行相应操作
+        if (tabName === 'space') {
+            renderSpaceLibrary();
+        }
+        
+        // 更新当前类型
+        if (tabName === 'home' || tabName === 'commercial') {
+            currentType = tabName;
+        }
+    }
+}
+
+// 打开多项目添加模态框
+function openAddMultiModal(type, category) {
+    currentType = type;
+    currentCategory = category;
+    
+    document.getElementById('selected-projects-list').innerHTML = '<div class="empty-state">未选择任何项目</div>';
+    document.getElementById('multiSpaceArea').value = '';
+    loadMultiSpaceOptions();
+    openMultiSelectProjectLibrary();
+    document.getElementById('addMultiModal').style.display = 'flex';
+}
+
+// 关闭多项目添加模态框
+function closeMultiModal() {
+    document.getElementById('addMultiModal').style.display = 'none';
+}
+
+// 加载多项目空间选项
+function loadMultiSpaceOptions() {
+    const spaceSelect = document.getElementById('multiSpaceArea');
+    if (!spaceSelect) return;
+    
+    spaceSelect.innerHTML = '<option value="">请选择空间</option>';
+    const spaces = projectData.spaces[currentType] || [];
+    
+    spaces.forEach(space => {
+        const option = document.createElement('option');
+        option.value = space;
+        option.textContent = space;
+        spaceSelect.appendChild(option);
+    });
+}
+
+// 添加手动输入的项目到选择列表
+function addManualProject() {
+    const name = document.getElementById('manualProjectName').value.trim();
+    const price = parseFloat(document.getElementById('manualProjectPrice').value) || 0;
+    const unit = document.getElementById('manualProjectUnit').value.trim();
+    const quantity = parseFloat(document.getElementById('manualProjectQuantity').value) || 1;
+    const description = document.getElementById('manualProjectDescription').value.trim();
+    const selectedSpace = document.getElementById('multiSpaceArea').value.trim();
+    const space = selectedSpace || '';
+    
+    if (!name || !unit || price <= 0) {
+        showNotification('请填写项目名称、单位和单价', 'warning');
+        return;
+    }
+    
+    if (!space) {
+        showNotification('请选择空间区域', 'warning');
+        return;
+    }
+    
+    if (isProjectDuplicate(currentType, currentCategory, space, name)) {
+        showNotification(`"${space}"中已存在项目"${name}"，请勿重复添加`, 'warning');
+        return;
+    }
+    
+    const selectedList = document.getElementById('selected-projects-list');
+    const project = {
+        id: generateProjectId(),
+        name: name,
+        space: space,
+        unit: unit,
+        quantity: quantity,
+        price: price,
+        total: price * quantity,
+        description: description
+    };
+    
+    addProjectToSelectedList(project);
+    document.getElementById('manualProjectName').value = '';
+    document.getElementById('manualProjectPrice').value = '';
+    document.getElementById('manualProjectDescription').value = '';
+    
+    showNotification('项目已添加到列表', 'success');
+}
+
+// 辅助函数：添加项目到已选项目列表
+function addProjectToSelectedList(project) {
+    const selectedList = document.getElementById('selected-projects-list');
+    
+    if (selectedList.firstChild && selectedList.firstChild.classList.contains('empty-state')) {
+        selectedList.innerHTML = '';
+    }
+    
+    const projectDiv = document.createElement('div');
+    projectDiv.className = 'selected-project-item';
+    projectDiv.innerHTML = `
         <div>
-            <strong>${project['\u006E\u0061\u006D\u0065']}</strong>
+            <strong>${project.name}</strong>
             <div style="font-size:0.8rem;color:#666;">
-                ${project['\u0073\u0070\u0061\u0063\u0065']} | ${project['\u0075\u006E\u0069\u0074']} | 数量:${project['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079']} | 单价:¥${project['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](681877^681879)}<br>
-                ${project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']?project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](465794^465794,490673^490671)+(project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u006C\u0065\u006E\u0067\u0074\u0068']>(131645^131619)?"\u002E\u002E\u002E":''):''}
+                ${project.space} | ${project.unit} | 数量:${project.quantity} | 单价:¥${project.price.toFixed(2)}<br>
+                ${project.description ? project.description.substring(0, 30) + (project.description.length > 30 ? '...' : '') : ''}
             </div>
         </div>
         <button class="btn btn-sm btn-outline" onclick="removeSelectedProject(this)" style="padding:2px 8px;">
             <i class="fas fa-times"></i>
         </button>
-    `;_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006E\u0061\u006D\u0065']=project['\u006E\u0061\u006D\u0065'];_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0075\u006E\u0069\u0074']=project['\u0075\u006E\u0069\u0074'];_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079']=project['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079'];_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u0069\u0063\u0065']=project['\u0070\u0072\u0069\u0063\u0065'];_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0073\u0070\u0061\u0063\u0065']=project['\u0073\u0070\u0061\u0063\u0065'];_0x2f2['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']=project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||'';_0xeb4be['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x2f2);}function openMultiSelectProjectLibrary(){const _0x1f_0x4d9=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u006C\u0069\u0062\u0072\u0061\u0072\u0079\u002D\u006C\u0069\u0073\u0074");if(!_0x1f_0x4d9)return;_0x1f_0x4d9['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';let _0xbc9e=quickAddExamples;if(currentCategory){_0xbc9e=_0xbc9e['\u0066\u0069\u006C\u0074\u0065\u0072'](project=>project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']===currentCategory);}if(_0xbc9e['\u006C\u0065\u006E\u0067\u0074\u0068']===(535639^535639)){_0x1f_0x4d9['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">vid/<\u76EE\u9879\u5173\u76F8\u65E0\u6682>\"etats-ytpme\"=ssalc vid<".split("").reverse().join("");}else{_0xbc9e['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((project,index)=>{var _0x23a1ad=(488893^488884)+(574308^574308);const _0xabc=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x23a1ad=(408691^408691)+(453164^453157);_0xabc['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u006C\u0069\u0062\u0072\u0061\u0072\u0079\u002D\u0069\u0074\u0065\u006D\u0020\u006D\u0075\u006C\u0074\u0069\u002D\u0073\u0065\u006C\u0065\u0063\u0074";_0xabc['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+    `;
+    
+    projectDiv.dataset.name = project.name;
+    projectDiv.dataset.unit = project.unit;
+    projectDiv.dataset.quantity = project.quantity;
+    projectDiv.dataset.price = project.price;
+    projectDiv.dataset.space = project.space;
+    projectDiv.dataset.description = project.description || '';
+    
+    selectedList.appendChild(projectDiv);
+}
+
+// 打开多选项目库模态框
+function openMultiSelectProjectLibrary() {
+    const container = document.getElementById('multi-project-library-list');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    // 使用 quickAddExamples 作为项目库
+    let filteredProjects = quickAddExamples;
+    
+    // 按类别筛选
+    if (currentCategory) {
+        filteredProjects = filteredProjects.filter(project => project.category === currentCategory);
+    }
+    
+    // 显示项目
+    if (filteredProjects.length === 0) {
+        container.innerHTML = '<div class="empty-state">暂无相关项目</div>';
+    } else {
+        filteredProjects.forEach((project, index) => {
+            const div = document.createElement('div');
+            div.className = 'project-library-item multi-select';
+            div.innerHTML = `
                 <input type="checkbox" class="project-checkbox" id="multi-project-${index}" 
-                       data-name="${project['\u006E\u0061\u006D\u0065']}" 
-                       data-unit="${project['\u0075\u006E\u0069\u0074']}" 
-                       data-description="${project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||''}"
-                       data-price="${project['\u0070\u0072\u0069\u0063\u0065']||952761^952761}"
-                       data-category="${project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||"\u0062\u0061\u0073\u0065"}">
+                       data-name="${project.name}" 
+                       data-unit="${project.unit}" 
+                       data-description="${project.description || ''}"
+                       data-price="${project.price || 0}"
+                       data-category="${project.category || 'base'}">
                 <label for="multi-project-${index}" class="project-label">
-                    <div class="project-name">${project['\u006E\u0061\u006D\u0065']}</div>
-                    <div class="project-unit">${project['\u0075\u006E\u0069\u0074']}</div>
-                    <div class="project-price">¥${project['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](797013^797015)}</div>
-                    <div class="project-category">${getCategoryName(project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079'])}</div>
+                    <div class="project-name">${project.name}</div>
+                    <div class="project-unit">${project.unit}</div>
+                    <div class="project-price">¥${project.price.toFixed(2)}</div>
+                    <div class="project-category">${getCategoryName(project.category)}</div>
                 </label>
-            `;_0x1f_0x4d9['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xabc);});}document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMyrarbiLtcejorPtceleSitlum".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";}function searchMultiProjects(){const _0x12_0x1bc=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0073\u0065\u0061\u0072\u0063\u0068")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']();const _0x1c3e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u006C\u0069\u0062\u0072\u0061\u0072\u0079\u002D\u006C\u0069\u0073\u0074");if(!_0x1c3e)return;var _0x49faef=(943424^943430)+(369390^369386);let _0xbc75ce=quickAddExamples;_0x49faef="eogbhp".split("").reverse().join("");if(currentCategory){_0xbc75ce=_0xbc75ce['\u0066\u0069\u006C\u0074\u0065\u0072'](project=>project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']===currentCategory);}if(_0x12_0x1bc){_0xbc75ce=_0xbc75ce['\u0066\u0069\u006C\u0074\u0065\u0072'](project=>project['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x12_0x1bc)||project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']&&project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x12_0x1bc));}_0x1c3e['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';if(_0xbc75ce['\u006C\u0065\u006E\u0067\u0074\u0068']===(294686^294686)){_0x1c3e['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">vid/<\u76EE\u9879\u5173\u76F8\u5230\u627E\u672A>\"etats-ytpme\"=ssalc vid<".split("").reverse().join("");}else{_0xbc75ce['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((project,index)=>{var _0x85c=(657765^657760)+(391660^391656);const _0xf6b=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x85c=(153298^153300)+(685969^685968);_0xf6b['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u006C\u0069\u0062\u0072\u0061\u0072\u0079\u002D\u0069\u0074\u0065\u006D\u0020\u006D\u0075\u006C\u0074\u0069\u002D\u0073\u0065\u006C\u0065\u0063\u0074";_0xf6b['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+            `;
+            container.appendChild(div);
+        });
+    }
+    
+    document.getElementById('multiSelectProjectLibraryModal').style.display = 'flex';
+}
+
+// 搜索多选项目
+function searchMultiProjects() {
+    const searchTerm = document.getElementById('multi-project-search').value.toLowerCase();
+    const container = document.getElementById('multi-project-library-list');
+    if (!container) return;
+    
+    // 使用 quickAddExamples 作为项目库
+    let filteredProjects = quickAddExamples;
+    
+    // 按类别筛选
+    if (currentCategory) {
+        filteredProjects = filteredProjects.filter(project => project.category === currentCategory);
+    }
+    
+    // 按搜索词筛选
+    if (searchTerm) {
+        filteredProjects = filteredProjects.filter(project => 
+            project.name.toLowerCase().includes(searchTerm) ||
+            (project.description && project.description.toLowerCase().includes(searchTerm))
+        );
+    }
+    
+    container.innerHTML = '';
+    
+    if (filteredProjects.length === 0) {
+        container.innerHTML = '<div class="empty-state">未找到相关项目</div>';
+    } else {
+        filteredProjects.forEach((project, index) => {
+            const div = document.createElement('div');
+            div.className = 'project-library-item multi-select';
+            div.innerHTML = `
                 <input type="checkbox" class="project-checkbox" id="multi-project-${index}" 
-                       data-name="${project['\u006E\u0061\u006D\u0065']}" 
-                       data-unit="${project['\u0075\u006E\u0069\u0074']}" 
-                       data-description="${project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||''}"
-                       data-price="${project['\u0070\u0072\u0069\u0063\u0065']||675720^675720}"
-                       data-category="${project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||"esab".split("").reverse().join("")}">
+                       data-name="${project.name}" 
+                       data-unit="${project.unit}" 
+                       data-description="${project.description || ''}"
+                       data-price="${project.price || 0}"
+                       data-category="${project.category || 'base'}">
                 <label for="multi-project-${index}" class="project-label">
-                    <div class="project-name">${project['\u006E\u0061\u006D\u0065']}</div>
-                    <div class="project-unit">${project['\u0075\u006E\u0069\u0074']}</div>
-                    <div class="project-price">¥${project['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](771695^771693)}</div>
-                    <div class="project-category">${getCategoryName(project['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079'])}</div>
+                    <div class="project-name">${project.name}</div>
+                    <div class="project-unit">${project.unit}</div>
+                    <div class="project-price">¥${project.price.toFixed(2)}</div>
+                    <div class="project-category">${getCategoryName(project.category)}</div>
                 </label>
-            `;_0x1c3e['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xf6b);});}}function confirmMultiSelection(){const _0x6620db=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u0023\u006D\u0075\u006C\u0074\u0069\u0053\u0065\u006C\u0065\u0063\u0074\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u004C\u0069\u0062\u0072\u0061\u0072\u0079\u004D\u006F\u0064\u0061\u006C\u0020\u002E\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0063\u0068\u0065\u0063\u006B\u0062\u006F\u0078\u003A\u0063\u0068\u0065\u0063\u006B\u0065\u0064");const _0x4afgg=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u0073\u002D\u006C\u0069\u0073\u0074");_0x4afgg['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';if(_0x6620db['\u006C\u0065\u006E\u0067\u0074\u0068']===(390423^390423)){_0x4afgg['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0065\u006D\u0070\u0074\u0079\u002D\u0073\u0074\u0061\u0074\u0065\u0022\u003E\u672A\u9009\u62E9\u4EFB\u4F55\u9879\u76EE\u003C\u002F\u0064\u0069\u0076\u003E";}else{_0x6620db['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](checkbox=>{const _0x2c744e=checkbox['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006E\u0061\u006D\u0065'];const _0xccb5de=checkbox['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0075\u006E\u0069\u0074'];const _0x3dde4c=checkbox['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E'];var _0x4bb3e;const _0x4ec54e=parseFloat(checkbox['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u0069\u0063\u0065'])||733978^733978;_0x4bb3e=(634198^634199)+(344810^344811);const _0x35f33f=checkbox['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||"esab".split("").reverse().join("");var _0x4gf=(410780^410773)+(738025^738031);const _0x77bb=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x4gf=(793488^793494)+(754493^754484);_0x77bb['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0069\u0074\u0065\u006D";_0x77bb['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+            `;
+            container.appendChild(div);
+        });
+    }
+}
+
+// 确认多选选择
+function confirmMultiSelection() {
+    const checkboxes = document.querySelectorAll('#multiSelectProjectLibraryModal .project-checkbox:checked');
+    const selectedList = document.getElementById('selected-projects-list');
+    
+    selectedList.innerHTML = '';
+    
+    if (checkboxes.length === 0) {
+        selectedList.innerHTML = '<div class="empty-state">未选择任何项目</div>';
+    } else {
+        checkboxes.forEach(checkbox => {
+            const name = checkbox.dataset.name;
+            const unit = checkbox.dataset.unit;
+            const description = checkbox.dataset.description;
+            const price = parseFloat(checkbox.dataset.price) || 0;
+            const category = checkbox.dataset.category || 'base';
+            
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'selected-project-item';
+            projectDiv.innerHTML = `
                 <div>
-                    <strong>${_0x2c744e}</strong>
+                    <strong>${name}</strong>
                     <div style="font-size:0.8rem;color:#666;">
-                        ${_0xccb5de} | ¥${_0x4ec54e['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](779351^779349)}<br>
-                        类别: ${getCategoryName(_0x35f33f)}<br>
-                        ${_0x3dde4c?_0x3dde4c['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](764525^764525,416404^416394)+(_0x3dde4c['\u006C\u0065\u006E\u0067\u0074\u0068']>(798320^798318)?"...".split("").reverse().join(""):''):''}
+                        ${unit} | ¥${price.toFixed(2)}<br>
+                        类别: ${getCategoryName(category)}<br>
+                        ${description ? description.substring(0, 30) + (description.length > 30 ? '...' : '') : ''}
                     </div>
                 </div>
                 <button class="btn btn-sm btn-outline" onclick="removeSelectedProject(this)" style="padding:2px 8px;">
                     <i class="fas fa-times"></i>
                 </button>
-            `;_0x77bb['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006E\u0061\u006D\u0065']=_0x2c744e;_0x77bb['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0075\u006E\u0069\u0074']=_0xccb5de;_0x77bb['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']=_0x3dde4c;_0x77bb['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u0069\u0063\u0065']=_0x4ec54e;_0x77bb['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']=_0x35f33f;_0x4afgg['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x77bb);});}closeMultiSelectProjectLibrary();}function closeMultiSelectProjectLibrary(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u0053\u0065\u006C\u0065\u0063\u0074\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u004C\u0069\u0062\u0072\u0061\u0072\u0079\u004D\u006F\u0064\u0061\u006C")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}function removeSelectedProject(button){var _0xd170f=(571390^571389)+(268655^268649);const _0x4e0a=button['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u002E\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0069\u0074\u0065\u006D");_0xd170f=(537506^537509)+(426196^426204);_0x4e0a['\u0072\u0065\u006D\u006F\u0076\u0065']();const _0xc18dd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsil-stcejorp-detceles".split("").reverse().join(""));if(_0xc18dd['\u0063\u0068\u0069\u006C\u0064\u0072\u0065\u006E']['\u006C\u0065\u006E\u0067\u0074\u0068']===(984122^984122)){_0xc18dd['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0064\u0069\u0076\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0065\u006D\u0070\u0074\u0079\u002D\u0073\u0074\u0061\u0074\u0065\u0022\u003E\u672A\u9009\u62E9\u4EFB\u4F55\u9879\u76EE\u003C\u002F\u0064\u0069\u0076\u003E";}}function refreshSpaceFiltersAfterAdd(type,category){renderProjectList(type,category);updateSummary(type);updateSpaceFilterOptions(type,category);}function initTableEditing(){console['\u006C\u006F\u0067']("\u521D\u59CB\u5316\u8868\u683C\u7F16\u8F91\u529F\u80FD\u002E\u002E\u002E");document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0064\u0062\u006C\u0063\u006C\u0069\u0063\u006B",function(e){handleDoubleClick(e);});var _0xefc3f;let _0xb8df=null;_0xefc3f='\u0063\u0070\u0061\u0066\u0065\u006E';document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("tratshcuot".split("").reverse().join(""),function(e){const _0x9be3cf=e['\u0074\u006F\u0075\u0063\u0068\u0065\u0073'][887306^887306];var _0x746e=(289145^289147)+(323565^323566);const _0xcb3fe=document['\u0065\u006C\u0065\u006D\u0065\u006E\u0074\u0046\u0072\u006F\u006D\u0050\u006F\u0069\u006E\u0074'](_0x9be3cf['\u0063\u006C\u0069\u0065\u006E\u0074\u0058'],_0x9be3cf['\u0063\u006C\u0069\u0065\u006E\u0074\u0059']);_0x746e='\u006C\u006A\u0068\u006A\u0063\u006C';const _0x2ccfde=_0xcb3fe['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u005B\u0063\u006C\u0061\u0073\u0073\u002A\u003D\u0022\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0022\u005D");if(_0x2ccfde&&!_0x2ccfde['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("\u0069\u0074\u0065\u006D\u002D\u0068\u0065\u0061\u0064\u0065\u0072")){_0xb8df=setTimeout(()=>{handleDoubleClick({'\u0074\u0061\u0072\u0067\u0065\u0074':_0x2ccfde});},385634^385346);}});document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0074\u006F\u0075\u0063\u0068\u0065\u006E\u0064",function(){clearTimeout(_0xb8df);});console['\u006C\u006F\u0067']("\u6210\u5B8C\u5316\u59CB\u521D\u80FD\u529F\u8F91\u7F16\u683C\u8868".split("").reverse().join(""));}function renderProjectList(type,category){const _0x22aa9a=`${type}-${category}-list`;var _0x2_0x0f5=(174472^174476)+(957483^957481);const _0xb887fg=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0x22aa9a);_0x2_0x0f5=(538984^538989)+(417576^417580);if(!_0xb887fg){console['\u0065\u0072\u0072\u006F\u0072'](`找不到容器: ${_0x22aa9a}`);return;}if(!projectData[type]){projectData[type]={'\u0062\u0061\u0073\u0065':[],"auxiliary":[],'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065':[],'\u006F\u0074\u0068\u0065\u0072':[]};}if(!projectData[type][category]){projectData[type][category]=[];}var _0x91b6c=(581583^581582)+(171569^171577);const _0xbe89g=projectData[type][category]||[];_0x91b6c=165833^165835;_0xb887fg['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';if(_0xbe89g['\u006C\u0065\u006E\u0067\u0074\u0068']===(781464^781464)){const _0x74e1c=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x74e1c['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="etats-ytpme".split("").reverse().join("");_0x74e1c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u6682\u65E0\u9879\u76EE\uFF0C\u8BF7\u6DFB\u52A0";_0xb887fg['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x74e1c);var _0xdf8ffa=(745507^745506)+(785128^785121);const _0xa58f3d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-count`);_0xdf8ffa="kglhqf".split("").reverse().join("");if(_0xa58f3d){_0xa58f3d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u0030\u4E2A\u9879\u76EE";}updateSpaceFilterOptions(type,category);return;}var _0x8cde=(425258^425262)+(635115^635117);const _0xbfc={};_0x8cde=(934951^934951)+(864232^864225);_0xbe89g['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{var _0x39e1f;const _0xae318e=item['\u0073\u0070\u0061\u0063\u0065']||"\u5B9A\u6307\u672A".split("").reverse().join("");_0x39e1f=(264722^264721)+(743527^743526);if(!_0xbfc[_0xae318e]){_0xbfc[_0xae318e]=[];}_0xbfc[_0xae318e]['\u0070\u0075\u0073\u0068'](item);});const _0xe2473e={};Object['\u006B\u0065\u0079\u0073'](_0xbfc)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{var _0x5b754a;const _0xd183f=_0xbfc[space];_0x5b754a=(971113^971114)+(524818^524820);var _0xfge=(867104^867104)+(917319^917315);const _0xb797f=_0xd183f['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+(item['\u0074\u006F\u0074\u0061\u006C']||967355^967355),570004^570004);_0xfge=(131417^131416)+(264453^264452);_0xe2473e[space]=_0xb797f;});Object['\u006B\u0065\u0079\u0073'](_0xbfc)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{var _0x54d=(119459^119458)+(777665^777668);const _0x1705ba=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x54d=(632960^632966)+(281489^281493);_0x1705ba['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="puorg-ecaps".split("").reverse().join("");_0x1705ba['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0073\u0070\u0061\u0063\u0065']=space;var _0x48eca;const _0x34f=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x48eca=(867638^867634)+(365224^365231);_0x34f['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0070\u0061\u0063\u0065\u002D\u0068\u0065\u0061\u0064\u0065\u0072";_0x34f['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div class="space-name" 
-                 onclick="toggleSpaceGroupCollapse(this)"
-                 ondblclick="editSpaceName('${type}', '${category}', '${space}', this)">
-                <i class="fas fa-chevron-down space-collapse-icon"></i>
-                <span class="space-label">${space}</span>
-            </div>
-            <div class="space-total">¥${(_0xe2473e[space]||899671^899671)['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](491710^491708)}</div>
-            <button class="space-delete-btn" 
-                    onclick="deleteSpaceProjects('${type}', '${category}', '${space}')"
-                    title="删除该空间下所有项目">
-                <i class="fas fa-trash-alt"></i>
-                <span>删除空间</span>
-            </button>
-        `;var _0x520b=(595260^595253)+(349412^349411);const _0x1c061d=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x520b=(229249^229248)+(683431^683427);_0x1c061d['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="tnetnoc-ecaps".split("").reverse().join("");var _0x21c4a=(784653^784650)+(665930^665933);const _0x11a5f=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x21c4a='\u006B\u0069\u006C\u006B\u006C\u006D';_0x11a5f['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u0074\u0065\u006D\u002D\u0072\u006F\u0077\u0020\u0069\u0074\u0065\u006D\u002D\u0068\u0065\u0061\u0064\u0065\u0072";_0x11a5f['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+            `;
+            projectDiv.dataset.name = name;
+            projectDiv.dataset.unit = unit;
+            projectDiv.dataset.description = description;
+            projectDiv.dataset.price = price;
+            projectDiv.dataset.category = category;
+            
+            selectedList.appendChild(projectDiv);
+        });
+    }
+    
+    closeMultiSelectProjectLibrary();
+}
+
+// 关闭多选项目库模态框
+function closeMultiSelectProjectLibrary() {
+    document.getElementById('multiSelectProjectLibraryModal').style.display = 'none';
+}
+
+// 移除已选项目
+function removeSelectedProject(button) {
+    const item = button.closest('.selected-project-item');
+    item.remove();
+    
+    const selectedList = document.getElementById('selected-projects-list');
+    if (selectedList.children.length === 0) {
+        selectedList.innerHTML = '<div class="empty-state">未选择任何项目</div>';
+    }
+}
+
+
+
+// 表格编辑功能
+function initTableEditing() {
+    console.log('初始化表格编辑功能...');
+    
+    document.addEventListener('dblclick', function(e) {
+        handleDoubleClick(e);
+    });
+    
+    // 移动端长按支持
+    let longPressTimer = null;
+    document.addEventListener('touchstart', function(e) {
+        const touch = e.touches[0];
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        const cell = target.closest('[class*="item-col-"]');
+        
+        if (cell && !cell.classList.contains('item-header')) {
+            longPressTimer = setTimeout(() => {
+                handleDoubleClick({ target: cell });
+            }, 800);
+        }
+    });
+    
+    document.addEventListener('touchend', function() {
+        clearTimeout(longPressTimer);
+    });
+    
+    console.log('表格编辑功能初始化完成');
+}
+// 1. renderProjectList 函数完整代码
+function renderProjectList(type, category) {
+    const listId = `${type}-${category}-list`;
+    const container = document.getElementById(listId);
+    if (!container) {
+        console.error(`找不到容器: ${listId}`);
+        return;
+    }
+    
+    // 确保数据结构存在
+    if (!projectData[type]) {
+        projectData[type] = {
+            base: [],
+            auxiliary: [],
+            furniture: [],
+            other: []
+        };
+    }
+    
+    if (!projectData[type][category]) {
+        projectData[type][category] = [];
+    }
+    
+    const items = projectData[type][category] || [];
+    
+    // 清空容器
+    container.innerHTML = '';
+    
+    if (items.length === 0) {
+        const emptyDiv = document.createElement('div');
+        emptyDiv.className = 'empty-state';
+        emptyDiv.textContent = '暂无项目，请添加';
+        container.appendChild(emptyDiv);
+        
+        const countElement = document.getElementById(`${type}-${category}-count`);
+        if (countElement) {
+            countElement.textContent = '0个项目';
+        }
+        
+        updateSpaceFilterOptions(type, category);
+        return;
+    }
+    
+    const spaceGroups = {};
+    items.forEach(item => {
+        const space = item.space || '未指定';
+        if (!spaceGroups[space]) {
+            spaceGroups[space] = [];
+        }
+        spaceGroups[space].push(item);
+    });
+    
+    const spaceTotals = {};
+    
+    // 计算每个空间的总价
+    Object.keys(spaceGroups).forEach(space => {
+        const spaceItems = spaceGroups[space];
+        const spaceTotal = spaceItems.reduce((sum, item) => sum + (item.total || 0), 0);
+        spaceTotals[space] = spaceTotal;
+    });
+    
+    Object.keys(spaceGroups).forEach(space => {
+        const spaceGroup = document.createElement('div');
+        spaceGroup.className = 'space-group';
+        spaceGroup.dataset.space = space;
+        
+        // 空间名称行
+        const spaceHeader = document.createElement('div');
+        spaceHeader.className = 'space-header';
+      // 修改后（移除 ondblclick）：
+      spaceHeader.innerHTML = `
+      <div class="space-name" onclick="toggleSpaceGroupCollapse(this)">
+          <i class="fas fa-chevron-down space-collapse-icon"></i>
+          <span class="space-label">${space}</span>
+      </div>
+      <div class="space-total">¥${(spaceTotals[space] || 0).toFixed(2)}</div>
+      <div class="space-buttons">
+          <button class="space-copy-btn" 
+                  onclick="copySpaceProjects('${type}', '${category}', '${space}', this)"
+                  title="复制该空间下所有项目到其他空间">
+              <i class="fas fa-copy"></i>
+              <span>复制</span>
+          </button>
+          <button class="space-move-btn" 
+                  onclick="moveSpaceProjects('${type}', '${category}', '${space}', this)"
+                  title="将该项目转移到其他空间">
+              <i class="fas fa-exchange-alt"></i>
+              <span>转移</span>
+          </button>
+          <button class="space-delete-btn" 
+                  onclick="deleteSpaceProjects('${type}', '${category}', '${space}')"
+                  title="删除该空间下所有项目">
+              <i class="fas fa-trash-alt"></i>
+              <span>删除空间</span>
+          </button>
+      </div>
+  `;
+        // 空间内容区域（包含表格）
+        const spaceContent = document.createElement('div');
+        spaceContent.className = 'space-content';
+        
+        // 表格头部（移动到空间内容区域）
+        const headerRow = document.createElement('div');
+        headerRow.className = 'item-row item-header';
+        headerRow.innerHTML = `
             <div class="item-col-name">项目名称/工艺说明</div>
             <div class="item-col-unit">单位</div>
             <div class="item-col-quantity">数量</div>
             <div class="item-col-price">单价</div>
             <div class="item-col-total">小计</div>
             <div class="item-col-actions">操作</div>
-        `;_0x1c061d['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x11a5f);_0xbfc[space]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{var _0xd2_0x6d1=(573234^573233)+(828507^828507);const _0x16_0xdab=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xd2_0x6d1='\u006B\u0070\u006E\u0068\u006E\u0061';_0x16_0xdab['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u0074\u0065\u006D\u002D\u0072\u006F\u0077";_0x16_0xdab['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u0049\u0064']=item['\u0069\u0064'];_0x16_0xdab['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-                <div class="item-col-name" title="${item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||''}" style="cursor:pointer;">
-                    <div style="font-weight:500;">${item['\u006E\u0061\u006D\u0065']||"\u76EE\u9879\u540D\u547D\u672A".split("").reverse().join("")}</div>
-                    ${item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']?`<div style="font-size:0.8rem;color:#666;margin-top:2px;cursor:pointer;">${item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](823646^823646,217042^217036)}${item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u006C\u0065\u006E\u0067\u0074\u0068']>(895077^895099)?"\u002E\u002E\u002E":''}</div>`:''}
+        `;
+        
+        spaceContent.appendChild(headerRow);
+        
+        // 添加项目行
+        spaceGroups[space].forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'item-row';
+            row.dataset.projectId = item.id;
+            
+            row.innerHTML = `
+                <div class="item-col-name" title="${item.description || ''}" style="cursor:pointer;">
+                    <div style="font-weight:500;">${item.name || '未命名项目'}</div>
+                    ${item.description ? 
+                        `<div style="font-size:0.8rem;color:#666;margin-top:2px;cursor:pointer;">${item.description.substring(0, 30)}${item.description.length > 30 ? '...' : ''}</div>` 
+                        : ''
+                    }
                 </div>
-                <div class="item-col-unit" style="cursor:pointer;">${item['\u0075\u006E\u0069\u0074']||''}</div>
-                <div class="item-col-quantity" style="cursor:pointer;">${item['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079']||822686^822686}</div>
-                <div class="item-col-price" style="cursor:pointer;">¥${(item['\u0070\u0072\u0069\u0063\u0065']||515806^515806)['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](590690^590688)}</div>
-                <div class="item-col-total">¥${(item['\u0074\u006F\u0074\u0061\u006C']||765213^765213)['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](524812^524814)}</div>
+                <div class="item-col-unit" style="cursor:pointer;">${item.unit || ''}</div>
+                <div class="item-col-quantity" style="cursor:pointer;">${item.quantity || 0}</div>
+                <div class="item-col-price" style="cursor:pointer;">¥${(item.price || 0).toFixed(2)}</div>
+                <div class="item-col-total">¥${(item.total || 0).toFixed(2)}</div>
                 <div class="item-col-actions">
-                    <button class="btn btn-sm btn-danger" onclick="deleteProject('${type}', '${category}', '${item['\u0069\u0064']}')">
+                    <button class="btn btn-sm btn-danger" onclick="deleteProject('${type}', '${category}', '${item.id}')">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>
-            `;_0x1c061d['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x16_0xdab);});_0x1705ba['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x34f);_0x1705ba['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x1c061d);_0xb887fg['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x1705ba);});}function quickAddHomeProject(_0x77281c,_0x17_0xa42){if(!kongjianchanpin||!kongjianchanpin['\u0068\u006F\u006D\u0065']||kongjianchanpin['\u0068\u006F\u006D\u0065']['\u006C\u0065\u006E\u0067\u0074\u0068']===(141229^141229)){if(kongjianchanpin['\u0068\u006F\u006D\u0065']['\u006C\u0065\u006E\u0067\u0074\u0068']===(161734^161734)){setDefaultExampleData();}if(kongjianchanpin['\u0068\u006F\u006D\u0065']['\u006C\u0065\u006E\u0067\u0074\u0068']===(936944^936944)){showNotification("\u672A\u627E\u5230\u793A\u4F8B\u6570\u636E\uFF0C\u8BF7\u624B\u52A8\u6DFB\u52A0\u9879\u76EE","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}}_0x77281c=853636^853636;_0x17_0xa42=849212^849212;if(!projectData['\u0068\u006F\u006D\u0065']['\u006F\u0074\u0068\u0065\u0072']){projectData['\u0068\u006F\u006D\u0065']['\u006F\u0074\u0068\u0065\u0072']=[];}kongjianchanpin['\u0068\u006F\u006D\u0065']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](spaceData=>{const _0x43f2=spaceData['\u0073\u0070\u0061\u0063\u0065'];var _0x4412c=(898507^898506)+(605206^605202);const _0x5bbc=spaceData['\u006E\u0061\u006D\u0065']||[];_0x4412c=(885943^885942)+(943702^943698);_0x5bbc['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](projectName=>{var _0x96bbe=(722828^722825)+(647186^647188);const _0x18_0xc27=getProjectInfoByName(projectName);_0x96bbe=(186906^186908)+(599541^599549);if(_0x18_0xc27){const _0x8b25g={"id":generateProjectId(),'\u006E\u0061\u006D\u0065':_0x18_0xc27['\u006E\u0061\u006D\u0065'],'\u0075\u006E\u0069\u0074':_0x18_0xc27['\u0075\u006E\u0069\u0074']||"\u9879",'\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079':1,'\u0070\u0072\u0069\u0063\u0065':_0x18_0xc27['\u0070\u0072\u0069\u0063\u0065']||172245^172245,"total":(_0x18_0xc27['\u0070\u0072\u0069\u0063\u0065']||423271^423271)*(853701^853700),'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':_0x18_0xc27['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||"","space":_0x43f2};let _0x6be=_0x18_0xc27['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||"esab".split("").reverse().join("");if(!projectData['\u0068\u006F\u006D\u0065'][_0x6be]){projectData['\u0068\u006F\u006D\u0065'][_0x6be]=[];}if(!isProjectDuplicate("emoh".split("").reverse().join(""),_0x6be,_0x43f2,_0x18_0xc27['\u006E\u0061\u006D\u0065'])){projectData['\u0068\u006F\u006D\u0065'][_0x6be]['\u0070\u0075\u0073\u0068'](_0x8b25g);_0x77281c++;}else{_0x17_0xa42++;}}});});saveDataToStorage();["\u0062\u0061\u0073\u0065","yrailixua".split("").reverse().join(""),"\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065","rehto".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{renderProjectList("emoh".split("").reverse().join(""),category);});updateSummary("emoh".split("").reverse().join(""));let _0x5322af=`已添加 ${_0x77281c} 个家装示例项目`;if(_0x17_0xa42>(227673^227673)){_0x5322af+=`，跳过 ${_0x17_0xa42} 个重复项目`;}showNotification(_0x5322af,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}function quickAddCommercialProject(_0x91fd,_0x22726c){if(!kongjianchanpin||!kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']||kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006C\u0065\u006E\u0067\u0074\u0068']===(939542^939542)){if(kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006C\u0065\u006E\u0067\u0074\u0068']===(573055^573055)){setDefaultExampleData();}if(kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006C\u0065\u006E\u0067\u0074\u0068']===(380171^380171)){showNotification("\u672A\u627E\u5230\u793A\u4F8B\u6570\u636E\uFF0C\u8BF7\u624B\u52A8\u6DFB\u52A0\u9879\u76EE","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}}var _0x6g9ca=(262085^262087)+(956178^956179);_0x91fd=169301^169301;_0x6g9ca=(535203^535203)+(732124^732117);_0x22726c=685461^685461;if(!projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006F\u0074\u0068\u0065\u0072']){projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006F\u0074\u0068\u0065\u0072']=[];}kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](spaceData=>{const _0xac0eg=spaceData['\u0073\u0070\u0061\u0063\u0065'];var _0xd6305b=(226298^226303)+(793988^793987);const _0xd0dca=spaceData['\u006E\u0061\u006D\u0065']||[];_0xd6305b=(924358^924358)+(434341^434348);_0xd0dca['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](projectName=>{const _0x4190fg=getProjectInfoByName(projectName);if(_0x4190fg){const _0xea9ef={'\u0069\u0064':generateProjectId(),"name":_0x4190fg['\u006E\u0061\u006D\u0065'],'\u0075\u006E\u0069\u0074':_0x4190fg['\u0075\u006E\u0069\u0074']||"\u9879",'\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079':1,'\u0070\u0072\u0069\u0063\u0065':_0x4190fg['\u0070\u0072\u0069\u0063\u0065']||370090^370090,'\u0074\u006F\u0074\u0061\u006C':(_0x4190fg['\u0070\u0072\u0069\u0063\u0065']||776543^776543)*(654690^654691),"description":_0x4190fg['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||"",'\u0073\u0070\u0061\u0063\u0065':_0xac0eg};let _0xb6cbfd=_0x4190fg['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||"\u0062\u0061\u0073\u0065";if(!projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][_0xb6cbfd]){projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][_0xb6cbfd]=[];}if(!isProjectDuplicate("\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C",_0xb6cbfd,_0xac0eg,_0x4190fg['\u006E\u0061\u006D\u0065'])){projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][_0xb6cbfd]['\u0070\u0075\u0073\u0068'](_0xea9ef);_0x91fd++;}else{_0x22726c++;}}});});saveDataToStorage();["\u0062\u0061\u0073\u0065","\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065","\u006F\u0074\u0068\u0065\u0072"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{renderProjectList("\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C",category);});updateSummary("\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C");let _0x6a993a=`已添加 ${_0x91fd} 个公装示例项目`;if(_0x22726c>(445975^445975)){_0x6a993a+=`，跳过 ${_0x22726c} 个重复项目`;}showNotification(_0x6a993a,"sseccus".split("").reverse().join(""));}function addMultiProjects(_0xdf98db,_0xba62e){var _0xf_0x5f7=(121758^121753)+(917944^917936);const _0x814g4c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("aerAecapSitlum".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0xf_0x5f7='\u0070\u006D\u0069\u0068\u0067\u006D';var _0xfd33gd=(217392^217401)+(201449^201449);const _0x9bb6ed=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsil-stcejorp-detceles".split("").reverse().join(""));_0xfd33gd="qccfnd".split("").reverse().join("");var _0xebc;const _0x9db42g=_0x9bb6ed['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("meti-tcejorp-detceles.".split("").reverse().join(""));_0xebc="phnild".split("").reverse().join("");if(_0x9db42g['\u006C\u0065\u006E\u0067\u0074\u0068']===(519000^519000)){showNotification("\u76EE\u9879\u4E2A\u4E00\u62E9\u9009\u5C11\u81F3\u8BF7".split("").reverse().join(""),"gninraw".split("").reverse().join(""));return;}if(!_0x814g4c){showNotification("\u57DF\u533A\u95F4\u7A7A\u62E9\u9009\u8BF7".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}_0xdf98db=518003^518003;_0xba62e=867520^867520;var _0xffbe2f=(450057^450048)+(887008^887009);const _0x24147f=_0x9bb6ed['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("etats-ytpme.".split("").reverse().join(""));_0xffbe2f='\u0062\u0067\u0067\u006A\u006A\u0061';if(_0x24147f&&_0x24147f['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){_0x24147f['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0x24147f);}_0x9db42g['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{var _0xe1c8a;const _0x50647c=item['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006E\u0061\u006D\u0065'];_0xe1c8a=(258112^258115)+(163135^163129);const _0xa1b5e=item['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0075\u006E\u0069\u0074'];var _0xcd_0x714=(860593^860597)+(178645^178653);const _0x21_0x0a6=item['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E'];_0xcd_0x714=(353397^353397)+(137835^137826);const _0xg_0x1e1=parseFloat(item['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u0069\u0063\u0065'])||830471^830471;const _0xe112bb=item['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079']||currentCategory;if(isProjectDuplicate(currentType,_0xe112bb,_0x814g4c,_0x50647c)){_0xba62e++;return;}var _0x130bea=(564649^564654)+(353047^353043);const _0x22_0xb82={'\u0069\u0064':generateProjectId(),"name":_0x50647c,'\u0073\u0070\u0061\u0063\u0065':_0x814g4c,'\u0075\u006E\u0069\u0074':_0xa1b5e,'\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079':1,"price":_0xg_0x1e1,"total":_0xg_0x1e1*(659631^659630),'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':_0x21_0x0a6};_0x130bea=(516950^516944)+(753675^753677);projectData[currentType][_0xe112bb]['\u0070\u0075\u0073\u0068'](_0x22_0xb82);_0xdf98db++;});saveDataToStorage();renderProjectList(currentType,currentCategory);updateSummary(currentType);updateSpaceFilterOptions(currentType,currentCategory);const _0xa335e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${currentType}-${currentCategory}-content`);if(_0xa335e&&_0xa335e['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("despalloc".split("").reverse().join(""))){toggleCategoryCollapse(currentType,currentCategory);}closeMultiModal();let _0xd27c=`成功添加 ${_0xdf98db} 个项目`;if(_0xba62e>(427504^427504)){_0xd27c+=`，跳过 ${_0xba62e} 个重复项目`;}showNotification(_0xd27c,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}function setDefaultExampleData(){if(!kongjianchanpin){kongjianchanpin={"home":[],'\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C':[]};}if(kongjianchanpin['\u0068\u006F\u006D\u0065']['\u006C\u0065\u006E\u0067\u0074\u0068']===(166400^166400)){kongjianchanpin['\u0068\u006F\u006D\u0065']=[{"space":"\u5BA2\u5385",'\u006E\u0061\u006D\u0065':["\u5E73\u9762\u540A\u9876","\u76F4\u7EBF\u540A\u9876","\u6F06\u80F6\u4E73\u9762\u5899".split("").reverse().join("")]},{'\u0073\u0070\u0061\u0063\u0065':"主卧室","name":["\u5E73\u9762\u540A\u9876","\u6F06\u80F6\u4E73\u9762\u5899".split("").reverse().join("")]},{"space":"改造部分","name":["\u7535\u8DEF\u6539\u9020","\u6C34\u8DEF\u6539\u9020"]}];}if(kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u006C\u0065\u006E\u0067\u0074\u0068']===(853596^853596)){kongjianchanpin['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']=[{"space":"\u524D\u53F0","name":["\u63A5\u5F85\u53F0\u57FA\u7840\u5236\u4F5C","\u524D\u53F0\u533A\u5730\u7816"]},{"space":"\u529E\u516C\u533A","name":["\u5899\u9694\u533A\u516C\u529E".split("").reverse().join(""),"\u529E\u516C\u533A\u5730\u7816"]},{'\u0073\u0070\u0061\u0063\u0065':"会议室","name":["\u5899\u666F\u80CC\u5BA4\u8BAE\u4F1A".split("").reverse().join(""),"\u4F1A\u8BAE\u684C"]}];}}function handleDoubleClick(e){var _0xacf=(495688^495688)+(477355^477354);const _0x3479f=e['\u0074\u0061\u0072\u0067\u0065\u0074']||e;_0xacf='\u006B\u0064\u0066\u0067\u006C\u0068';var _0x62454c=(386221^386219)+(420024^420026);const _0xfbf=_0x3479f['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u005B\u0063\u006C\u0061\u0073\u0073\u002A\u003D\u0022\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0022\u005D");_0x62454c=(918742^918736)+(709336^709340);if(!_0xfbf)return;const _0x015d=_0xfbf['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("wor-meti.".split("").reverse().join(""));if(!_0x015d||_0x015d['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("\u0069\u0074\u0065\u006D\u002D\u0068\u0065\u0061\u0064\u0065\u0072"))return;const _0x23_0xc61=_0x015d['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u0049\u0064'];if(!_0x23_0xc61)return;var _0xbd448a=(219971^219979)+(334630^334630);const _0x7889ec=_0x015d['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u002E\u0069\u0074\u0065\u006D\u002D\u006C\u0069\u0073\u0074");_0xbd448a=(261603^261601)+(729920^729929);if(!_0x7889ec)return;const _0x7f_0x375=_0x7889ec['\u0069\u0064'];if(!_0x7f_0x375)return;var _0x2fb;const _0xbe748c=_0x7f_0x375['\u0073\u0070\u006C\u0069\u0074']("\u002D");_0x2fb=435837^435828;if(_0xbe748c['\u006C\u0065\u006E\u0067\u0074\u0068']<(900839^900837))return;const _0x68d33a=_0xbe748c[647737^647737];const _0xe5ac=_0xbe748c[393580^393581];if(!projectData[_0x68d33a]||!projectData[_0x68d33a][_0xe5ac])return;var _0x3_0xc2e;const _0xb3d3e=projectData[_0x68d33a][_0xe5ac];_0x3_0xc2e=418714^418707;var _0x9219c;const _0x24a=_0xb3d3e['\u0066\u0069\u006E\u0064'](p=>p['\u0069\u0064']===_0x23_0xc61);_0x9219c=(653740^653736)+(987265^987270);if(!_0x24a)return;const _0xcb84fd=Array['\u0066\u0072\u006F\u006D'](_0xfbf['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074'])['\u0066\u0069\u006E\u0064'](cls=>cls['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D"));switch(_0xcb84fd){case"\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0070\u0072\u0069\u0063\u0065":editInlineCell(_0xfbf,_0x24a,_0x68d33a,_0xe5ac,"\u0070\u0072\u0069\u0063\u0065","\u006E\u0075\u006D\u0062\u0065\u0072");break;case"ytitnauq-loc-meti".split("").reverse().join(""):editInlineCell(_0xfbf,_0x24a,_0x68d33a,_0xe5ac,"\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079","rebmun".split("").reverse().join(""));break;case"tinu-loc-meti".split("").reverse().join(""):editInlineUnit(_0xfbf,_0x24a,_0x68d33a,_0xe5ac);break;case"\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0073\u0070\u0061\u0063\u0065":editInlineSpace(_0xfbf,_0x24a,_0x68d33a,_0xe5ac);break;case"eman-loc-meti".split("").reverse().join(""):editInlineDescription(_0xfbf,_0x24a,_0x68d33a,_0xe5ac);break;case"latot-loc-meti".split("").reverse().join(""):showNotification("\u8F91\u7F16\u63A5\u76F4\u6CD5\u65E0\uFF0C\u7B97\u8BA1\u52A8\u81EA\u7EDF\u7CFB\u7531\u8BA1\u603B".split("").reverse().join(""),"ofni".split("").reverse().join(""));break;}}function editInlineCell(cell,project,type,category,field,inputType="txet".split("").reverse().join("")){const _0xbe99b=project[field]||502933^502933;const _0x33ef=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0069\u006E\u0070\u0075\u0074");_0x33ef['\u0074\u0079\u0070\u0065']=inputType;_0x33ef['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u006E\u006C\u0069\u006E\u0065\u002D\u0065\u0064\u0069\u0074";_0x33ef['\u0076\u0061\u006C\u0075\u0065']=_0xbe99b;_0x33ef['\u006D\u0069\u006E']="\u0030";_0x33ef['\u0073\u0074\u0065\u0070']=field==="\u0070\u0072\u0069\u0063\u0065"?"\u0030\u002E\u0030\u0031":"\u0031";_0x33ef['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="%001".split("").reverse().join("");_0x33ef['\u0073\u0074\u0079\u006C\u0065']['\u0074\u0065\u0078\u0074\u0041\u006C\u0069\u0067\u006E']="\u0063\u0065\u006E\u0074\u0065\u0072";_0x33ef['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp8".split("").reverse().join("");const _0x1b931b=cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C'];cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';cell['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x33ef);_0x33ef['\u0066\u006F\u0063\u0075\u0073']();_0x33ef['\u0073\u0065\u006C\u0065\u0063\u0074']();const _0x39a2g=()=>{var _0xad_0xce2;const _0xdg317b=inputType==="rebmun".split("").reverse().join("")?parseFloat(_0x33ef['\u0076\u0061\u006C\u0075\u0065'])||247069^247069:_0x33ef['\u0076\u0061\u006C\u0075\u0065'];_0xad_0xce2=(356631^356628)+(548433^548439);if(_0xdg317b!==_0xbe99b){project[field]=_0xdg317b;if(field==="ecirp".split("").reverse().join("")||field==="ytitnauq".split("").reverse().join("")){project['\u0074\u006F\u0074\u0061\u006C']=project['\u0070\u0072\u0069\u0063\u0065']*project['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079'];}saveDataToStorage();updateTableRow(project,type,category);updateSummary(type);showNotification(`${field==="\u0070\u0072\u0069\u0063\u0065"?"\u5355\u4EF7":"\u91CF\u6570".split("").reverse().join("")}已更新`,"sseccus".split("").reverse().join(""));}else{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x1b931b;}};var _0x937e;const _0x810ab=()=>{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x1b931b;};_0x937e=(656643^656646)+(521425^521427);_0x33ef['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("rulb".split("").reverse().join(""),_0x39a2g);_0x33ef['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u006B\u0065\u0079\u0064\u006F\u0077\u006E",e=>{if(e['\u006B\u0065\u0079']==="\u0045\u006E\u0074\u0065\u0072"){_0x39a2g();}else if(e['\u006B\u0065\u0079']==="\u0045\u0073\u0063\u0061\u0070\u0065"){_0x810ab();}});}function editInlineUnit(cell,project,type,category){var _0xa8d7bd=(889104^889105)+(103781^103782);const _0x5cf=project['\u0075\u006E\u0069\u0074']||'';_0xa8d7bd=(631342^631339)+(951757^951756);var _0x58aa5d=(848831^848831)+(471940^471942);const _0x15d=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0073\u0065\u006C\u0065\u0063\u0074");_0x58aa5d=(621688^621680)+(918083^918083);_0x15d['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u006E\u006C\u0069\u006E\u0065\u002D\u0065\u0064\u0069\u0074";_0x15d['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="\u0031\u0030\u0030\u0025";_0x15d['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="\u0034\u0070\u0078";_0x15d['\u0073\u0074\u0079\u006C\u0065']['\u0074\u0065\u0078\u0074\u0041\u006C\u0069\u0067\u006E']="\u0063\u0065\u006E\u0074\u0065\u0072";var _0x5678b;const _0x76fcd=["\u5E73\u7C73","\u7C73","\u9879","\u5957","\u53EA","\u7EC4","\u6A18","\u4E2A","\u5F20","\u53F0","\u526F","\u5E45","\u5EF6\u7C73","\u6839","\u4EF6","\u5757"];_0x5678b=356416^356418;_0x76fcd['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](unit=>{const _0xc5b8ac=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0xc5b8ac['\u0076\u0061\u006C\u0075\u0065']=unit;_0xc5b8ac['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=unit;if(unit===_0x5cf){_0xc5b8ac['\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064']=!![];}_0x15d['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xc5b8ac);});var _0xbbe=(282903^282900)+(570324^570320);const _0x8dce0f=cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C'];_0xbbe=(308664^308665)+(289597^289598);cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';cell['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x15d);_0x15d['\u0066\u006F\u0063\u0075\u0073']();var _0xf4faf=(523088^523089)+(979506^979507);const _0x2019a=()=>{if(_0x15d['\u0076\u0061\u006C\u0075\u0065']!==_0x5cf){project['\u0075\u006E\u0069\u0074']=_0x15d['\u0076\u0061\u006C\u0075\u0065'];saveDataToStorage();updateTableRow(project,type,category);showNotification("\u5355\u4F4D\u5DF2\u66F4\u65B0","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}else{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x8dce0f;}};_0xf4faf=(887717^887716)+(123281^123281);_0x15d['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("rulb".split("").reverse().join(""),_0x2019a);_0x15d['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("egnahc".split("").reverse().join(""),_0x2019a);}function editInlineSpace(cell,project,type,category){const _0xb6223c=project['\u0073\u0070\u0061\u0063\u0065']||'';var _0x48aeeb=(241915^241913)+(717933^717924);const _0xf1g87f=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("tceles".split("").reverse().join(""));_0x48aeeb=(842556^842558)+(536426^536425);_0xf1g87f['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u006E\u006C\u0069\u006E\u0065\u002D\u0065\u0064\u0069\u0074";_0xf1g87f['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="\u0031\u0030\u0030\u0025";_0xf1g87f['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp4".split("").reverse().join("");_0xf1g87f['\u0073\u0074\u0079\u006C\u0065']['\u0074\u0065\u0078\u0074\u0041\u006C\u0069\u0067\u006E']="\u0063\u0065\u006E\u0074\u0065\u0072";const _0x31450d=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0x31450d['\u0076\u0061\u006C\u0075\u0065']='';_0x31450d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u95F4\u7A7A\u62E9\u9009\u8BF7".split("").reverse().join("");_0xf1g87f['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x31450d);var _0x76e52d=(271963^271967)+(739643^739647);const _0x0e14b=projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][type]||[];_0x76e52d=(755543^755551)+(562542^562536);_0x0e14b['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{const _0x3883ec=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0x3883ec['\u0076\u0061\u006C\u0075\u0065']=space;_0x3883ec['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=space;if(space===_0xb6223c){_0x3883ec['\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064']=!![];}_0xf1g87f['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x3883ec);});var _0x11f7e=(745748^745750)+(270998^271006);const _0xe9c9gf=cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C'];_0x11f7e=(160049^160050)+(359729^359731);cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';cell['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xf1g87f);_0xf1g87f['\u0066\u006F\u0063\u0075\u0073']();const _0xb09f=()=>{if(_0xf1g87f['\u0076\u0061\u006C\u0075\u0065']!==_0xb6223c){project['\u0073\u0070\u0061\u0063\u0065']=_0xf1g87f['\u0076\u0061\u006C\u0075\u0065'];saveDataToStorage();renderProjectList(type,category);updateSummary(type);showNotification("\u7A7A\u95F4\u5DF2\u66F4\u65B0","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}else{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xe9c9gf;}};_0xf1g87f['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0062\u006C\u0075\u0072",_0xb09f);_0xf1g87f['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u0068\u0061\u006E\u0067\u0065",_0xb09f);}function editInlineDescription(cell,project,type,category){var _0x103faf;const _0xbb64ea=cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C'];_0x103faf=(946283^946283)+(145494^145493);const _0x5g11f=project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||'';const _0xbe_0x941=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0069\u006E\u0070\u0075\u0074");_0xbe_0x941['\u0074\u0079\u0070\u0065']="txet".split("").reverse().join("");_0xbe_0x941['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0069\u006E\u006C\u0069\u006E\u0065\u002D\u0065\u0064\u0069\u0074";_0xbe_0x941['\u0076\u0061\u006C\u0075\u0065']=_0x5g11f;_0xbe_0x941['\u0070\u006C\u0061\u0063\u0065\u0068\u006F\u006C\u0064\u0065\u0072']="\u8F93\u5165\u5DE5\u827A\u8BF4\u660E\u002E\u002E\u002E";_0xbe_0x941['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="%001".split("").reverse().join("");_0xbe_0x941['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp8".split("").reverse().join("");cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';cell['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xbe_0x941);_0xbe_0x941['\u0066\u006F\u0063\u0075\u0073']();_0xbe_0x941['\u0073\u0065\u006C\u0065\u0063\u0074']();var _0xca7e;const _0xf19d=()=>{const _0xe6be7e=_0xbe_0x941['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();if(_0xe6be7e!==_0x5g11f){project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']=_0xe6be7e;saveDataToStorage();updateTableRow(project,type,category);showNotification("\u5DE5\u827A\u8BF4\u660E\u5DF2\u66F4\u65B0","sseccus".split("").reverse().join(""));}else{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xbb64ea;}};_0xca7e='\u0069\u0070\u0069\u006F\u006C\u006B';const _0xe7ecad=()=>{cell['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xbb64ea;};_0xbe_0x941['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0062\u006C\u0075\u0072",_0xf19d);_0xbe_0x941['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u006B\u0065\u0079\u0064\u006F\u0077\u006E",e=>{if(e['\u006B\u0065\u0079']==="\u0045\u006E\u0074\u0065\u0072"){_0xf19d();}else if(e['\u006B\u0065\u0079']==="epacsE".split("").reverse().join("")){_0xe7ecad();}});}function updateTableRow(project,type,category){var _0xaa_0xd3c;const _0x98fc8f=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](`[data-project-id="${project['\u0069\u0064']}"]`);_0xaa_0xd3c=779392^779398;if(!_0x98fc8f){renderProjectList(type,category);return;}const _0xg8a71a=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("eman-loc-meti.".split("").reverse().join(""));const _0x95ed=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0073\u0070\u0061\u0063\u0065");var _0x7cad=(390213^390214)+(207100^207092);const _0xef9bfg=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0075\u006E\u0069\u0074");_0x7cad=(863136^863143)+(879240^879242);var _0x8de9e=(915653^915650)+(836183^836179);const _0xca0ef=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079");_0x8de9e=(533347^533347)+(388896^388896);const _0xe93e8b=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u0074\u0065\u006D\u002D\u0063\u006F\u006C\u002D\u0070\u0072\u0069\u0063\u0065");const _0x8e24af=_0x98fc8f['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("latot-loc-meti.".split("").reverse().join(""));if(_0xg8a71a){_0xg8a71a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <strong>${project['\u006E\u0061\u006D\u0065']}</strong>
-            ${project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']?"\u003C\u0064\u0069\u0076\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0066\u006F\u006E\u0074\u002D\u0073\u0069\u007A\u0065\u003A\u0030\u002E\u0038\u0072\u0065\u006D\u003B\u0063\u006F\u006C\u006F\u0072\u003A\u0023\u0036\u0036\u0036\u003B\u006D\u0061\u0072\u0067\u0069\u006E\u002D\u0074\u006F\u0070\u003A\u0032\u0070\u0078\u003B\u0022\u003E"+(project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u006C\u0065\u006E\u0067\u0074\u0068']>(592615^592633)?project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](605012^605012,103079^103097)+"\u002E\u002E\u002E":project['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E'])+">vid/<".split("").reverse().join(""):''}
-        `;}if(_0x95ed)_0x95ed['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=project['\u0073\u0070\u0061\u0063\u0065']||"\u5B9A\u6307\u672A".split("").reverse().join("");if(_0xef9bfg)_0xef9bfg['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=project['\u0075\u006E\u0069\u0074']||'';if(_0xca0ef)_0xca0ef['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=project['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079']||333474^333474;if(_0xe93e8b)_0xe93e8b['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${project['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](545807^545805)}`;if(_0x8e24af)_0x8e24af['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${project['\u0074\u006F\u0074\u0061\u006C']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](931140^931142)}`;updateSpaceTotal(project['\u0073\u0070\u0061\u0063\u0065'],type,category);}function updateSpaceTotal(space,type,category){var _0xe207g=(336651^336642)+(719941^719936);const _0x5c7c7b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](`[data-space="${space}"]`);_0xe207g=(443576^443582)+(312697^312703);if(!_0x5c7c7b)return;var _0xd9e=(661566^661562)+(876739^876746);const _0x3f90a=projectData[type][category];_0xd9e=(570775^570771)+(889001^889007);const _0xdg63d=_0x3f90a['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0073\u0070\u0061\u0063\u0065']===space);var _0x8b6a0e;const _0xff87b=_0xdg63d['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],739476^739476);_0x8b6a0e=740576^740577;const _0x6c5ffb=_0x5c7c7b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0074\u006F\u0074\u0061\u006C");if(_0x6c5ffb){_0x6c5ffb['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0xff87b['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](911703^911701)}`;}}function filterProjectsBySpace(type,category){var _0x1d064b=(260422^260430)+(729558^729559);const _0x46ad6a=`${type}-${category}-space-filter`;_0x1d064b=(260025^260029)+(966377^966376);var _0xe7egf;const _0x25_0x17g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0x46ad6a);_0xe7egf=285593^285593;if(!_0x25_0x17g)return;const _0xf42gfe=_0x25_0x17g['\u0076\u0061\u006C\u0075\u0065'];const _0xeb7e9b=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-list`);if(!_0xeb7e9b)return;var _0xd443fb=(669184^669192)+(999284^999280);const _0x95ce=_0xeb7e9b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0067\u0072\u006F\u0075\u0070");_0xd443fb=352955^352947;_0x95ce['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](group=>{if(!_0xf42gfe||group['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0073\u0070\u0061\u0063\u0065']===_0xf42gfe){group['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";}else{group['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}});}function deleteProject(type,category,id){if(confirm("\uFF1F\u5417\u76EE\u9879\u4E2A\u8FD9\u9664\u5220\u8981\u5B9A\u786E".split("").reverse().join(""))){projectData[type][category]=projectData[type][category]['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0069\u0064']!==id);saveDataToStorage();renderProjectList(type,category);updateSummary(type);showNotification("\u9879\u76EE\u5DF2\u5220\u9664","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}}function updateSummary(type,_0x77ed1f,_0x4e_0x1c4,_0xgdf,_0x6a81e){var _0xg11a=(597873^597877)+(715001^715007);const _0xae8f=["esab".split("").reverse().join(""),"\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065","\u006F\u0074\u0068\u0065\u0072"];_0xg11a=184288^184295;_0x77ed1f=907009^907009;var _0x5087ee;_0x4e_0x1c4=944592^944592;_0x5087ee='\u0066\u0066\u0069\u006B\u006C\u0064';var _0xfa30c=(721038^721037)+(480847^480844);_0xgdf=490481^490481;_0xfa30c=385565^385566;var _0x6f14e;_0x6a81e=212001^212001;_0x6f14e=(842525^842522)+(781229^781220);projectData[type]['\u0062\u0061\u0073\u0065']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>_0x77ed1f+=item['\u0074\u006F\u0074\u0061\u006C']);projectData[type]['\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>_0x4e_0x1c4+=item['\u0074\u006F\u0074\u0061\u006C']);projectData[type]['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>_0xgdf+=item['\u0074\u006F\u0074\u0061\u006C']);projectData[type]['\u006F\u0074\u0068\u0065\u0072']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>_0x6a81e+=item['\u0074\u006F\u0074\u0061\u006C']);const _0x34d=_0x77ed1f+_0x4e_0x1c4+_0xgdf+_0x6a81e;var _0x16165b;const _0x15df7b={"\u0062\u0061\u0073\u0065":_0x77ed1f,'auxiliary':_0x4e_0x1c4,"\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065":_0xgdf,'other':_0x6a81e};_0x16165b=480899^480898;_0xae8f['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{const _0x26_0xd0d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-total`);var _0x7c3fe;const _0x92a5df=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-summary`);_0x7c3fe=(253055^253046)+(515703^515701);var _0x8064be=(457455^457451)+(519851^519853);const _0x8c9b1g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-${category}-count`);_0x8064be=(848278^848276)+(799310^799311);if(_0x26_0xd0d)_0x26_0xd0d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x15df7b[category]['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](775090^775088)}`;if(_0x92a5df)_0x92a5df['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x15df7b[category]['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](812203^812201)}`;if(_0x8c9b1g){const _0x52893a=projectData[type][category]['\u006C\u0065\u006E\u0067\u0074\u0068'];_0x8c9b1g['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`${_0x52893a}个项目`;}});const _0xe4775g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`${type}-grand-total`);if(_0xe4775g)_0xe4775g['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x34d['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](501694^501692)}`;}function updateAllSummaries(){updateSummary("emoh".split("").reverse().join(""));updateSummary("laicremmoc".split("").reverse().join(""));}function renderSpaceLibrary(){const _0xb07g1d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsil-ecaps-emoh".split("").reverse().join(""));var _0x058ddd;const _0xe31e5g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsil-ecaps-laicremmoc".split("").reverse().join(""));_0x058ddd="fjejib".split("").reverse().join("");if(!_0xb07g1d||!_0xe31e5g)return;_0xb07g1d['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';_0xe31e5g['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0068\u006F\u006D\u0065']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{const spaceItem=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");spaceItem['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0070\u0061\u0063\u0065\u002D\u0069\u0074\u0065\u006D";spaceItem['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div class="space-item-name">${space}</div>
-            <div class="space-item-type">家装</div>
-        `;_0xb07g1d['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](spaceItem);});projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{var _0x71975e=(282534^282534)+(379139^379146);const spaceItem=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x71975e=(727603^727603)+(526498^526497);spaceItem['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0070\u0061\u0063\u0065\u002D\u0069\u0074\u0065\u006D";spaceItem['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div class="space-item-name">${space}</div>
-            <div class="space-item-type">公装</div>
-        `;_0xe31e5g['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](spaceItem);});}function clearAllProjects(type){if(confirm(`确定要清空所有${type==="emoh".split("").reverse().join("")?"\u5BB6\u88C5":"\u88C5\u5DE5".split("").reverse().join("")}项目吗？此操作不可撤销。`)){projectData[type]={"base":[],"auxiliary":[],'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065':[],'\u006F\u0074\u0068\u0065\u0072':[]};if(type==="\u0068\u006F\u006D\u0065"){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tupnIemaNtcejorp".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';}else{document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("2tupnIemaNtcejorp".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';}projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']='';saveDataToStorage();["esab".split("").reverse().join(""),"yrailixua".split("").reverse().join(""),"\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065","rehto".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{renderProjectList(type,category);});updateSummary(type);showNotification(`已清空所有${type==="\u0068\u006F\u006D\u0065"?"\u88C5\u5BB6".split("").reverse().join(""):"\u5DE5\u88C5"}项目`,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}}function openSpaceModal(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0053\u0070\u0061\u0063\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0053\u0070\u0061\u0063\u0065\u0054\u0079\u0070\u0065")['\u0076\u0061\u006C\u0075\u0065']=currentType||"\u0068\u006F\u006D\u0065";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMecaps".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";}function closeSpaceModal(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMecaps".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}function addNewSpace(){const _0x774dg=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0053\u0070\u0061\u0063\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();const _0x28_0xfa2=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("epyTecapSwen".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];if(!_0x774dg){showNotification("\u79F0\u540D\u95F4\u7A7A\u5165\u8F93\u8BF7".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}let _0xa4f68c=false;Object['\u006B\u0065\u0079\u0073'](projectData['\u0073\u0070\u0061\u0063\u0065\u0073'])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](type=>{if(projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][type]['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x774dg)){_0xa4f68c=!![];}});if(_0xa4f68c){showNotification("\u8BE5\u7A7A\u95F4\u5DF2\u5B58\u5728","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][_0x28_0xfa2]['\u0070\u0075\u0073\u0068'](_0x774dg);saveDataToStorage();loadMultiSpaceOptions();renderSpaceLibrary();closeSpaceModal();showNotification("\u7A7A\u95F4\u5DF2\u6DFB\u52A0\u5230\u5E93","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}function updateSpaceFilterOptions(type,category){var _0xbea55f=(115541^115537)+(140687^140683);const _0x41761d=`${type}-${category}-space-filter`;_0xbea55f='\u0063\u0068\u006D\u0066\u0066\u0071';const _0xfg15a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0x41761d);if(!_0xfg15a)return;const _0x30_0xf2e=_0xfg15a['\u0076\u0061\u006C\u0075\u0065'];_0xfg15a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u006F\u0070\u0074\u0069\u006F\u006E\u0020\u0076\u0061\u006C\u0075\u0065\u003D\u0022\u0022\u003E\u5168\u90E8\u7A7A\u95F4\u003C\u002F\u006F\u0070\u0074\u0069\u006F\u006E\u003E";var _0x661a;const _0x26116f=new Set();_0x661a=336719^336718;projectData[type][category]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(item['\u0073\u0070\u0061\u0063\u0065']&&item['\u0073\u0070\u0061\u0063\u0065']['\u0074\u0072\u0069\u006D']()!==''){_0x26116f['\u0061\u0064\u0064'](item['\u0073\u0070\u0061\u0063\u0065']['\u0074\u0072\u0069\u006D']());}});if(_0x26116f['\u0073\u0069\u007A\u0065']===(945942^945942)){const _0xgb1g=projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][type]||[];_0xgb1g['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{_0x26116f['\u0061\u0064\u0064'](space);});}_0x26116f['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{var _0x1e05ae;const _0xcfc07e=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0x1e05ae=(994528^994529)+(727454^727448);_0xcfc07e['\u0076\u0061\u006C\u0075\u0065']=space;_0xcfc07e['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=space;_0xfg15a['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xcfc07e);});if(_0x30_0xf2e&&Array['\u0066\u0072\u006F\u006D'](_0x26116f)['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x30_0xf2e)){_0xfg15a['\u0076\u0061\u006C\u0075\u0065']=_0x30_0xf2e;}}function toggleSpaceGroupCollapse(spaceNameElement){const _0xe30eb=spaceNameElement['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u002E\u0073\u0070\u0061\u0063\u0065\u002D\u0067\u0072\u006F\u0075\u0070");const _0x783ef=_0xe30eb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("tnetnoc-ecaps.".split("").reverse().join(""));const _0x8c2fb=_0xe30eb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("noci-espalloc-ecaps.".split("").reverse().join(""));if(_0x783ef['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("despalloc".split("").reverse().join(""))){_0x783ef['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0063\u006F\u006C\u006C\u0061\u0070\u0073\u0065\u0064");_0x8c2fb['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0072\u0069\u0067\u0068\u0074");_0x8c2fb['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0064\u006F\u0077\u006E");}else{_0x783ef['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("despalloc".split("").reverse().join(""));_0x8c2fb['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0064\u006F\u0077\u006E");_0x8c2fb['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0066\u0061\u002D\u0063\u0068\u0065\u0076\u0072\u006F\u006E\u002D\u0072\u0069\u0067\u0068\u0074");}}function changeSpaceGroup(type,category,oldSpace){var _0xed76af;const _0xc733c=projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][type]||[];_0xed76af='\u0068\u0070\u006F\u0065\u0069\u006A';if(_0xc733c['\u006C\u0065\u006E\u0067\u0074\u0068']===(496839^496839)){showNotification("\u95F4\u7A7A\u52A0\u6DFB\u5148\u8BF7".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}const _0xcg5abb=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xcg5abb['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u006D\u006F\u0064\u0061\u006C";_0xcg5abb['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";_0xcg5abb['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-        <div class="modal-content" style="max-width:400px;">
-            <button class="modal-close" onclick="this.closest('.modal').remove()">&times;</button>
-            <div class="modal-header">
-                <i class="fas fa-exchange-alt"></i> 批量更改空间
-            </div>
-            <div class="form-group">
-                <label class="form-label">原空间: <strong>${oldSpace}</strong></label>
-                <label class="form-label">新空间:</label>
-                <select class="form-select" id="newSpaceSelect">
-                    <option value="">请选择新空间</option>
-                    ${_0xc733c['\u006D\u0061\u0070'](space=>`<option value="${space}" ${space===oldSpace?"detceles".split("").reverse().join(""):''}>${space}</option>`)['\u006A\u006F\u0069\u006E']('')}
-                </select>
-            </div>
-            <div class="action-buttons">
-                <button class="btn btn-primary" onclick="confirmChangeSpace('${type}', '${category}', '${oldSpace}')">
-                    <i class="fas fa-check"></i> 确认更改
-                </button>
-                <button class="btn btn-outline" onclick="this.closest('.modal').remove()">
-                    <i class="fas fa-times"></i> 取消
-                </button>
-            </div>
-        </div>
-    `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xcg5abb);}function confirmChangeSpace(type,category,oldSpace,_0x891ae){const _0xee_0xffa=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0053\u0070\u0061\u0063\u0065\u0053\u0065\u006C\u0065\u0063\u0074");const _0xb11bb=_0xee_0xffa['\u0076\u0061\u006C\u0075\u0065'];if(!_0xb11bb){showNotification("\u95F4\u7A7A\u65B0\u62E9\u9009\u8BF7".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}if(_0xb11bb===oldSpace){document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ladom.".split("").reverse().join(""))['\u0072\u0065\u006D\u006F\u0076\u0065']();showNotification("\u7A7A\u95F4\u672A\u53D8\u5316","\u0069\u006E\u0066\u006F");return;}const _0x549a8f=projectData[type][category];var _0xd3_0x811=(776358^776354)+(542338^542346);_0x891ae=134421^134421;_0xd3_0x811=(565647^565640)+(733599^733597);_0x549a8f['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](project=>{if(project['\u0073\u0070\u0061\u0063\u0065']===oldSpace){project['\u0073\u0070\u0061\u0063\u0065']=_0xb11bb;_0x891ae++;}});if(_0x891ae>(385735^385735)){saveDataToStorage();renderProjectList(type,category);updateSummary(type);showNotification(`已将 ${_0x891ae} 个项目从 "${oldSpace}" 移动到 "${_0xb11bb}"`,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006D\u006F\u0064\u0061\u006C")['\u0072\u0065\u006D\u006F\u0076\u0065']();}function initializeAllSpaceFilters(){["\u0062\u0061\u0073\u0065","yrailixua".split("").reverse().join(""),"erutinruf".split("").reverse().join(""),"\u006F\u0074\u0068\u0065\u0072"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{updateSpaceFilterOptions("\u0068\u006F\u006D\u0065",category);updateSpaceFilterOptions("\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C",category);});}function bindEventListeners(){const _0x071a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0075\u006C\u0074\u0069\u002D\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u002D\u0073\u0065\u0061\u0072\u0063\u0068");if(_0x071a){_0x071a['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("tupni".split("").reverse().join(""),searchMultiProjects);}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",function(event){if(event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073']("\u006D\u006F\u0064\u0061\u006C")){event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");}});document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u006B\u0065\u0079\u0064\u006F\u0077\u006E",function(event){if(event['\u006B\u0065\u0079']==="\u0045\u0073\u0063\u0061\u0070\u0065"){closeAllModals();}});}function closeAllModals(){document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u006D\u006F\u0064\u0061\u006C")['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](modal=>{modal['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");});}function showNotification(message,type="sseccus".split("").reverse().join(""),options={},_0x202f8e){const _0x31_0xf5f=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("aera-noitacifiton".split("").reverse().join(""));if(!_0x31_0xf5f)return;var _0x3cg5ed=(649484^649486)+(513505^513511);const _0xeg807b=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x3cg5ed=(924372^924373)+(257043^257042);var _0x11e=(624019^624026)+(662702^662695);const _0x9e9c=options['\u0063\u006F\u006D\u0070\u0061\u0063\u0074']||type==="\u0069\u006E\u0066\u006F";_0x11e=(688874^688873)+(726673^726679);_0xeg807b['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']=`notification ${type}`;if(_0x9e9c){_0xeg807b['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0063\u006F\u006D\u0070\u0061\u0063\u0074");}_0x202f8e="\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0063\u0068\u0065\u0063\u006B\u002D\u0063\u0069\u0072\u0063\u006C\u0065";if(type==="rorre".split("").reverse().join(""))_0x202f8e="elcric-noitamalcxe-af saf".split("").reverse().join("");if(type==="\u0077\u0061\u0072\u006E\u0069\u006E\u0067")_0x202f8e="\u0066\u0061\u0073\u0020\u0066\u0061\u002D\u0065\u0078\u0063\u006C\u0061\u006D\u0061\u0074\u0069\u006F\u006E\u002D\u0074\u0072\u0069\u0061\u006E\u0067\u006C\u0065";if(type==="ofni".split("").reverse().join(""))_0x202f8e="elcric-ofni-af saf".split("").reverse().join("");_0xeg807b['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-        <i class="${_0x202f8e}"></i>
-        <div style="flex: 1;">${message}</div>
-    `;_0x31_0xf5f['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xeg807b);const _0xcg7cb=_0x9e9c?964115^966059:233364^236572;setTimeout(()=>{_0xeg807b['\u0073\u0074\u0079\u006C\u0065']['\u0061\u006E\u0069\u006D\u0061\u0074\u0069\u006F\u006E']=_0x9e9c?"\u0063\u006F\u006D\u0070\u0061\u0063\u0074\u004E\u006F\u0074\u0069\u0066\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u0053\u006C\u0069\u0064\u0065\u0049\u006E\u0020\u0030\u002E\u0033\u0073\u0020\u0065\u0061\u0073\u0065\u002D\u006F\u0075\u0074\u0020\u0072\u0065\u0076\u0065\u0072\u0073\u0065\u0020\u0066\u006F\u0072\u0077\u0061\u0072\u0064\u0073":"\u006E\u006F\u0074\u0069\u0066\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u0053\u006C\u0069\u0064\u0065\u004F\u0075\u0074\u0020\u0030\u002E\u0033\u0073\u0020\u0065\u0061\u0073\u0065\u002D\u006F\u0075\u0074\u0020\u0066\u006F\u0072\u0077\u0061\u0072\u0064\u0073";setTimeout(()=>{if(_0x31_0xf5f['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073'](_0xeg807b)){_0x31_0xf5f['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0xeg807b);}},179999^179763);},_0xcg7cb);}function exportToExcel(){var _0x5544d;const _0x9cb3db=Object['\u0076\u0061\u006C\u0075\u0065\u0073'](projectData['\u0068\u006F\u006D\u0065'])['\u0073\u006F\u006D\u0065'](arr=>arr['\u006C\u0065\u006E\u0067\u0074\u0068']>(209730^209730));_0x5544d=165662^165660;var _0xbf83a=(902077^902075)+(152953^152945);const _0x291c7a=Object['\u0076\u0061\u006C\u0075\u0065\u0073'](projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'])['\u0073\u006F\u006D\u0065'](arr=>arr['\u006C\u0065\u006E\u0067\u0074\u0068']>(610070^610070));_0xbf83a=(684772^684771)+(582429^582427);if(!_0x9cb3db&&!_0x291c7a){showNotification("\u76EE\u9879\u52A0\u6DFB\u5148\u8BF7\uFF0C\u636E\u6570\u7684\u51FA\u5BFC\u53EF\u6709\u6CA1".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return;}var _0xd2ca;const _0x3ccba=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0062\u006F\u006F\u006B\u005F\u006E\u0065\u0077']();_0xd2ca=718322^718327;var _0xfeac;const _0xc4d4a=prepareSheetData();_0xfeac=651567^651565;var _0xbdfdda=(793539^793546)+(554347^554351);const _0x84a4a=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0061\u006F\u0061\u005F\u0074\u006F\u005F\u0073\u0068\u0065\u0065\u0074'](_0xc4d4a);_0xbdfdda=(434319^434318)+(585049^585041);applySheetStyles(_0x84a4a,_0xc4d4a);XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0062\u006F\u006F\u006B\u005F\u0061\u0070\u0070\u0065\u006E\u0064\u005F\u0073\u0068\u0065\u0065\u0074'](_0x3ccba,_0x84a4a,"\u88C5\u9970\u9879\u76EE\u62A5\u4EF7\u5355");const _0x2e2bcg=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||"\u76EE\u9879\u540D\u547D\u672A".split("").reverse().join("");var _0xffg9a=(485656^485660)+(509499^509498);const _0x2aa=`${_0x2e2bcg}_装饰项目报价单_${new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u006C\u0069\u0063\u0065'](750061^750061,126466^126472)}.xlsx`;_0xffg9a=235117^235109;XLSX['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065'](_0x3ccba,_0x2aa);showNotification("\u0045\u0078\u0063\u0065\u006C\u8868\u683C\u5BFC\u51FA\u6210\u529F\uFF01","sseccus".split("").reverse().join(""));}function createSheetForType(wb,type,typeName){const _0x9629b=prepareSheetData(type,typeName);var _0x1egag=(622748^622749)+(623680^623680);const _0xe284ge=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0061\u006F\u0061\u005F\u0074\u006F\u005F\u0073\u0068\u0065\u0065\u0074'](_0x9629b);_0x1egag=(175391^175390)+(413714^413712);applySheetStyles(_0xe284ge,_0x9629b);XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0062\u006F\u006F\u006B\u005F\u0061\u0070\u0070\u0065\u006E\u0064\u005F\u0073\u0068\u0065\u0065\u0074'](wb,_0xe284ge,`${typeName}报价`);}function prepareSheetData(){const _0xea6ebe=currentType;const _0x26a0g=_0xea6ebe==="\u0068\u006F\u006D\u0065"?"\u5BB6\u88C5":"\u88C5\u516C".split("").reverse().join("");function _0xdf_0x243(items){const _0x554e={};items['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{var _0x7c_0x687;const _0x5b22ea=item['\u0073\u0070\u0061\u0063\u0065']||"\u5B9A\u6307\u672A".split("").reverse().join("");_0x7c_0x687=(793611^793614)+(386841^386845);if(!_0x554e[_0x5b22ea]){_0x554e[_0x5b22ea]=[];}_0x554e[_0x5b22ea]['\u0070\u0075\u0073\u0068'](item);});return _0x554e;}var _0x97b59e;const _0x40abcd=[];_0x97b59e=(252132^252141)+(223612^223604);_0x40abcd['\u0070\u0075\u0073\u0068'](['']);_0x40abcd['\u0070\u0075\u0073\u0068']([`${_0x26a0g}装饰项目报价单`,'','','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](['']);const _0x5d_0xa1f=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||"\u76EE\u9879\u540D\u547D\u672A".split("").reverse().join("");_0x40abcd['\u0070\u0075\u0073\u0068'](["\u9879\u76EE\u540D\u79F0\uFF1A",_0x5d_0xa1f,'','','','','']);var _0xb_0x4b4=(213419^213422)+(448098^448100);const _0xa8d=[{"key":'base',"title":"\u4E00\u3001\u57FA\u7840\u88C5\u4FEE","summary":"\u57FA\u7840\u88C5\u4FEE\u5408\u8BA1","noteColumn":'工艺说明'},{'\u006B\u0065\u0079':'auxiliary',"title":"\u4E8C\u3001\u4E3B\u6750",'\u0073\u0075\u006D\u006D\u0061\u0072\u0079':'主材合计',"noteColumn":"\u5907\u6CE8\u8BF4\u660E"},{'\u006B\u0065\u0079':"\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065",'\u0074\u0069\u0074\u006C\u0065':"\u4E09\u3001\u5BB6\u5177\u5BB6\u7535\u002F\u706F\u5177\u7A97\u5E18\u002F\u8F6F\u88C5\u914D\u9970","summary":"\u5BB6\u5177\u5BB6\u7535\u7B49\u5408\u8BA1",'\u006E\u006F\u0074\u0065\u0043\u006F\u006C\u0075\u006D\u006E':'备注说明'},{"key":'other','\u0074\u0069\u0074\u006C\u0065':"\u56DB\u3001\u5176\u5B83\u9879",'\u0073\u0075\u006D\u006D\u0061\u0072\u0079':'其它项合计',"noteColumn":"\u5907\u6CE8"}];_0xb_0x4b4=(715514^715517)+(662198^662194);_0xa8d['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{var _0x2f_0x62e;const _0x3e55d=projectData[_0xea6ebe][category['\u006B\u0065\u0079']];_0x2f_0x62e=(653686^653695)+(922650^922655);if(_0x3e55d['\u006C\u0065\u006E\u0067\u0074\u0068']===(580443^580443))return;_0x40abcd['\u0070\u0075\u0073\u0068']([category['\u0074\u0069\u0074\u006C\u0065'],'','','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](["\u5E8F\u53F7","\u9879\u76EE\u540D\u79F0","\u4F4D\u5355".split("").reverse().join(""),"\u91CF\u6570".split("").reverse().join(""),"\u5355\u4EF7\u0028\u00A5\u0029","\u5C0F\u8BA1\u0028\u00A5\u0029","\u5907\u6CE8\u8BF4\u660E"]);const _0x8072e=_0xdf_0x243(_0x3e55d);Object['\u006B\u0065\u0079\u0073'](_0x8072e)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{_0x40abcd['\u0070\u0075\u0073\u0068']([space,'','','','','','']);let _0x2c878g=825100^825101;var _0x3fgge=(704998^704997)+(919269^919269);let _0x68ea=465353^465353;_0x3fgge=(121081^121072)+(670059^670051);_0x8072e[space]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{_0x40abcd['\u0070\u0075\u0073\u0068']([_0x2c878g++,item['\u006E\u0061\u006D\u0065'],item['\u0075\u006E\u0069\u0074'],item['\u0071\u0075\u0061\u006E\u0074\u0069\u0074\u0079'],item['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](811272^811274),item['\u0074\u006F\u0074\u0061\u006C']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](880087^880085),item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||'']);_0x68ea+=item['\u0074\u006F\u0074\u0061\u006C'];});_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\u5C0F\u8BA1",'','','',`¥${_0x68ea['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](454235^454233)}`,'']);});var _0x1c0g5d=(232960^232965)+(746903^746900);const _0x97eba=_0x3e55d['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],820854^820854);_0x1c0g5d=(195431^195428)+(980340^980343);_0x40abcd['\u0070\u0075\u0073\u0068'](['',`${getCategoryName(category['\u006B\u0065\u0079'])}合计`,'','','',`¥${_0x97eba['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](126523^126521)}`,'']);});var _0xd0692c=(785275^785274)+(818567^818563);const _0x20c=projectData[_0xea6ebe]['\u0062\u0061\u0073\u0065']['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],207464^207464);_0xd0692c=(753768^753761)+(888307^888314);var _0x66035d=(639498^639501)+(682132^682130);const _0x4dc76f=projectData[_0xea6ebe]['\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079']['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],523431^523431);_0x66035d=(103695^103687)+(703437^703429);const _0xbc383d=projectData[_0xea6ebe]['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065']['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],992907^992907);const _0x20ga=projectData[_0xea6ebe]['\u006F\u0074\u0068\u0065\u0072']['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+item['\u0074\u006F\u0074\u0061\u006C'],608465^608465);const _0x00aae=_0x20c+_0x4dc76f+_0xbc383d+_0x20ga;_0x40abcd['\u0070\u0075\u0073\u0068'](['']);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\uFF1A\u989D\u91D1\u8BA1\u5C0F".split("").reverse().join(""),'','','',`¥${_0x00aae['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](604887^604885)}`,'']);var _0x66afe=(915679^915670)+(149236^149233);const _0x8g625e=convertCurrency(_0x00aae);_0x66afe=(904932^904934)+(135676^135669);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\uFF1A\u989D\u91D1\u5199\u5927".split("").reverse().join(""),'','','',_0x8g625e,'']);_0x40abcd['\u0070\u0075\u0073\u0068'](["\u5907\u6CE8\uFF1A",'','','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\u8D39\u7406\u7BA1\u53CA\u8D39\u6599\u6750\u3001\u8D39\u5DE5\u4EBA\u542B\u5305\u5355\u4EF7\u62A5\u672C .1".split("").reverse().join(""),'','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\u51C6\u4E3A\u91CF\u5DE5\u65BD\u9645\u5B9E\u4EE5\u7B97\u7ED3\u9645\u5B9E .2".split("").reverse().join(""),'','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\u8BA4\u786E\u5546\u534F\u65B9\u53CC\u9700\uFF0C\u66F4\u53D8\u6709\u5982 .3".split("").reverse().join(""),'','','','','']);_0x40abcd['\u0070\u0075\u0073\u0068'](['',"\u592903\u671F\u6548\u6709\u4EF7\u62A5 .4".split("").reverse().join(""),'','','','','']);return _0x40abcd;}function applySheetStyles(ws,data){var _0x3359be;const _0xg9c4c=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0064\u0065\u0063\u006F\u0064\u0065\u005F\u0072\u0061\u006E\u0067\u0065'](ws["\u0021\u0072\u0065\u0066"]);_0x3359be=(220029^220025)+(789692^789693);const _0x98afc=[];for(let R=_0xg9c4c['\u0073']['\u0072'];R<=_0xg9c4c['\u0065']['\u0072'];++R){for(let C=_0xg9c4c['\u0073']['\u0063'];C<=_0xg9c4c['\u0065']['\u0063'];++C){var _0x4d5da=(599484^599477)+(418599^418593);const _0x00f14f=XLSX['\u0075\u0074\u0069\u006C\u0073']['\u0065\u006E\u0063\u006F\u0064\u0065\u005F\u0063\u0065\u006C\u006C']({'\u0063':C,'\u0072':R});_0x4d5da=(187607^187606)+(306567^306575);if(!ws[_0x00f14f]){ws[_0x00f14f]={'\u0076':'','\u0074':"\u0073"};}var _0xaef42f;const _0x9ef=ws[_0x00f14f];_0xaef42f=783009^783011;if(!_0x9ef['\u0073'])_0x9ef['\u0073']={};_0x9ef['\u0073']['\u0062\u006F\u0072\u0064\u0065\u0072']={"top":{"style":'thin','\u0063\u006F\u006C\u006F\u0072':{"rgb":"\u0030\u0030\u0030\u0030\u0030\u0030"}},"bottom":{'\u0073\u0074\u0079\u006C\u0065':'thin','\u0063\u006F\u006C\u006F\u0072':{'\u0072\u0067\u0062':'000000'}},'\u006C\u0065\u0066\u0074':{'\u0073\u0074\u0079\u006C\u0065':'thin',"color":{"rgb":"\u0030\u0030\u0030\u0030\u0030\u0030"}},'\u0072\u0069\u0067\u0068\u0074':{"style":"\u0074\u0068\u0069\u006E",'\u0063\u006F\u006C\u006F\u0072':{"rgb":"\u0030\u0030\u0030\u0030\u0030\u0030"}}};var _0xc3ed3d;const _0x129b6c=data[R];_0xc3ed3d='\u0071\u006F\u006E\u0067\u0071\u006B';if(!_0x129b6c||_0x129b6c['\u006C\u0065\u006E\u0067\u0074\u0068']===(846631^846631))continue;const _0xg0afb=_0x129b6c[717955^717955]!==undefined?String(_0x129b6c[612924^612924]):'';if(_0xg0afb['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u88C5\u9970\u9879\u76EE\u62A5\u4EF7\u5355")&&C===(139133^139133)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={"horizontal":"\u0063\u0065\u006E\u0074\u0065\u0072",'\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':'center'};_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![],"sz":16};}else if(_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u9879\u76EE\u540D\u79F0\uFF1A")&&C===(185043^185043)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u006C\u0065\u0066\u0074","vertical":"\u0063\u0065\u006E\u0074\u0065\u0072"};_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![]};}else if((_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u3001\u4E00".split("").reverse().join(""))||_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u4E8C\u3001")||_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u4E09\u3001")||_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u3001\u56DB".split("").reverse().join("")))&&C===(369275^369275)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u006C\u0065\u0066\u0074",'\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':'center'};_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![],"sz":12};_0x9ef['\u0073']['\u0066\u0069\u006C\u006C']={'\u0066\u0067\u0043\u006F\u006C\u006F\u0072':{"rgb":'E8E8E8'}};}else if(C===(387991^387991)&&_0xg0afb!==''&&!_0xg0afb['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u88C5\u9970\u9879\u76EE\u62A5\u4EF7\u5355")&&!_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u9879\u76EE\u540D\u79F0\uFF1A")&&!_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u3001\u4E00".split("").reverse().join(""))&&!_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u4E8C\u3001")&&!_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u4E09\u3001")&&!_0xg0afb['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u3001\u56DB".split("").reverse().join(""))&&_0xg0afb!=="\u5E8F\u53F7"&&_0xg0afb!=="\u5C0F\u8BA1"&&_0xg0afb!=="\u5907\u6CE8\uFF1A"&&!_0xg0afb['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u5408\u8BA1")&&_0xg0afb!=="\uFF1A\u989D\u91D1\u8BA1\u5C0F".split("").reverse().join("")&&_0xg0afb!=="\u5927\u5199\u91D1\u989D\uFF1A"){if(_0x129b6c['\u006C\u0065\u006E\u0067\u0074\u0068']>(290490^290491)&&_0x129b6c[600513^600512]===''){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u006C\u0065\u0066\u0074",'\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072"};_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![]};}}else if(_0xg0afb==="\u5E8F\u53F7"||_0xg0afb==="\u9879\u76EE\u540D\u79F0"){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![]};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072"};_0x9ef['\u0073']['\u0066\u0069\u006C\u006C']={"fgColor":{"rgb":'F5F5F5'}};}else if(_0xg0afb==="\u5C0F\u8BA1"){if(C===(708548^708548)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![]};_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':1}});}else if(C===(271227^271230)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![]};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u0072\u0069\u0067\u0068\u0074"};}}else if(_0xg0afb['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u5408\u8BA1")){if(C===(531153^531153)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![]};_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':5}});}else if(C===(409004^409001)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![]};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':'right'};_0x9ef['\u0073']['\u0066\u0069\u006C\u006C']={'\u0066\u0067\u0043\u006F\u006C\u006F\u0072':{'\u0072\u0067\u0062':"\u0046\u0035\u0046\u0035\u0046\u0035"}};}}else if(_0xg0afb==="\uFF1A\u989D\u91D1\u8BA1\u5C0F".split("").reverse().join("")){if(C===(629849^629849)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![]};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u006C\u0065\u0066\u0074"};}else if(C===(629615^629610)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':5},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![],'\u0073\u007A':12};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072","vertical":'center'};}}else if(_0xg0afb==="\uFF1A\u989D\u91D1\u5199\u5927".split("").reverse().join("")){if(C===(611991^611991)){_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![]};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u006C\u0065\u0066\u0074"};}else if(C===(170653^170648)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':5},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={"bold":!![],'\u0073\u007A':12};_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={'\u0068\u006F\u0072\u0069\u007A\u006F\u006E\u0074\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072",'\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072"};}}else if(_0xg0afb==="\u5907\u6CE8\uFF1A"){if(C===(668967^668967)){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':0},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={"horizontal":'left','\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072"};_0x9ef['\u0073']['\u0066\u006F\u006E\u0074']={'\u0062\u006F\u006C\u0064':!![]};}}else if(C===(782262^782263)&&_0x129b6c[842540^842541]&&_0x129b6c[188023^188022]['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u006D\u0061\u0074\u0063\u0068'](new RegExp(".\\+d\\^".split("").reverse().join(""),""))){_0x98afc['\u0070\u0075\u0073\u0068']({'\u0073':{'\u0072':R,'\u0063':1},'\u0065':{'\u0072':R,'\u0063':6}});_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={"horizontal":"\u006C\u0065\u0066\u0074",'\u0076\u0065\u0072\u0074\u0069\u0063\u0061\u006C':"\u0063\u0065\u006E\u0074\u0065\u0072"};}if((C===(261966^261962)||C===(661234^661239))&&_0x9ef['\u0076']&&!isNaN(parseFloat(_0x9ef['\u0076']))){_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={"horizontal":"\u0072\u0069\u0067\u0068\u0074"};}if(C===(346001^346007)){_0x9ef['\u0073']['\u0061\u006C\u0069\u0067\u006E\u006D\u0065\u006E\u0074']={"horizontal":"\u006C\u0065\u0066\u0074"};}}}ws["\u0021\u006D\u0065\u0072\u0067\u0065\u0073"]=_0x98afc;ws['!cols']=[{'\u0077\u0063\u0068':6},{'\u0077\u0063\u0068':25},{"wch":8},{'\u0077\u0063\u0068':8},{'\u0077\u0063\u0068':12},{'\u0077\u0063\u0068':15},{'\u0077\u0063\u0068':50}];}function convertCurrency(money,_0xc7b0c,_0x0f2,_0xgg86b){var _0x55171e;const _0x5e6dba=["\u96F6","\u58F9","\u8D30","\u53C1","\u8086","\u4F0D","\u9646","\u67D2","\u634C","\u7396"];_0x55171e=(256013^256010)+(352569^352575);var _0x8a14a=(709353^709344)+(154608^154616);const _0x878a=["","\u62FE","\u4F70","\u4EDF"];_0x8a14a=(246812^246805)+(615967^615959);var _0xbcgb9d;const _0xc4e8f=["","\u4E07","\u4EBF","\u5146"];_0xbcgb9d=624716^624719;var _0xac_0x422;const _0xaeadd=["\u89D2","\u5206","\u6BEB","\u5398"];_0xac_0x422="cnnega".split("").reverse().join("");var _0xbc86f=(220009^220014)+(981306^981310);_0xc7b0c="\u6574";_0xbc86f=641571^641575;_0x0f2="\u5143";var _0xc1d4fc=(462192^462192)+(329021^329017);let _0x36eg7c=Math['\u0066\u006C\u006F\u006F\u0072'](money);_0xc1d4fc='\u0065\u006E\u0070\u0064\u0067\u006D';var _0xcfd8e=(367354^367357)+(761683^761680);let _0x2757e=Math['\u0072\u006F\u0075\u006E\u0064']((money-_0x36eg7c)*(660425^660397));_0xcfd8e='\u0062\u006E\u0070\u006B\u006A\u0064';if(_0x36eg7c===(751931^751931)&&_0x2757e===(107674^107674)){return"\u6574\u5143\u96F6".split("").reverse().join("");}_0xgg86b="";if(_0x36eg7c>(710126^710126)){var _0xf2_0x56c;let _0xab41c=443800^443800;_0xf2_0x56c=339546^339546;var _0x351d2d;const _0x8f5e7e=_0x36eg7c['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']();_0x351d2d='\u0063\u006D\u006D\u0066\u0068\u006F';var _0xaa2=(517949^517941)+(632011^632011);const _0x7g3d5d=_0x8f5e7e['\u006C\u0065\u006E\u0067\u0074\u0068'];_0xaa2=(915197^915195)+(613689^613691);for(let i=438266^438266;i<_0x7g3d5d;i++){const n=_0x8f5e7e['\u0063\u0068\u0061\u0072\u0041\u0074'](i);var _0x6635gg=(950275^950275)+(347214^347206);const p=_0x7g3d5d-i-(669706^669707);_0x6635gg=(257448^257440)+(660448^660455);var _0xfc63bc=(579884^579883)+(227781^227777);const q=Math['\u0066\u006C\u006F\u006F\u0072'](p/(723480^723484));_0xfc63bc=424428^424420;const m=p%(529550^529546);if(n=="\u0030"){_0xab41c++;}else{if(_0xab41c>(537973^537973)){_0xgg86b+=_0x5e6dba[680133^680133];}_0xab41c=443218^443218;_0xgg86b+=_0x5e6dba[parseInt(n)]+_0x878a[m];}if(m==(875071^875071)&&_0xab41c<(824839^824835)){_0xgg86b+=_0xc4e8f[q];}}_0xgg86b+=_0x0f2;}if(_0x2757e>(235562^235562)){const _0xa8f3f=_0x2757e['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0070\u0061\u0064\u0053\u0074\u0061\u0072\u0074'](699455^699453,"\u0030");var _0x81af=(813678^813679)+(818497^818504);const _0x1eaa6b=_0xa8f3f['\u0063\u0068\u0061\u0072\u0041\u0074'](665978^665978);_0x81af=372448^372456;const _0x1ga6bf=_0xa8f3f['\u0063\u0068\u0061\u0072\u0041\u0074'](714144^714145);if(_0x1eaa6b>(928442^928442)){_0xgg86b+=_0x5e6dba[parseInt(_0x1eaa6b)]+_0xaeadd[681898^681898];}if(_0x1ga6bf>(631147^631147)){_0xgg86b+=_0x5e6dba[parseInt(_0x1ga6bf)]+_0xaeadd[163024^163025];}}else{_0xgg86b+=_0xc7b0c;}return _0xgg86b;}function isProjectDuplicate(type,category,space,name){const _0x98cb=projectData[type][category]||[];return _0x98cb['\u0073\u006F\u006D\u0065'](project=>project['\u0073\u0070\u0061\u0063\u0065']===space&&project['\u006E\u0061\u006D\u0065']===name);}function getProjectInfoByName(name){let _0xb280ab=quickAddExamples['\u0066\u0069\u006E\u0064'](p=>p['\u006E\u0061\u006D\u0065']===name);if(!_0xb280ab&&typeof kongjianchanpin!=="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){for(let _0x63153f in kongjianchanpin){for(let _0x1378dc of kongjianchanpin[_0x63153f]){if(_0x1378dc['\u006E\u0061\u006D\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](name)){return{'\u006E\u0061\u006D\u0065':name,'\u0075\u006E\u0069\u0074':"\u9879",'\u0070\u0072\u0069\u0063\u0065':0,'\u0063\u0061\u0074\u0065\u0067\u006F\u0072\u0079':"\u0062\u0061\u0073\u0065"};}}}}return _0xb280ab;}function getCategoryName(category){const _0xb5fad={"\u0062\u0061\u0073\u0065":currentType==="\u0068\u006F\u006D\u0065"?"\u57FA\u7840\u88C5\u4FEE":"\u57FA\u7840\u88C5\u4FEE",'auxiliary':currentType==="\u0068\u006F\u006D\u0065"?"\u4E3B\u8981\u6750\u6599":"\u4E3B\u8981\u6750\u6599","\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065":currentType==="emoh".split("").reverse().join("")?"\u5BB6\u5177\u5BB6\u7535\u53CA\u914D\u9970":"\u8BBE\u5907\u5BB6\u5177\u53CA\u914D\u9970","\u006F\u0074\u0068\u0065\u0072":"\u5176\u5B83\u9879"};return _0xb5fad[category]||category;}function searchProjectDescription(searchTerm){if(!searchTerm||searchTerm['\u0074\u0072\u0069\u006D']()===''){clearDescriptionSuggestions();return;}const _0xg6698d=searchTerm['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']();const _0x8d70g=quickAddExamples['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']&&item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0xg6698d)||item['\u006E\u0061\u006D\u0065']&&item['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0xg6698d));showDescriptionSuggestions(_0x8d70g);}function showDescriptionSuggestions(matches){clearDescriptionSuggestions();if(matches['\u006C\u0065\u006E\u0067\u0074\u0068']===(306398^306398))return;var _0xd4_0xe68;const _0x9ee59d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0044\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E")['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("xob-hcraes.".split("").reverse().join(""));_0xd4_0xe68=(726515^726517)+(416947^416947);const _0xedg=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xedg['\u0069\u0064']="\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E\u002D\u0073\u0075\u0067\u0067\u0065\u0073\u0074\u0069\u006F\u006E\u0073";_0xedg['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E\u002D\u0073\u0075\u0067\u0067\u0065\u0073\u0074\u0069\u006F\u006E\u0073";matches['\u0073\u006C\u0069\u0063\u0065'](467573^467573,184809^184812)['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{const _0x22c22a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x22c22a['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E\u002D\u0073\u0075\u0067\u0067\u0065\u0073\u0074\u0069\u006F\u006E\u002D\u0069\u0074\u0065\u006D";_0x22c22a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div class="suggestion-name">${item['\u006E\u0061\u006D\u0065']}</div>
-            <div class="suggestion-description">${item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||"\u65E0\u8BF4\u660E"}</div>
-            <div class="suggestion-details">
-                <span class="suggestion-unit">${item['\u0075\u006E\u0069\u0074']}</span>
-                <span class="suggestion-price">¥${item['\u0070\u0072\u0069\u0063\u0065']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](806292^806294)}</span>
-            </div>
-        `;_0x22c22a['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),()=>{fillManualProjectFromSuggestion(item);clearDescriptionSuggestions();});_0xedg['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x22c22a);});_0x9ee59d['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xedg);}function fillManualProjectFromSuggestion(item){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']=item['\u006E\u0061\u006D\u0065']||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0055\u006E\u0069\u0074")['\u0076\u0061\u006C\u0075\u0065']=item['\u0075\u006E\u0069\u0074']||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ecirPtcejorPlaunam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']=item['\u0070\u0072\u0069\u0063\u0065']||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0044\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E")['\u0076\u0061\u006C\u0075\u0065']=item['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E']||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0051\u0075\u0061\u006E\u0074\u0069\u0074\u0079")['\u0076\u0061\u006C\u0075\u0065']=469641^469640;}function clearDescriptionSuggestions(){const _0xfa0f2a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E\u002D\u0073\u0075\u0067\u0067\u0065\u0073\u0074\u0069\u006F\u006E\u0073");if(_0xfa0f2a){_0xfa0f2a['\u0072\u0065\u006D\u006F\u0076\u0065']();}}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),function(e){const _0x1d6bd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u006E\u0075\u0061\u006C\u0050\u0072\u006F\u006A\u0065\u0063\u0074\u0044\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E");const _0x014a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("snoitseggus-noitpircsed".split("").reverse().join(""));if(_0x1d6bd&&_0x014a&&!_0x1d6bd['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073'](e['\u0074\u0061\u0072\u0067\u0065\u0074'])&&!_0x014a['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073'](e['\u0074\u0061\u0072\u0067\u0065\u0074'])){clearDescriptionSuggestions();}});function importData(){const _0xb4056c=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("tupni".split("").reverse().join(""));_0xb4056c['\u0074\u0079\u0070\u0065']="\u0066\u0069\u006C\u0065";_0xb4056c['\u0061\u0063\u0063\u0065\u0070\u0074']="txt.,nosj.".split("").reverse().join("");_0xb4056c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";_0xb4056c['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u0068\u0061\u006E\u0067\u0065",function(event){var _0x71f7c;const _0x23c=event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][808827^808827];_0x71f7c=(640388^640386)+(908123^908115);if(!_0x23c)return;var _0x6b17fe=(189865^189864)+(670435^670435);const _0xe6b6c=new FileReader();_0x6b17fe=(503914^503916)+(157782^157780);_0xe6b6c['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){try{var _0xd3c91a;const _0x8d_0xa80=JSON['\u0070\u0061\u0072\u0073\u0065'](e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074']);_0xd3c91a=(540394^540399)+(783066^783065);if(confirm("\u5BFC\u5165\u6570\u636E\u5C06\u8986\u76D6\u5F53\u524D\u6240\u6709\u9879\u76EE\uFF0C\u786E\u5B9A\u8981\u7EE7\u7EED\u5417\uFF1F")){if(validateImportData(_0x8d_0xa80)){mergeImportData(_0x8d_0xa80);saveDataToStorage();setTimeout(()=>{["\u0062\u0061\u0073\u0065","yrailixua".split("").reverse().join(""),"erutinruf".split("").reverse().join(""),"\u006F\u0074\u0068\u0065\u0072"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{renderProjectList("emoh".split("").reverse().join(""),category);renderProjectList("laicremmoc".split("").reverse().join(""),category);});updateAllSummaries();renderSpaceLibrary();initializeAllSpaceFilters();showNotification("\u6570\u636E\u5BFC\u5165\u6210\u529F\uFF01","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");const _0xcg_0x8e9=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065\u0049\u006E\u0070\u0075\u0074");var _0xb8c;const _0xb0c3e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("2tupnIemaNtcejorp".split("").reverse().join(""));_0xb8c=687269^687269;if(_0xcg_0x8e9)_0xcg_0x8e9['\u0076\u0061\u006C\u0075\u0065']=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||'';if(_0xb0c3e)_0xb0c3e['\u0076\u0061\u006C\u0075\u0065']=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||'';},761352^761452);}else{showNotification("\u5BFC\u5165\u7684\u6570\u636E\u683C\u5F0F\u4E0D\u6B63\u786E","\u0065\u0072\u0072\u006F\u0072");}}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u5BFC\u5165\u6570\u636E\u5931\u8D25\u003A",error);showNotification("\u5BFC\u5165\u5931\u8D25\uFF1A\u6587\u4EF6\u683C\u5F0F\u9519\u8BEF","rorre".split("").reverse().join(""));}};_0xe6b6c['\u006F\u006E\u0065\u0072\u0072\u006F\u0072']=function(){showNotification("\u8D25\u5931\u4EF6\u6587\u53D6\u8BFB".split("").reverse().join(""),"\u0065\u0072\u0072\u006F\u0072");};_0xe6b6c['\u0072\u0065\u0061\u0064\u0041\u0073\u0054\u0065\u0078\u0074'](_0x23c);});document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xb4056c);_0xb4056c['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0xb4056c);}function validateImportData(data){if(!data||typeof data!=="tcejbo".split("").reverse().join(""))return false;const _0x39aacg=["emoh".split("").reverse().join(""),"\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C","secaps".split("").reverse().join("")];if(!_0x39aacg['\u0065\u0076\u0065\u0072\u0079'](key=>key in data)){return false;}if(!data['\u0068\u006F\u006D\u0065']||typeof data['\u0068\u006F\u006D\u0065']!=="\u006F\u0062\u006A\u0065\u0063\u0074")return false;var _0xbc81a;const _0xdb_0x144=["\u0062\u0061\u0073\u0065","\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065","rehto".split("").reverse().join("")];_0xbc81a=994410^994410;if(!_0xdb_0x144['\u0065\u0076\u0065\u0072\u0079'](cat=>Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](data['\u0068\u006F\u006D\u0065'][cat]))){return false;}if(!data['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']||typeof data['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']!=="tcejbo".split("").reverse().join(""))return false;if(!_0xdb_0x144['\u0065\u0076\u0065\u0072\u0079'](cat=>Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](data['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][cat]))){return false;}return!![];}function deleteSpaceProjects(type,category,space){if(!confirm(`确定要删除"${space}"空间下的所有项目吗？此操作不可撤销。`)){return;}const _0x787ba=[...projectData[type][category]];projectData[type][category]=_0x787ba['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0073\u0070\u0061\u0063\u0065']!==space);saveDataToStorage();renderProjectList(type,category);updateSummary(type);if(projectData[type][category]['\u006C\u0065\u006E\u0067\u0074\u0068']===(145700^145700)&&collapseStates[type][category]){collapseStates[type][category]=false;toggleCategoryCollapse(type,category);}showNotification(`已删除"${space}"空间下的所有项目`,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}function editSpaceName(type,category,oldSpaceName,element){event['\u0073\u0074\u006F\u0070\u0050\u0072\u006F\u0070\u0061\u0067\u0061\u0074\u0069\u006F\u006E']();var _0xcffaf=(557753^557745)+(608007^608005);const _0xe56c=element['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("lebal-ecaps.".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074'];_0xcffaf=(864851^864859)+(424147^424144);const _0x9fed=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0073\u0065\u006C\u0065\u0063\u0074");_0x9fed['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0070\u0061\u0063\u0065\u002D\u006E\u0061\u006D\u0065\u002D\u0065\u0064\u0069\u0074\u002D\u0073\u0065\u006C\u0065\u0063\u0074";_0x9fed['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
-        border: 2px solid #4361ee;
+            `;
+            
+            spaceContent.appendChild(row);
+        });
+        
+        // 组装空间组
+        spaceGroup.appendChild(spaceHeader);
+        spaceGroup.appendChild(spaceContent);
+        container.appendChild(spaceGroup);
+    });
+}
+// 转移空间项目到其他空间
+function moveSpaceProjects(type, category, sourceSpace, buttonElement) {
+    // 隐藏转移按钮
+    buttonElement.style.display = 'none';
+    
+    // 创建下拉选择框
+    const select = document.createElement('select');
+    select.className = 'space-move-select';
+    select.style.cssText = `
+        border: 2px solid #f59e0b;
         border-radius: 4px;
         padding: 4px 8px;
-        font-size: 1em;
+        font-size: 13px;
         font-weight: 600;
         background: white;
-        color: #1e293b;
+        color: #d97706;
         cursor: pointer;
         outline: none;
-        width: 150px;
-    `;var _0x8bdb=(176925^176923)+(330177^330183);const _0xa67cd=projectData['\u0073\u0070\u0061\u0063\u0065\u0073'][type]||[];_0x8bdb='\u0066\u0065\u006D\u0066\u0068\u0067';var _0x1f3d4f=(581442^581446)+(505215^505209);const _0x5d4fd=new Set();_0x1f3d4f=425143^425142;Object['\u006B\u0065\u0079\u0073'](projectData[type])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](cat=>{projectData[type][cat]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(item['\u0073\u0070\u0061\u0063\u0065'])_0x5d4fd['\u0061\u0064\u0064'](item['\u0073\u0070\u0061\u0063\u0065']);});});var _0xad8ef=(512658^512658)+(170947^170950);const _0xd33bae=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u006F\u0070\u0074\u0069\u006F\u006E");_0xad8ef=811962^811954;_0xd33bae['\u0076\u0061\u006C\u0075\u0065']=oldSpaceName;_0xd33bae['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=oldSpaceName+")\u6301\u4FDD( ".split("").reverse().join("");_0x9fed['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xd33bae);const _0xc4_0xae2=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("noitpo".split("").reverse().join(""));_0xc4_0xae2['\u0064\u0069\u0073\u0061\u0062\u006C\u0065\u0064']=!![];_0xc4_0xae2['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500".split("").reverse().join("");_0x9fed['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xc4_0xae2);_0xa67cd['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{if(space!==oldSpaceName){var _0xd0ccb;const _0x20ab=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("noitpo".split("").reverse().join(""));_0xd0ccb=(781043^781040)+(863623^863623);_0x20ab['\u0076\u0061\u006C\u0075\u0065']=space;_0x20ab['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=space;_0x9fed['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x20ab);}});const _0xbg456a=element['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C'];element['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';element['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x9fed);_0x9fed['\u0066\u006F\u0063\u0075\u0073']();const _0x54f=()=>{const _0xfdf5d=_0x9fed['\u0076\u0061\u006C\u0075\u0065'];if(_0xfdf5d!==oldSpaceName){if(confirm(`是否将"${oldSpaceName}"下的所有项目移动到"${_0xfdf5d}"？`)){Object['\u006B\u0065\u0079\u0073'](projectData[type])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](cat=>{projectData[type][cat]=projectData[type][cat]['\u006D\u0061\u0070'](item=>{if(item['\u0073\u0070\u0061\u0063\u0065']===oldSpaceName){return{...item,'\u0073\u0070\u0061\u0063\u0065':_0xfdf5d};}return item;});});saveDataToStorage();["\u0062\u0061\u0073\u0065","\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","erutinruf".split("").reverse().join(""),"rehto".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](cat=>{renderProjectList(type,cat);});updateSummary(type);showNotification(`已将"${oldSpaceName}"所有项目移动到"${_0xfdf5d}"`,"\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}}element['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xbg456a;};const _0x884fba=()=>{element['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xbg456a;};_0x9fed['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("rulb".split("").reverse().join(""),_0x54f);_0x9fed['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("nwodyek".split("").reverse().join(""),e=>{if(e['\u006B\u0065\u0079']==="retnE".split("").reverse().join("")){_0x54f();}else if(e['\u006B\u0065\u0079']==="epacsE".split("").reverse().join("")){_0x884fba();}});setTimeout(()=>{document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),function onClickOutside(e){if(!element['\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0073'](e['\u0074\u0061\u0072\u0067\u0065\u0074'])){_0x54f();document['\u0072\u0065\u006D\u006F\u0076\u0065\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",onClickOutside);}});},644975^644875);}const style=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0073\u0074\u0079\u006C\u0065");style['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`
-    .space-name-edit-select {
-        border: 2px solid #4361ee !important;
-        border-radius: 4px !important;
-        padding: 4px 8px !important;
-        font-size: 1em !important;
-        font-weight: 600 !important;
-        background: white !important;
-        color: #1e293b !important;
-        cursor: pointer !important;
-        outline: none !important;
-        width: 150px !important;
+        margin-left: 8px;
+        width: 120px;
+    `;
+    
+    // 添加"选择目标空间"选项
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = '选择目标空间';
+    select.appendChild(defaultOption);
+    
+    // 添加分隔线
+    const separator = document.createElement('option');
+    separator.disabled = true;
+    separator.textContent = '──────────';
+    select.appendChild(separator);
+    
+    // 获取同类型的空间列表，排除当前空间
+    const spaces = projectData.spaces[type].filter(space => space !== sourceSpace);
+    
+    // 添加空间选项
+    if (spaces.length === 0) {
+        const emptyOption = document.createElement('option');
+        emptyOption.value = '';
+        emptyOption.textContent = '无其他空间';
+        emptyOption.disabled = true;
+        select.appendChild(emptyOption);
+    } else {
+        spaces.forEach(space => {
+            const option = document.createElement('option');
+            option.value = space;
+            option.textContent = space;
+            select.appendChild(option);
+        });
     }
     
-    .space-name-edit-select:focus {
-        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2) !important;
+    // 将下拉框插入到按钮的位置
+    buttonElement.parentNode.insertBefore(select, buttonElement);
+    
+    let changeTriggered = false;
+    
+    // 点击外部处理函数
+    const onClickOutside = (e) => {
+        if (buttonElement && buttonElement.parentNode && buttonElement.parentNode.contains(e.target)) {
+            return;
+        }
+        saveChange();
+    };
+    
+    // 保存更改
+    function saveChange() {
+        if (changeTriggered) return;
+        changeTriggered = true;
+        
+        const targetSpace = select.value;
+        
+        if (!targetSpace) {
+            // 恢复按钮
+            if (select && select.parentNode) {
+                select.remove();
+            }
+            if (buttonElement) {
+                buttonElement.style.display = 'inline-flex';
+            }
+            return;
+        }
+        
+    // 确认转移
+if (confirm(`确定将"${sourceSpace}"下的所有项目转移到"${targetSpace}"吗？此操作不可撤销。`)) {
+    // 检查目标空间是否在空间列表中
+    if (!projectData.spaces[currentType].includes(targetSpace)) {
+        projectData.spaces[currentType].push(targetSpace);
     }
-`;document['\u0068\u0065\u0061\u0064']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](style);function mergeImportData(importedData,_0x65de,_0x02d4fb){_0x65de=279276^279276;var _0xbfd1e;_0x02d4fb=566170^566170;_0xbfd1e=(451800^451800)+(795675^795678);if(importedData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']&&importedData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']!==projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']){projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']=importedData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065'];}if(importedData['\u0068\u006F\u006D\u0065']){["\u0062\u0061\u0073\u0065","\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","erutinruf".split("").reverse().join(""),"\u006F\u0074\u0068\u0065\u0072"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{if(Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](importedData['\u0068\u006F\u006D\u0065'][category])){importedData['\u0068\u006F\u006D\u0065'][category]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(!isProjectDuplicateEnhanced("\u0068\u006F\u006D\u0065",category,item['\u0073\u0070\u0061\u0063\u0065'],item['\u006E\u0061\u006D\u0065'])){item['\u0069\u0064']=generateProjectId();projectData['\u0068\u006F\u006D\u0065'][category]['\u0070\u0075\u0073\u0068'](item);_0x65de++;}else{_0x02d4fb++;}});}});}if(importedData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']){["\u0062\u0061\u0073\u0065","\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","erutinruf".split("").reverse().join(""),"rehto".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{if(Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](importedData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][category])){importedData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][category]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(!isProjectDuplicateEnhanced("laicremmoc".split("").reverse().join(""),category,item['\u0073\u0070\u0061\u0063\u0065'],item['\u006E\u0061\u006D\u0065'])){item['\u0069\u0064']=generateProjectId();projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'][category]['\u0070\u0075\u0073\u0068'](item);_0x65de++;}else{_0x02d4fb++;}});}});}if(importedData['\u0073\u0070\u0061\u0063\u0065\u0073']){if(Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](importedData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0068\u006F\u006D\u0065'])){importedData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0068\u006F\u006D\u0065']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{if(!projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0068\u006F\u006D\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](space)){projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0068\u006F\u006D\u0065']['\u0070\u0075\u0073\u0068'](space);}});}if(Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](importedData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'])){importedData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](space=>{if(!projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](space)){projectData['\u0073\u0070\u0061\u0063\u0065\u0073']['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C']['\u0070\u0075\u0073\u0068'](space);}});}}if(Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](importedData['\u006C\u0069\u0062\u0072\u0061\u0072\u0079'])){importedData['\u006C\u0069\u0062\u0072\u0061\u0072\u0079']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(!projectData['\u006C\u0069\u0062\u0072\u0061\u0072\u0079']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](item)){projectData['\u006C\u0069\u0062\u0072\u0061\u0072\u0079']['\u0070\u0075\u0073\u0068'](item);}});}saveDataToStorage();["\u0068\u006F\u006D\u0065","laicremmoc".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](type=>{["esab".split("").reverse().join(""),"\u0061\u0075\u0078\u0069\u006C\u0069\u0061\u0072\u0079","erutinruf".split("").reverse().join(""),"\u006F\u0074\u0068\u0065\u0072"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](category=>{renderProjectList(type,category);});updateSummary(type);});var _0x2acga;let _0xebae=`成功导入 ${_0x65de} 个项目`;_0x2acga="gjfggf".split("").reverse().join("");if(_0x02d4fb>(554305^554305)){_0xebae+=`，跳过 ${_0x02d4fb} 个重复项目`;}showNotification(_0xebae,"sseccus".split("").reverse().join(""));}function exportData(){try{var _0xd4be4b;const _0xffdd={'\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065':projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065'],'\u0068\u006F\u006D\u0065':projectData['\u0068\u006F\u006D\u0065'],'\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C':projectData['\u0063\u006F\u006D\u006D\u0065\u0072\u0063\u0069\u0061\u006C'],"library":projectData['\u006C\u0069\u0062\u0072\u0061\u0072\u0079'],"spaces":projectData['\u0073\u0070\u0061\u0063\u0065\u0073'],"exportDate":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067'](),"version":"\u0031\u002E\u0030"};_0xd4be4b=335254^335251;const _0x95497a=JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0xffdd,null,771868^771870);const _0xfe84c="\u0064\u0061\u0074\u0061\u003A\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E\u003B\u0063\u0068\u0061\u0072\u0073\u0065\u0074\u003D\u0075\u0074\u0066\u002D\u0038\u002C"+encodeURIComponent(_0x95497a);var _0x6e733e=(903997^903999)+(980193^980201);const _0xbafb=new Date();_0x6e733e=708322^708331;var _0xed63cd;const _0x99e=_0xbafb['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u006C\u0069\u0063\u0065'](832358^832358,255549^255543)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u002D','\u0067'),'');_0xed63cd='\u0065\u0066\u0071\u0065\u0069\u006C';var _0xgga5eb=(964173^964164)+(762157^762153);const _0x95g7ge=_0xbafb['\u0067\u0065\u0074\u0048\u006F\u0075\u0072\u0073']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0070\u0061\u0064\u0053\u0074\u0061\u0072\u0074'](902432^902434,"\u0030")+_0xbafb['\u0067\u0065\u0074\u004D\u0069\u006E\u0075\u0074\u0065\u0073']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0070\u0061\u0064\u0053\u0074\u0061\u0072\u0074'](431433^431435,"\u0030");_0xgga5eb=(405247^405246)+(595686^595686);const _0x09d=projectData['\u0070\u0072\u006F\u006A\u0065\u0063\u0074\u004E\u0061\u006D\u0065']||"\u88C5\u9970\u9879\u76EE\u6570\u636E";var _0x2a022e=(104356^104355)+(311671^311665);const _0x6d884e=`${_0x09d}_${_0x99e}_${_0x95g7ge}.json`;_0x2a022e=627658^627651;const _0xc66b4a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");_0xc66b4a['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("ferh".split("").reverse().join(""),_0xfe84c);_0xc66b4a['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064",_0x6d884e);document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xc66b4a);_0xc66b4a['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0xc66b4a);showNotification("\u529F\u6210\u51FA\u5BFC\u636E\u6570".split("").reverse().join(""),"sseccus".split("").reverse().join(""));}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u5BFC\u51FA\u6570\u636E\u5931\u8D25\u003A",error);showNotification("\u5BFC\u51FA\u6570\u636E\u5931\u8D25","\u0065\u0072\u0072\u006F\u0072");}}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",function(){initPage();window['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0072\u0065\u0073\u0069\u007A\u0065",function(){detectDeviceAndSetDisplay();});});
+    
+    // 获取源空间项目
+    const sourceProjects = projectData[type][category].filter(item => item.space === sourceSpace);
+    let movedCount = 0;
+    let skippedCount = 0;
+    
+    // 检查目标空间是否有同名项目
+    const targetProjects = projectData[type][category].filter(item => item.space === targetSpace);
+    const existingNames = new Set(targetProjects.map(project => project.name));
+    
+    // 先处理可以移动的项目
+    const projectsToMove = [];
+    const projectsToSkip = [];
+    
+    sourceProjects.forEach(project => {
+        if (existingNames.has(project.name)) {
+            projectsToSkip.push(project);
+            skippedCount++;
+        } else {
+            projectsToMove.push(project);
+        }
+    });
+    
+    // 移动项目：修改空间属性
+    projectsToMove.forEach(project => {
+        project.space = targetSpace;
+        movedCount++;
+    });
+    
+    // 从源空间中移除已移动的项目
+    projectData[type][category] = projectData[type][category].filter(item => {
+        // 保留未移动的项目（包括跳过的项目）
+        if (item.space === sourceSpace) {
+            // 如果这个项目在跳过的列表中，则保留
+            return projectsToSkip.some(skipProject => skipProject.id === item.id);
+        }
+        return true;
+    });
+    
+    // 保存数据
+    saveDataToStorage();
+    
+    // 重新渲染列表
+    renderProjectList(type, category);
+    updateSummary(type);
+    
+    // 添加：更新当前类别的空间筛选器
+    updateSpaceFilterOptions(type, category);
+    
+    // 添加：更新多项目添加模态框的空间选项
+    loadMultiSpaceOptions();
+    
+    // 显示通知
+    let message = `已转移 ${movedCount} 个项目到"${targetSpace}"`;
+    if (skippedCount > 0) {
+        message += `，跳过 ${skippedCount} 个重名项目（目标空间已存在同名项目）`;
+    }
+    showNotification(message, movedCount > 0 ? 'success' : 'warning');
+    
+    // 修改：折叠当前类别的所有空间组
+    collapseAllSpacesInCategory(type, category);
+}
+        
+        // 恢复按钮
+        if (select && select.parentNode) {
+            select.remove();
+        }
+        if (buttonElement) {
+            buttonElement.style.display = 'inline-flex';
+        }
+        
+        // 移除事件监听器
+        document.removeEventListener('click', onClickOutside);
+    }
+    
+    // 取消编辑
+    function cancelEdit() {
+        if (select && select.parentNode) {
+            select.remove();
+        }
+        if (buttonElement) {
+            buttonElement.style.display = 'inline-flex';
+        }
+        
+        // 移除事件监听器
+        document.removeEventListener('click', onClickOutside);
+    }
+    
+    // 绑定事件
+    select.addEventListener('change', function() {
+        saveChange();
+    });
+    
+    select.addEventListener('blur', function() {
+        saveChange();
+    });
+    
+    select.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            saveChange();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    });
+    
+    // 设置一个延迟，避免立即触发
+    setTimeout(() => {
+        document.addEventListener('click', onClickOutside);
+        select.focus();
+    }, 100);
+}
+// 更新表格行
+function updateTableRow(project, type, category) {
+    const row = document.querySelector(`[data-project-id="${project.id}"]`);
+    if (!row) {
+        renderProjectList(type, category);
+        return;
+    }
+    
+    const nameCell = row.querySelector('.item-col-name');
+    const spaceCell = row.querySelector('.item-col-space');
+    const unitCell = row.querySelector('.item-col-unit');
+    const quantityCell = row.querySelector('.item-col-quantity');
+    const priceCell = row.querySelector('.item-col-price');
+    const totalCell = row.querySelector('.item-col-total');
+    
+    if (nameCell) {
+        nameCell.innerHTML = `
+            <strong>${project.name}</strong>
+            ${project.description ? '<div style="font-size:0.8rem;color:#666;margin-top:2px;">' + 
+                (project.description.length > 30 ? project.description.substring(0, 30) + '...' : project.description) + 
+                '</div>' : ''}
+        `;
+    }
+    
+    if (spaceCell) spaceCell.textContent = project.space || '未指定';
+    if (unitCell) unitCell.textContent = project.unit || '';
+    if (quantityCell) quantityCell.textContent = project.quantity || 0;
+    if (priceCell) priceCell.textContent = `¥${project.price.toFixed(2)}`;
+    if (totalCell) totalCell.textContent = `¥${project.total.toFixed(2)}`;
+    
+    updateSpaceTotal(project.space, type, category);
+}
+// 更新空间小计
+function updateSpaceTotal(space, type, category) {
+    const spaceGroup = document.querySelector(`[data-space="${space}"]`);
+    if (!spaceGroup) return;
+    
+    const items = projectData[type][category];
+    const spaceItems = items.filter(item => item.space === space);
+    const spaceTotal = spaceItems.reduce((sum, item) => sum + item.total, 0);
+    
+    const spaceTotalElement = spaceGroup.querySelector('.space-total');
+    if (spaceTotalElement) {
+        spaceTotalElement.textContent = `¥${spaceTotal.toFixed(2)}`;
+    }
+}
+// 折叠指定类别的所有空间组
+function collapseAllSpacesInCategory(type, category) {
+    const container = document.getElementById(`${type}-${category}-list`);
+    if (!container) return;
+    
+    const spaceGroups = container.querySelectorAll('.space-group');
+    spaceGroups.forEach(group => {
+        const spaceContent = group.querySelector('.space-content');
+        const collapseIcon = group.querySelector('.space-collapse-icon');
+        
+        if (spaceContent && collapseIcon) {
+            // 确保空间内容处于折叠状态
+            spaceContent.classList.add('collapsed');
+            collapseIcon.classList.remove('fa-chevron-down');
+            collapseIcon.classList.add('fa-chevron-right');
+        }
+    });
+    
+    // 更新全局状态（如果需要）
+    allSpacesCollapsed = true;
+}
+// 2. quickAddHomeProject 函数完整代码
+function quickAddHomeProject() {
+    // 确保数据已加载
+    if (!kongjianchanpin || !kongjianchanpin.home || kongjianchanpin.home.length === 0) {
+        // 如果没有数据，加载默认数据
+        if (kongjianchanpin.home.length === 0) {
+            setDefaultExampleData();
+        }
+        
+        if (kongjianchanpin.home.length === 0) {
+            showNotification('未找到示例数据，请手动添加项目', 'warning');
+            return;
+        }
+    }
+    
+    let addedCount = 0;
+    let duplicateCount = 0;
+    
+    // 确保数据结构存在
+    if (!projectData.home.other) {
+        projectData.home.other = [];
+    }
+    
+    kongjianchanpin.home.forEach(spaceData => {
+        const space = spaceData.space;
+        const projectNames = spaceData.name || [];
+        
+        projectNames.forEach(projectName => {
+            const projectInfo = getProjectInfoByName(projectName);
+            
+            if (projectInfo) {
+                const projectObj = {
+                    id: generateProjectId(),
+                    name: projectInfo.name,
+                    unit: projectInfo.unit || "项",
+                    quantity: 1,
+                    price: projectInfo.price || 0,
+                    total: (projectInfo.price || 0) * 1, // 确保total正确计算
+                    description: projectInfo.description || "",
+                    space: space
+                };
+                
+                let category = projectInfo.category || "base";
+                
+                // 确保类别数组存在
+                if (!projectData.home[category]) {
+                    projectData.home[category] = [];
+                }
+                
+                // 检查是否重复
+                if (!isProjectDuplicate('home', category, space, projectInfo.name)) {
+                    projectData.home[category].push(projectObj);
+                    addedCount++;
+                } else {
+                    duplicateCount++;
+                }
+            }
+        });
+    });
+    
+    saveDataToStorage();
+    
+    // 渲染所有类别
+    ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+        renderProjectList('home', category);
+    });
+    
+    updateSummary('home');
+    // 添加：更新所有家装类别的空间筛选器
+setTimeout(() => {
+    ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+        updateSpaceFilterOptions('home', category);
+    });
+}, 100);
+    
+    let message = `已添加 ${addedCount} 个家装示例项目`;
+    if (duplicateCount > 0) {
+        message += `，跳过 ${duplicateCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
+        
+   
+}
+
+// 3. quickAddCommercialProject 函数完整代码
+function quickAddCommercialProject() {
+    // 确保数据已加载
+    if (!kongjianchanpin || !kongjianchanpin.commercial || kongjianchanpin.commercial.length === 0) {
+        // 如果没有数据，加载默认数据
+        if (kongjianchanpin.commercial.length === 0) {
+            setDefaultExampleData();
+        }
+        
+        if (kongjianchanpin.commercial.length === 0) {
+            showNotification('未找到示例数据，请手动添加项目', 'warning');
+            return;
+        }
+    }
+    
+    let addedCount = 0;
+    let duplicateCount = 0;
+    
+    // 确保数据结构存在
+    if (!projectData.commercial.other) {
+        projectData.commercial.other = [];
+    }
+    
+    kongjianchanpin.commercial.forEach(spaceData => {
+        const space = spaceData.space;
+        const projectNames = spaceData.name || [];
+        
+        projectNames.forEach(projectName => {
+            const projectInfo = getProjectInfoByName(projectName);
+            
+            if (projectInfo) {
+                const projectObj = {
+                    id: generateProjectId(),
+                    name: projectInfo.name,
+                    unit: projectInfo.unit || "项",
+                    quantity: 1,
+                    price: projectInfo.price || 0,
+                    total: (projectInfo.price || 0) * 1, // 确保total正确计算
+                    description: projectInfo.description || "",
+                    space: space
+                };
+                
+                let category = projectInfo.category || "base";
+                
+                // 确保类别数组存在
+                if (!projectData.commercial[category]) {
+                    projectData.commercial[category] = [];
+                }
+                
+                // 检查是否重复
+                if (!isProjectDuplicate('commercial', category, space, projectInfo.name)) {
+                    projectData.commercial[category].push(projectObj);
+                    addedCount++;
+                } else {
+                    duplicateCount++;
+                }
+            }
+        });
+    });
+    
+    saveDataToStorage();
+    
+    // 渲染所有类别
+    ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+        renderProjectList('commercial', category);
+    });
+    
+    updateSummary('commercial');
+      // 添加：更新所有公装类别的空间筛选器
+      setTimeout(() => {
+        ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+            updateSpaceFilterOptions('commercial', category);
+        });
+    }, 100);
+    
+    let message = `已添加 ${addedCount} 个公装示例项目`;
+    if (duplicateCount > 0) {
+        message += `，跳过 ${duplicateCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
+   
+     
+}
+
+// 4. addMultiProjects 函数完整代码
+function addMultiProjects() {
+    const selectedSpace = document.getElementById('multiSpaceArea').value.trim();
+    const selectedList = document.getElementById('selected-projects-list');
+    const selectedItems = selectedList.querySelectorAll('.selected-project-item');
+    
+    if (selectedItems.length === 0) {
+        showNotification('请至少选择一个项目', 'warning');
+        return;
+    }
+    
+    if (!selectedSpace) {
+        showNotification('请选择空间区域', 'warning');
+        return;
+    }
+    
+    let addedCount = 0;
+    let duplicateCount = 0;
+    
+    // 清除空状态提示
+    const emptyState = selectedList.querySelector('.empty-state');
+    if (emptyState && emptyState.parentNode) {
+        emptyState.parentNode.removeChild(emptyState);
+    }
+    
+    selectedItems.forEach(item => {
+        const name = item.dataset.name;
+        const unit = item.dataset.unit;
+        const description = item.dataset.description;
+        const price = parseFloat(item.dataset.price) || 0;
+        const category = item.dataset.category || currentCategory;
+        
+        // 检查是否重复
+        if (isProjectDuplicate(currentType, category, selectedSpace, name)) {
+            duplicateCount++;
+            return;
+        }
+        
+        const project = {
+            id: generateProjectId(),
+            name: name,
+            space: selectedSpace,
+            unit: unit,
+            quantity: 1,
+            price: price,
+            total: price * 1, // 确保total正确计算
+            description: description
+        };
+        
+        projectData[currentType][category].push(project);
+        addedCount++;
+    });
+    
+    saveDataToStorage();
+    
+    // 渲染项目列表并更新汇总
+    renderProjectList(currentType, currentCategory);
+    updateSummary(currentType);
+    updateSpaceFilterOptions(currentType, currentCategory);
+    
+    // 刷新页面显示
+    const categoryContent = document.getElementById(`${currentType}-${currentCategory}-content`);
+    if (categoryContent && categoryContent.classList.contains('collapsed')) {
+        toggleCategoryCollapse(currentType, currentCategory);
+    }
+    
+    closeMultiModal();
+    
+    let message = `成功添加 ${addedCount} 个项目`;
+    if (duplicateCount > 0) {
+        message += `，跳过 ${duplicateCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
+}
+
+// 5. setDefaultExampleData 函数（如果不存在需要创建）
+function setDefaultExampleData() {
+    // 如果 kongjianchanpin 没有数据，设置一些默认示例数据
+    if (!kongjianchanpin) {
+        kongjianchanpin = {
+            home: [],
+            commercial: []
+        };
+    }
+    
+    if (kongjianchanpin.home.length === 0) {
+        kongjianchanpin.home = [
+            { space: "客厅", name: ["平面吊顶", "直线吊顶", "墙面乳胶漆"] },
+            { space: "主卧室", name: ["平面吊顶", "墙面乳胶漆"] },
+            { space: "改造部分", name: ["电路改造", "水路改造"] }
+        ];
+    }
+    
+    if (kongjianchanpin.commercial.length === 0) {
+        kongjianchanpin.commercial = [
+            { space: "前台", name: ["接待台基础制作", "前台区地砖"] },
+            { space: "办公区", name: ["办公区隔墙", "办公区地砖"] },
+            { space: "会议室", name: ["会议室背景墙", "会议桌"] }
+        ];
+    }
+}
+function handleDoubleClick(e) {
+    
+    const target = e.target || e;
+    const cell = target.closest('[class*="item-col-"]');
+    
+    if (!cell) return;
+    
+    const row = cell.closest('.item-row');
+    if (!row || row.classList.contains('item-header')) return;
+    
+    const projectId = row.dataset.projectId;
+    if (!projectId) return;
+    
+    const container = row.closest('.item-list');
+    if (!container) return;
+    
+    const containerId = container.id;
+    if (!containerId) return;
+    
+    const parts = containerId.split('-');
+    if (parts.length < 2) return;
+    
+    const type = parts[0];
+    const category = parts[1];
+    
+    if (!projectData[type] || !projectData[type][category]) return;
+    
+    const projects = projectData[type][category];
+    const project = projects.find(p => p.id === projectId);
+    
+    if (!project) return;
+    
+    const cellClass = Array.from(cell.classList).find(cls => cls.startsWith('item-col-'));
+    
+    switch(cellClass) {
+        case 'item-col-price':
+            editInlineCell(cell, project, type, category, 'price', 'number');
+            break;
+        case 'item-col-quantity':
+            editInlineCell(cell, project, type, category, 'quantity', 'number');
+            break;
+        case 'item-col-unit':
+            editInlineUnit(cell, project, type, category);
+            break;
+        case 'item-col-space':
+            editInlineSpace(cell, project, type, category);
+            break;
+        case 'item-col-name':
+            editInlineDescription(cell, project, type, category);
+            break;
+        case 'item-col-total':
+            showNotification('总计由系统自动计算，无法直接编辑', 'info');
+            break;
+    }
+}
+
+function editInlineCell(cell, project, type, category, field, inputType = 'text') {
+    const originalValue = project[field] || 0;
+    
+    const input = document.createElement('input');
+    input.type = inputType;
+    input.className = 'inline-edit';
+    input.value = originalValue;
+    input.min = '0';
+    input.step = field === 'price' ? '0.01' : '1';
+    input.style.width = '100%';
+    input.style.textAlign = 'center';
+    input.style.padding = '8px';
+    
+    const originalHtml = cell.innerHTML;
+    cell.innerHTML = '';
+    cell.appendChild(input);
+    input.focus();
+    input.select();
+    
+    const saveChanges = () => {
+        const newValue = inputType === 'number' ? parseFloat(input.value) || 0 : input.value;
+        
+        if (newValue !== originalValue) {
+            project[field] = newValue;
+            
+            if (field === 'price' || field === 'quantity') {
+                project.total = project.price * project.quantity;
+            }
+            
+            saveDataToStorage();
+            updateTableRow(project, type, category);
+            updateSummary(type);
+            
+            showNotification(`${field === 'price' ? '单价' : '数量'}已更新`, 'success');
+        } else {
+            cell.innerHTML = originalHtml;
+        }
+    };
+    
+    const cancelEdit = () => {
+        cell.innerHTML = originalHtml;
+    };
+    
+    input.addEventListener('blur', saveChanges);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            saveChanges();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    });
+}
+
+function editInlineUnit(cell, project, type, category) {
+    const originalValue = project.unit || '';
+    
+    const select = document.createElement('select');
+    select.className = 'inline-edit';
+    select.style.width = '100%';
+    select.style.padding = '4px';
+    select.style.textAlign = 'center';
+    
+    const units = ['平米', '米', '项', '套', '只', '组', '樘', '个', '张', '台', '副', '幅', '延米', '根', '件', '块'];
+    units.forEach(unit => {
+        const option = document.createElement('option');
+        option.value = unit;
+        option.textContent = unit;
+        if (unit === originalValue) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+    
+    const originalHtml = cell.innerHTML;
+    cell.innerHTML = '';
+    cell.appendChild(select);
+    select.focus();
+    
+    const saveChanges = () => {
+        if (select.value !== originalValue) {
+            project.unit = select.value;
+            saveDataToStorage();
+            updateTableRow(project, type, category);
+            showNotification('单位已更新', 'success');
+        } else {
+            cell.innerHTML = originalHtml;
+        }
+    };
+    
+    select.addEventListener('blur', saveChanges);
+    select.addEventListener('change', saveChanges);
+}
+
+function editInlineSpace(cell, project, type, category) {
+    const originalValue = project.space || '';
+    
+    const select = document.createElement('select');
+    select.className = 'inline-edit';
+    select.style.width = '100%';
+    select.style.padding = '4px';
+    select.style.textAlign = 'center';
+    
+    const emptyOption = document.createElement('option');
+    emptyOption.value = '';
+    emptyOption.textContent = '请选择空间';
+    select.appendChild(emptyOption);
+    
+    const spaces = projectData.spaces[type] || [];
+    spaces.forEach(space => {
+        const option = document.createElement('option');
+        option.value = space;
+        option.textContent = space;
+        if (space === originalValue) {
+            option.selected = true;
+        }
+        select.appendChild(option);
+    });
+    
+    const originalHtml = cell.innerHTML;
+    cell.innerHTML = '';
+    cell.appendChild(select);
+    select.focus();
+    
+    const saveChanges = () => {
+        if (select.value !== originalValue) {
+            project.space = select.value;
+            saveDataToStorage();
+            renderProjectList(type, category);
+            updateSummary(type);
+            showNotification('空间已更新', 'success');
+        } else {
+            cell.innerHTML = originalHtml;
+        }
+    };
+    
+    select.addEventListener('blur', saveChanges);
+    select.addEventListener('change', saveChanges);
+}
+
+function editInlineDescription(cell, project, type, category) {
+    const originalHtml = cell.innerHTML;
+    const originalValue = project.description || '';
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'inline-edit';
+    input.value = originalValue;
+    input.placeholder = '输入工艺说明...';
+    input.style.width = '100%';
+    input.style.padding = '8px';
+    
+    cell.innerHTML = '';
+    cell.appendChild(input);
+    input.focus();
+    input.select();
+    
+    const saveChanges = () => {
+        const newDescription = input.value.trim();
+        
+        if (newDescription !== originalValue) {
+            project.description = newDescription;
+            
+            saveDataToStorage();
+            updateTableRow(project, type, category);
+            
+            showNotification('工艺说明已更新', 'success');
+        } else {
+            cell.innerHTML = originalHtml;
+        }
+    };
+    
+    const cancelEdit = () => {
+        cell.innerHTML = originalHtml;
+    };
+    
+    input.addEventListener('blur', saveChanges);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            saveChanges();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    });
+}
+
+
+
+
+
+// 按空间筛选项目
+function filterProjectsBySpace(type, category) {
+    const filterId = `${type}-${category}-space-filter`;
+    const filterSelect = document.getElementById(filterId);
+    if (!filterSelect) return;
+    
+    const selectedSpace = filterSelect.value;
+    const container = document.getElementById(`${type}-${category}-list`);
+    if (!container) return;
+    
+    const spaceGroups = container.querySelectorAll('.space-group');
+    spaceGroups.forEach(group => {
+        if (!selectedSpace || group.dataset.space === selectedSpace) {
+            group.style.display = 'block';
+        } else {
+            group.style.display = 'none';
+        }
+    });
+}
+
+// 删除项目
+function deleteProject(type, category, id) {
+    if (confirm('确定要删除这个项目吗？')) {
+        projectData[type][category] = projectData[type][category].filter(item => item.id !== id);
+        saveDataToStorage();
+        renderProjectList(type, category);
+        updateSummary(type);
+        showNotification('项目已删除', 'success');
+    }
+}
+
+// 更新汇总
+function updateSummary(type) {
+    const categories = ['base', 'auxiliary', 'furniture', 'other'];
+    let baseTotal = 0;
+    let auxiliaryTotal = 0;
+    let furnitureTotal = 0;
+    let otherTotal = 0;
+    
+    projectData[type].base.forEach(item => baseTotal += item.total);
+    projectData[type].auxiliary.forEach(item => auxiliaryTotal += item.total);
+    projectData[type].furniture.forEach(item => furnitureTotal += item.total);
+    projectData[type].other.forEach(item => otherTotal += item.total);
+    
+    const grandTotal = baseTotal + auxiliaryTotal + furnitureTotal + otherTotal;
+    
+    // 更新各分类总计
+    const categoryTotals = {
+        'base': baseTotal,
+        'auxiliary': auxiliaryTotal,
+        'furniture': furnitureTotal,
+        'other': otherTotal
+    };
+    
+    categories.forEach(category => {
+        const totalElement = document.getElementById(`${type}-${category}-total`);
+        const summaryElement = document.getElementById(`${type}-${category}-summary`);
+        const countElement = document.getElementById(`${type}-${category}-count`);
+        
+        if (totalElement) totalElement.textContent = `¥${categoryTotals[category].toFixed(2)}`;
+        if (summaryElement) summaryElement.textContent = `¥${categoryTotals[category].toFixed(2)}`;
+        if (countElement) {
+            const count = projectData[type][category].length;
+            countElement.textContent = `${count}个项目`;
+        }
+    });
+    
+    const grandTotalElement = document.getElementById(`${type}-grand-total`);
+    if (grandTotalElement) grandTotalElement.textContent = `¥${grandTotal.toFixed(2)}`;
+}
+
+// 更新所有汇总
+function updateAllSummaries() {
+    updateSummary('home');
+    updateSummary('commercial');
+}
+
+// 渲染空间库
+function renderSpaceLibrary() {
+    const homeSpaceList = document.getElementById('home-space-list');
+    const commercialSpaceList = document.getElementById('commercial-space-list');
+    
+    if (!homeSpaceList || !commercialSpaceList) return;
+    
+    homeSpaceList.innerHTML = '';
+    commercialSpaceList.innerHTML = '';
+    
+    projectData.spaces.home.forEach(space => {
+        const spaceItem = document.createElement('div');
+        spaceItem.className = 'space-item';
+        spaceItem.innerHTML = `
+            <div class="space-item-name">${space}</div>
+            <div class="space-item-type">家装</div>
+        `;
+        homeSpaceList.appendChild(spaceItem);
+    });
+    
+    projectData.spaces.commercial.forEach(space => {
+        const spaceItem = document.createElement('div');
+        spaceItem.className = 'space-item';
+        spaceItem.innerHTML = `
+            <div class="space-item-name">${space}</div>
+            <div class="space-item-type">公装</div>
+        `;
+        commercialSpaceList.appendChild(spaceItem);
+    });
+}
+
+
+// 清空所有项目
+function clearAllProjects(type) {
+    if (confirm(`确定要清空所有${type === 'home' ? '家装' : '工装'}项目吗？此操作不可撤销。`)) {
+        projectData[type] = {
+            base: [],
+            auxiliary: [],
+            furniture: [],
+            other: []
+        };
+        
+        // 清空项目名称输入框
+        if (type === 'home') {
+            document.getElementById('projectNameInput').value = '';
+        } else {
+            document.getElementById('projectNameInput2').value = '';
+        }
+        
+        // 清空项目名称数据
+        projectData.projectName = '';
+        
+        saveDataToStorage();
+        
+        ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+            renderProjectList(type, category);
+        });
+        
+        updateSummary(type);
+        showNotification(`已清空所有${type === 'home' ? '家装' : '工装'}项目`, 'success');
+    }
+}
+
+// 打开空间选择/添加模态框
+function openSpaceModal() {
+    document.getElementById('newSpaceName').value = '';
+    document.getElementById('newSpaceType').value = currentType || 'home';
+    document.getElementById('spaceModal').style.display = 'flex';
+}
+
+function closeSpaceModal() {
+    document.getElementById('spaceModal').style.display = 'none';
+}
+
+function addNewSpace() {
+    const spaceName = document.getElementById('newSpaceName').value.trim();
+    const spaceType = document.getElementById('newSpaceType').value;
+    
+    if (!spaceName) {
+        showNotification('请输入空间名称', 'warning');
+        return;
+    }
+    
+    let exists = false;
+    Object.keys(projectData.spaces).forEach(type => {
+        if (projectData.spaces[type].includes(spaceName)) {
+            exists = true;
+        }
+    });
+    
+    if (exists) {
+        showNotification('该空间已存在', 'warning');
+        return;
+    }
+    
+    projectData.spaces[spaceType].push(spaceName);
+    saveDataToStorage();
+    loadMultiSpaceOptions();
+    renderSpaceLibrary();
+    closeSpaceModal();
+    showNotification('空间已添加到库', 'success');
+}
+
+// 更新空间筛选器选项
+function updateSpaceFilterOptions(type, category) {
+    const filterId = `${type}-${category}-space-filter`;
+    const filterSelect = document.getElementById(filterId);
+    
+    if (!filterSelect) return;
+    
+    const currentValue = filterSelect.value;
+    filterSelect.innerHTML = '<option value="">全部空间</option>';
+    
+    const spaces = new Set();
+    projectData[type][category].forEach(item => {
+        if (item.space && item.space.trim() !== '') {
+            spaces.add(item.space.trim());
+        }
+    });
+    
+    if (spaces.size === 0) {
+        const globalSpaces = projectData.spaces[type] || [];
+        globalSpaces.forEach(space => {
+            spaces.add(space);
+        });
+    }
+    
+    spaces.forEach(space => {
+        const option = document.createElement('option');
+        option.value = space;
+        option.textContent = space;
+        filterSelect.appendChild(option);
+    });
+    
+    if (currentValue && Array.from(spaces).includes(currentValue)) {
+        filterSelect.value = currentValue;
+    }
+}
+
+
+
+// 切换空间组折叠
+function toggleSpaceGroupCollapse(spaceNameElement) {
+    if (!spaceNameElement) return;
+    
+    const spaceGroup = spaceNameElement.closest('.space-group');
+    if (!spaceGroup) return;
+    
+    const spaceContent = spaceGroup.querySelector('.space-content');
+    const collapseIcon = spaceGroup.querySelector('.space-collapse-icon');
+    
+    if (!spaceContent || !collapseIcon) return;
+    
+    if (spaceContent.classList.contains('collapsed')) {
+        spaceContent.classList.remove('collapsed');
+        collapseIcon.classList.remove('fa-chevron-right');
+        collapseIcon.classList.add('fa-chevron-down');
+    } else {
+        spaceContent.classList.add('collapsed');
+        collapseIcon.classList.remove('fa-chevron-down');
+        collapseIcon.classList.add('fa-chevron-right');
+    }
+}
+
+
+// 初始化所有空间筛选器
+function initializeAllSpaceFilters() {
+    ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+        updateSpaceFilterOptions('home', category);
+        updateSpaceFilterOptions('commercial', category);
+    });
+}
+
+// 绑定事件监听器
+    const multiProjectSearch = document.getElementById('multi-project-search');
+    if (multiProjectSearch) {
+        multiProjectSearch.addEventListener('input', searchMultiProjects);
+    }
+    
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+   
+// 关闭所有模态框
+function closeAllModals() {
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.style.display = 'none';
+    });
+}
+// 绑定事件监听器
+function bindEventListeners() {
+    const multiProjectSearch = document.getElementById('multi-project-search');
+    if (multiProjectSearch) {
+        multiProjectSearch.addEventListener('input', searchMultiProjects);
+    }
+    
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    });
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+    
+    // === 添加快捷键支持 ===
+    document.addEventListener('keydown', handleKeyboardShortcuts);
+}
+
+
+// 独立的键盘快捷键处理函数
+function handleKeyboardShortcuts(event) {
+    // 检查是否按下了ALT键
+    if (!event.altKey) return;
+    
+    // 防止默认行为
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    
+    // 记录按键信息
+    console.log('快捷键检测:', 'ALT+' + event.key);
+    
+    // 确保焦点不在输入框内
+    const activeElement = document.activeElement;
+    const isInputFocused = activeElement && (
+        activeElement.tagName === 'INPUT' || 
+        activeElement.tagName === 'TEXTAREA' || 
+        activeElement.tagName === 'SELECT' ||
+        activeElement.contentEditable === 'true'
+    );
+    
+    if (isInputFocused) {
+        console.log('焦点在输入元素上，跳过快捷键处理');
+        return;
+    }
+    
+    switch(event.key.toLowerCase()) {
+        case '1':
+            console.log('ALT+1 按下: 切换全部分类');
+            toggleAllCategories();
+            showNotification(`ALT+1: ${allCategoriesCollapsed ? '全部展开' : '全部折叠'}`, 'info');
+            break;
+        case '2':
+            console.log('ALT+2 按下: 切换空间折叠');
+            toggleAllSpaces();
+            showNotification(`ALT+2: ${allSpacesCollapsed ? '空间打开' : '空间折叠'}`, 'info');
+            break;
+        case 'e':
+            console.log('ALT+E 按下: 导出Excel');
+            exportToExcel();
+            showNotification('ALT+E: 导出Excel', 'info');
+            break;
+        case 'i':
+            console.log('ALT+I 按下: 导入数据');
+            importData();
+            showNotification('ALT+I: 导入数据', 'info');
+            break;
+        case 'o':
+            console.log('ALT+O 按下: 导出数据');
+            exportData();
+            showNotification('ALT+O: 导出数据', 'info');
+            break;
+        default:
+            return; // 不处理其他按键
+    }
+    
+    // 阻止事件继续传播
+    return false;
+}
+function showNotification(message, type = 'success', options = {}) {
+    const notificationArea = document.getElementById('notification-area');
+    if (!notificationArea) return;
+    
+    const notification = document.createElement('div');
+    
+    // 检查是否需要紧凑模式
+    const compact = options.compact || type === 'info';
+    
+    notification.className = `notification ${type}`;
+    if (compact) {
+        notification.classList.add('compact');
+    }
+    
+    let icon = 'fas fa-check-circle';
+    if (type === 'error') icon = 'fas fa-exclamation-circle';
+    if (type === 'warning') icon = 'fas fa-exclamation-triangle';
+    if (type === 'info') icon = 'fas fa-info-circle';
+    
+    notification.innerHTML = `
+        <i class="${icon}"></i>
+        <div style="flex: 1;">${message}</div>
+    `;
+    
+    notificationArea.appendChild(notification);
+    
+    // 设置不同的显示时间
+    const duration = compact ? 3000 : 5000;
+    
+    setTimeout(() => {
+        notification.style.animation = compact ? 
+            'compactNotificationSlideIn 0.3s ease-out reverse forwards' : 
+            'notificationSlideOut 0.3s ease-out forwards';
+        setTimeout(() => {
+            if (notificationArea.contains(notification)) {
+                notificationArea.removeChild(notification);
+            }
+        }, 300);
+    }, duration);
+}
+
+// Excel导出功能
+function exportToExcel() {
+    // 检查是否有数据
+    const hasHomeData = Object.values(projectData.home).some(arr => arr.length > 0);
+    const hasCommercialData = Object.values(projectData.commercial).some(arr => arr.length > 0);
+    
+    if (!hasHomeData && !hasCommercialData) {
+        showNotification('没有可导出的数据，请先添加项目', 'warning');
+        return;
+    }
+    
+    // 只创建一个工作表
+    const wb = XLSX.utils.book_new();
+    const data = prepareSheetData();
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    applySheetStyles(ws, data);
+    XLSX.utils.book_append_sheet(wb, ws, '装饰项目报价单');
+    
+    // 生成文件名
+    const projectName = projectData.projectName || '未命名项目';
+    const fileName = `${projectName}_装饰项目报价单_${new Date().toISOString().slice(0, 10)}.xlsx`;
+    
+    // 导出文件
+    XLSX.writeFile(wb, fileName);
+    
+    showNotification('Excel表格导出成功！', 'success');
+}
+
+
+
+
+// 准备工作表数据
+function prepareSheetData() {
+    // 使用当前激活的类型
+    const type = currentType;
+    const typeName = type === 'home' ? '家装' : '公装';
+    
+    // 添加空间分组辅助函数（放在函数内部）
+    function groupItemsBySpace(items) {
+        const groups = {};
+        items.forEach(item => {
+            const space = item.space || '未指定';
+            if (!groups[space]) {
+                groups[space] = [];
+            }
+            groups[space].push(item);
+        });
+        return groups;
+    }
+    
+    const data = [];    
+    data.push(['']);
+    data.push([`${typeName}装饰项目报价单`, '', '', '', '', '', '']);
+    data.push(['']);
+    
+    const projectName = projectData.projectName || '未命名项目';
+    data.push(['项目名称：', projectName, '', '', '', '', '']);
+    
+    const categories = [
+        { key: 'base', title: '一、基础装修', summary: '基础装修合计', noteColumn: '工艺说明' },
+        { key: 'auxiliary', title: '二、主材', summary: '主材合计', noteColumn: '备注说明' },
+        { key: 'furniture', title: '三、家具家电/灯具窗帘/软装配饰', summary: '家具家电等合计', noteColumn: '备注说明' },
+        { key: 'other', title: '四、其它项', summary: '其它项合计', noteColumn: '备注' }
+    ];
+    
+    categories.forEach(category => {
+        const items = projectData[type][category.key];
+        if (items.length === 0) return;
+        
+        data.push([category.title, '', '', '', '', '', '']);        
+        data.push(['序号', '项目名称', '单位', '数量', '单价(¥)', '小计(¥)', '备注说明']);
+        
+        const spaceGroups = groupItemsBySpace(items);
+        
+        Object.keys(spaceGroups).forEach(space => {
+            data.push([space, '', '', '', '', '', '']);
+            
+            let index = 1;
+            let spaceTotal = 0;
+            
+            spaceGroups[space].forEach(item => {
+                data.push([
+                    index++,
+                    item.name, 
+                    item.unit, 
+                    item.quantity, 
+                    item.price.toFixed(2), 
+                    item.total.toFixed(2),
+                    item.description || ''
+                ]);
+                spaceTotal += item.total;
+            });
+            
+            // 空间小计行
+            data.push(['', '小计', '', '', '', `¥${spaceTotal.toFixed(2)}`, '']);
+        });
+        
+        const categoryTotal = items.reduce((sum, item) => sum + item.total, 0);
+        // 大类别合计行
+        data.push(['', `${getCategoryName(category.key)}合计`, '', '', '', `¥${categoryTotal.toFixed(2)}`, '']);
+    });
+    
+    const baseTotal = projectData[type].base.reduce((sum, item) => sum + item.total, 0);
+    const auxiliaryTotal = projectData[type].auxiliary.reduce((sum, item) => sum + item.total, 0);
+    const furnitureTotal = projectData[type].furniture.reduce((sum, item) => sum + item.total, 0);
+    const otherTotal = projectData[type].other.reduce((sum, item) => sum + item.total, 0);
+    const grandTotal = baseTotal + auxiliaryTotal + furnitureTotal + otherTotal;
+    
+    data.push(['']);
+    // 总计行
+    data.push(['', '小计金额：', '', '', '', `¥${grandTotal.toFixed(2)}`, '']);
+    
+    const chineseAmount = convertCurrency(grandTotal);
+    data.push(['', '大写金额：', '', '', '', chineseAmount, '']);
+    
+    data.push(['备注：', '', '', '', '', '', '']);
+    data.push(['', '1. 本报价单包含人工费、材料费及管理费', '', '', '', '', '']);
+    data.push(['', '2. 实际结算以实际施工量为准', '', '', '', '', '']);
+    data.push(['', '3. 如有变更，需双方协商确认', '', '', '', '', '']);
+    data.push(['', '4. 报价有效期30天', '', '', '', '', '']);
+    
+    return data;
+}
+
+// 应用工作表样式
+// 替换 applySheetStyles 函数中的 merges 部分
+function applySheetStyles(ws, data) {
+    const range = XLSX.utils.decode_range(ws['!ref']);
+    const merges = [];
+    
+    for(let R = range.s.r; R <= range.e.r; ++R) {
+        for(let C = range.s.c; C <= range.e.c; ++C) {
+            const cellRef = XLSX.utils.encode_cell({c: C, r: R});
+            
+            if(!ws[cellRef]) {
+                ws[cellRef] = {v: '', t: 's'};
+            }
+            
+            const cell = ws[cellRef];
+            if(!cell.s) cell.s = {};
+            
+            // 设置边框
+            cell.s.border = {
+                top: {style: 'thin', color: {rgb: '000000'}},
+                bottom: {style: 'thin', color: {rgb: '000000'}},
+                left: {style: 'thin', color: {rgb: '000000'}},
+                right: {style: 'thin', color: {rgb: '000000'}}
+            };
+            
+            const rowData = data[R];
+            if (!rowData || rowData.length === 0) continue;
+            
+            const firstCellValue = rowData[0] !== undefined ? String(rowData[0]) : '';
+            
+            // 1. 标题行："**装饰项目报价单" - 合并A-G列，居中
+            if (firstCellValue.includes('装饰项目报价单') && C === 0) {
+                merges.push({s: {r: R, c: 0}, e: {r: R, c: 6}});
+                cell.s.alignment = {horizontal: 'center', vertical: 'center'};
+                cell.s.font = {bold: true, sz: 16};
+            }
+            
+            // 2. 项目名称行："项目名称：**" - 合并A-G列，居左
+            else if (firstCellValue.startsWith('项目名称：') && C === 0) {
+                merges.push({s: {r: R, c: 0}, e: {r: R, c: 6}});
+                cell.s.alignment = {horizontal: 'left', vertical: 'center'};
+                cell.s.font = {bold: true};
+            }
+            
+            // 3. 空间类型名称行（一、基础装修等）- 合并A-G列，居左
+            else if ((firstCellValue.startsWith('一、') || firstCellValue.startsWith('二、') || 
+                     firstCellValue.startsWith('三、') || firstCellValue.startsWith('四、')) && C === 0) {
+                merges.push({s: {r: R, c: 0}, e: {r: R, c: 6}});
+                cell.s.alignment = {horizontal: 'left', vertical: 'center'};
+                cell.s.font = {bold: true, sz: 12};
+                cell.s.fill = {fgColor: {rgb: 'E8E8E8'}};
+            }
+            
+           // 4. 空间名称行（客厅、卧室等）- 合并A-G列，居左
+else if (C === 0 && firstCellValue !== '' && 
+        !firstCellValue.includes('装饰项目报价单') &&
+        !firstCellValue.startsWith('项目名称：') &&
+        !firstCellValue.startsWith('一、') && 
+        !firstCellValue.startsWith('二、') && 
+        !firstCellValue.startsWith('三、') && 
+        !firstCellValue.startsWith('四、') &&
+        firstCellValue !== '序号' && 
+        firstCellValue !== '小计' && 
+        firstCellValue !== '备注：' &&
+        !firstCellValue.endsWith('合计') &&
+        firstCellValue !== '小计金额：' &&
+        firstCellValue !== '大写金额：') {
+    
+    // 简化判断：只要这一行的第一个单元格有值，且其他单元格为空（或数据中其他单元格为空）
+    // 检查当前行数据，如果是空间名称行，第二个单元格应该是空（在 prepareSheetData 中）
+    if (rowData.length > 1 && rowData[1] === '') {
+        merges.push({s: {r: R, c: 0}, e: {r: R, c: 6}});
+        cell.s.alignment = {horizontal: 'left', vertical: 'center'};
+        cell.s.font = {bold: true};
+    }
+}
+            
+            // 5. 表头行（序号、项目名称等）
+            else if (firstCellValue === '序号' || firstCellValue === '项目名称') {
+                cell.s.font = {bold: true};
+                cell.s.alignment = {horizontal: 'center'};
+                cell.s.fill = {fgColor: {rgb: 'F5F5F5'}};
+            }
+            
+            // 6. 空间小计行（小计）- 合并A-B列，F列金额加粗右对齐
+            else if (firstCellValue === '小计') {
+                if (C === 0) {
+                    cell.s.font = {bold: true};
+                    merges.push({s: {r: R, c: 0}, e: {r: R, c: 1}});
+                } else if (C === 5) {
+                    cell.s.font = {bold: true};
+                    cell.s.alignment = {horizontal: 'right'};
+                }
+            }
+            
+            // 7. 大类别合计行（基础装修合计等）- 合并A-F列，居左，F列金额加粗右对齐
+            else if (firstCellValue.endsWith('合计')) {
+                if (C === 0) {
+                    cell.s.font = {bold: true};
+                    merges.push({s: {r: R, c: 0}, e: {r: R, c: 5}});
+                } else if (C === 5) {
+                    cell.s.font = {bold: true};
+                    cell.s.alignment = {horizontal: 'right'};
+                    cell.s.fill = {fgColor: {rgb: 'F5F5F5'}};
+                }
+            }
+            
+            // 8. 总金额行（小计金额：）- 合并F-G列，居中
+            else if (firstCellValue === '小计金额：') {
+                if (C === 0) {
+                    cell.s.font = {bold: true};
+                    cell.s.alignment = {horizontal: 'left'};
+                } else if (C === 5) {
+                    merges.push({s: {r: R, c: 5}, e: {r: R, c: 6}});
+                    cell.s.font = {bold: true, sz: 12};
+                    cell.s.alignment = {horizontal: 'center', vertical: 'center'};
+                }
+            }
+            
+            // 9. 大写金额行（大写金额：）- 合并F-G列，居中
+            else if (firstCellValue === '大写金额：') {
+                if (C === 0) {
+                    cell.s.font = {bold: true};
+                    cell.s.alignment = {horizontal: 'left'};
+                } else if (C === 5) {
+                    merges.push({s: {r: R, c: 5}, e: {r: R, c: 6}});
+                    cell.s.font = {bold: true, sz: 12};
+                    cell.s.alignment = {horizontal: 'center', vertical: 'center'};
+                }
+            }
+            
+            // 10. 备注标题行（备注：）- 合并A-G列，居左
+            else if (firstCellValue === '备注：') {
+                if (C === 0) {
+                    merges.push({s: {r: R, c: 0}, e: {r: R, c: 6}});
+                    cell.s.alignment = {horizontal: 'left', vertical: 'center'};
+                    cell.s.font = {bold: true};
+                }
+            }
+            
+            // 11. 备注内容行（1. 本报价单...）- 合并B-G列，居左
+            else if (C === 1 && rowData[1] && rowData[1].toString().match(/^\d+\./)) {
+                merges.push({s: {r: R, c: 1}, e: {r: R, c: 6}});
+                cell.s.alignment = {horizontal: 'left', vertical: 'center'};
+            }
+            
+            // 12. 金额列（单价和小计）右对齐
+            if ((C === 4 || C === 5) && cell.v && !isNaN(parseFloat(cell.v))) {
+                cell.s.alignment = {horizontal: 'right'};
+            }
+            
+            // 13. 备注说明列左对齐
+            if (C === 6) {
+                cell.s.alignment = {horizontal: 'left'};
+            }
+        }
+    }
+    
+    ws['!merges'] = merges;
+    
+    // 设置列宽
+    ws['!cols'] = [
+        {wch: 6},   // A列
+        {wch: 25},  // B列
+        {wch: 8},   // C列
+        {wch: 8},   // D列
+        {wch: 12},  // E列
+        {wch: 15},  // F列
+        {wch: 50}   // G列
+    ];
+}
+
+// 金额大写转换函数
+function convertCurrency(money) {
+    const cnNums = ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"];
+    const cnIntRadice = ["", "拾", "佰", "仟"];
+    const cnIntUnits = ["", "万", "亿", "兆"];
+    const cnDecUnits = ["角", "分", "毫", "厘"];
+    const cnInteger = "整";
+    const cnIntLast = "元";
+    
+    let integerNum = Math.floor(money);
+    let decimalNum = Math.round((money - integerNum) * 100);
+    
+    if (integerNum === 0 && decimalNum === 0) {
+        return "零元整";
+    }
+    
+    let chineseStr = "";
+    
+    if (integerNum > 0) {
+        let zeroCount = 0;
+        const integerStr = integerNum.toString();
+        const integerLen = integerStr.length;
+        
+        for (let i = 0; i < integerLen; i++) {
+            const n = integerStr.charAt(i);
+            const p = integerLen - i - 1;
+            const q = Math.floor(p / 4);
+            const m = p % 4;
+            
+            if (n == '0') {
+                zeroCount++;
+            } else {
+                if (zeroCount > 0) {
+                    chineseStr += cnNums[0];
+                }
+                zeroCount = 0;
+                chineseStr += cnNums[parseInt(n)] + cnIntRadice[m];
+            }
+            
+            if (m == 0 && zeroCount < 4) {
+                chineseStr += cnIntUnits[q];
+            }
+        }
+        chineseStr += cnIntLast;
+    }
+    
+    if (decimalNum > 0) {
+        const decimalStr = decimalNum.toString().padStart(2, '0');
+        const jiao = decimalStr.charAt(0);
+        const fen = decimalStr.charAt(1);
+        
+        if (jiao > 0) {
+            chineseStr += cnNums[parseInt(jiao)] + cnDecUnits[0];
+        }
+        
+        if (fen > 0) {
+            chineseStr += cnNums[parseInt(fen)] + cnDecUnits[1];
+        }
+    } else {
+        chineseStr += cnInteger;
+    }
+    
+    return chineseStr;
+}
+// 检查项目是否重复
+function isProjectDuplicate(type, category, space, name) {
+    const projects = projectData[type][category] || [];
+    return projects.some(project => 
+        project.space === space && 
+        project.name === name
+    );
+}
+
+// 获取项目信息(快速模板调用)
+function getProjectInfoByName(name) {
+    // 从 quickAddExamples 或 kongjianchanpin 中查找
+    let project = quickAddExamples.find(p => p.name === name);
+    if (!project && typeof kongjianchanpin !== 'undefined') {
+        // 从空间产品数据中查找
+        for (let type in kongjianchanpin) {
+            for (let spaceData of kongjianchanpin[type]) {
+                if (spaceData.name.includes(name)) {
+                    return {
+                        name: name,
+                        unit: "项",
+                        price: 0,
+                        category: "base"
+                    };
+                }
+            }
+        }
+    }
+    return project;
+}
+// 获取类别名称
+function getCategoryName(category) {
+    const categoryNames = {
+        'base': currentType === 'home' ? '基础装修' : '基础装修',
+        'auxiliary': currentType === 'home' ? '主要材料' : '主要材料',
+        'furniture': currentType === 'home' ? '家具家电及配饰' : '设备家具及配饰',
+        'other': '其它项'
+    };
+    return categoryNames[category] || category;
+}
+// 搜索工艺说明
+function searchProjectDescription(searchTerm) {
+    if (!searchTerm || searchTerm.trim() === '') {
+        clearDescriptionSuggestions();
+        return;
+    }
+    
+    const term = searchTerm.toLowerCase();
+    
+    // 从项目库中搜索匹配的工艺说明
+    const matches = quickAddExamples.filter(item => 
+        (item.description && item.description.toLowerCase().includes(term)) ||
+        (item.name && item.name.toLowerCase().includes(term))
+    );
+    
+    showDescriptionSuggestions(matches);
+}
+
+// 显示工艺说明建议
+function showDescriptionSuggestions(matches) {
+    clearDescriptionSuggestions();
+    
+    if (matches.length === 0) return;
+    
+    const inputContainer = document.getElementById('manualProjectDescription').closest('.search-box');
+    const suggestionsDiv = document.createElement('div');
+    suggestionsDiv.id = 'description-suggestions';
+    suggestionsDiv.className = 'description-suggestions';
+    
+    matches.slice(0, 5).forEach(item => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.className = 'description-suggestion-item';
+        suggestionItem.innerHTML = `
+            <div class="suggestion-name">${item.name}</div>
+            <div class="suggestion-description">${item.description || '无说明'}</div>
+            <div class="suggestion-details">
+                <span class="suggestion-unit">${item.unit}</span>
+                <span class="suggestion-price">¥${item.price.toFixed(2)}</span>
+            </div>
+        `;
+        
+        suggestionItem.addEventListener('click', () => {
+            fillManualProjectFromSuggestion(item);
+            clearDescriptionSuggestions();
+        });
+        
+        suggestionsDiv.appendChild(suggestionItem);
+    });
+    
+    inputContainer.appendChild(suggestionsDiv);
+}
+
+// 从建议填充手动输入表单
+function fillManualProjectFromSuggestion(item) {
+    document.getElementById('manualProjectName').value = item.name || '';
+    document.getElementById('manualProjectUnit').value = item.unit || '';
+    document.getElementById('manualProjectPrice').value = item.price || '';
+    document.getElementById('manualProjectDescription').value = item.description || '';
+    document.getElementById('manualProjectQuantity').value = 1;
+}
+
+// 清除工艺说明建议
+function clearDescriptionSuggestions() {
+    const existingSuggestions = document.getElementById('description-suggestions');
+    if (existingSuggestions) {
+        existingSuggestions.remove();
+    }
+}
+
+// 添加点击其他地方时关闭建议列表
+document.addEventListener('click', function(e) {
+    const descriptionInput = document.getElementById('manualProjectDescription');
+    const suggestions = document.getElementById('description-suggestions');
+    
+    if (descriptionInput && suggestions && 
+        !descriptionInput.contains(e.target) && 
+        !suggestions.contains(e.target)) {
+        clearDescriptionSuggestions();
+    }
+});
+// 数据导入功能
+function importData() {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json,.txt';
+    fileInput.style.display = 'none';
+    
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const importedData = JSON.parse(e.target.result);
+                
+                if (confirm('导入数据将覆盖当前所有项目，确定要继续吗？')) {
+                    // 验证导入的数据结构
+                    if (validateImportData(importedData)) {
+                        // 合并导入的数据
+                        mergeImportData(importedData);
+                        
+                        saveDataToStorage();
+                        
+                        // 重新初始化页面
+                        setTimeout(() => {
+                            // 重新渲染所有列表
+                            ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+                                renderProjectList('home', category);
+                                renderProjectList('commercial', category);
+                            });
+                            
+                            updateAllSummaries();
+                            renderSpaceLibrary();
+                            initializeAllSpaceFilters();
+                            
+                            showNotification('数据导入成功！', 'success');
+                            
+                            // 更新项目名称输入框
+                            const projectNameInput1 = document.getElementById('projectNameInput');
+                            const projectNameInput2 = document.getElementById('projectNameInput2');
+                            if (projectNameInput1) projectNameInput1.value = projectData.projectName || '';
+                            if (projectNameInput2) projectNameInput2.value = projectData.projectName || '';
+                        }, 100);
+                    } else {
+                        showNotification('导入的数据格式不正确', 'error');
+                    }
+                }
+            } catch (error) {
+                console.error('导入数据失败:', error);
+                showNotification('导入失败：文件格式错误', 'error');
+            }
+        };
+        
+        reader.onerror = function() {
+            showNotification('读取文件失败', 'error');
+        };
+        
+        reader.readAsText(file);
+    });
+    
+    // 触发文件选择
+    document.body.appendChild(fileInput);
+    fileInput.click();
+    document.body.removeChild(fileInput);
+}
+
+// 验证导入数据
+function validateImportData(data) {
+    if (!data || typeof data !== 'object') return false;
+    
+    // 检查基本结构
+    const requiredKeys = ['home', 'commercial', 'spaces'];
+    if (!requiredKeys.every(key => key in data)) {
+        return false;
+    }
+    
+    // 检查home结构
+    if (!data.home || typeof data.home !== 'object') return false;
+    const homeCategories = ['base', 'auxiliary', 'furniture', 'other'];
+    if (!homeCategories.every(cat => Array.isArray(data.home[cat]))) {
+        return false;
+    }
+    
+    // 检查commercial结构
+    if (!data.commercial || typeof data.commercial !== 'object') return false;
+    if (!homeCategories.every(cat => Array.isArray(data.commercial[cat]))) {
+        return false;
+    }
+    
+    return true;
+}
+// 在 script.js 中添加以下函数
+
+
+
+// 删除指定空间下的所有项目
+function deleteSpaceProjects(type, category, space) {
+    if (!confirm(`确定要删除"${space}"空间下的所有项目吗？此操作不可撤销。`)) {
+        return;
+    }
+    
+    // 备份原始数据
+    const originalProjects = [...projectData[type][category]];
+    
+    // 过滤出不是该空间的项目
+    projectData[type][category] = originalProjects.filter(item => item.space !== space);
+    
+    // 保存数据
+    saveDataToStorage();
+    
+    // 重新渲染列表
+    renderProjectList(type, category);
+    
+    // 更新汇总
+    updateSummary(type);
+    
+    // 如果删除后该类别为空，且处于折叠状态，则展开
+    if (projectData[type][category].length === 0 && collapseStates[type][category]) {
+        collapseStates[type][category] = false;
+        toggleCategoryCollapse(type, category);
+    }
+    
+    showNotification(`已删除"${space}"空间下的所有项目`, 'success');
+}
+
+
+// 合并导入数据
+function mergeImportData(importedData) {
+    let addedCount = 0;
+    let skippedCount = 0;
+    
+    // 合并项目名称
+    if (importedData.projectName && importedData.projectName !== projectData.projectName) {
+        projectData.projectName = importedData.projectName;
+    }
+    
+    // 合并家装数据（带去重）
+    if (importedData.home) {
+        ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+            if (Array.isArray(importedData.home[category])) {
+                importedData.home[category].forEach(item => {
+                    // 使用现有的 isProjectDuplicate 函数
+                    if (!isProjectDuplicate('home', category, item.space, item.name)) {
+                        // 为新项目生成新的ID
+                        item.id = generateProjectId();
+                        projectData.home[category].push(item);
+                        addedCount++;
+                    } else {
+                        skippedCount++;
+                    }
+                });
+            }
+        });
+    }
+    
+    // 合并公装数据（带去重）
+    if (importedData.commercial) {
+        ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+            if (Array.isArray(importedData.commercial[category])) {
+                importedData.commercial[category].forEach(item => {
+                    // 使用现有的 isProjectDuplicate 函数
+                    if (!isProjectDuplicate('commercial', category, item.space, item.name)) {
+                        // 为新项目生成新的ID
+                        item.id = generateProjectId();
+                        projectData.commercial[category].push(item);
+                        addedCount++;
+                    } else {
+                        skippedCount++;
+                    }
+                });
+            }
+        });
+    }
+    
+    // 合并空间数据（去重）
+    if (importedData.spaces) {
+        if (Array.isArray(importedData.spaces.home)) {
+            importedData.spaces.home.forEach(space => {
+                if (!projectData.spaces.home.includes(space)) {
+                    projectData.spaces.home.push(space);
+                }
+            });
+        }
+        
+        if (Array.isArray(importedData.spaces.commercial)) {
+            importedData.spaces.commercial.forEach(space => {
+                if (!projectData.spaces.commercial.includes(space)) {
+                    projectData.spaces.commercial.push(space);
+                }
+            });
+        }
+    }
+    
+    // 合并词库数据
+    if (Array.isArray(importedData.library)) {
+        importedData.library.forEach(item => {
+            if (!projectData.library.includes(item)) {
+                projectData.library.push(item);
+            }
+        });
+    }
+    
+    // 保存数据
+    saveDataToStorage();
+    
+    // 更新显示
+    ['home', 'commercial'].forEach(type => {
+        ['base', 'auxiliary', 'furniture', 'other'].forEach(category => {
+            renderProjectList(type, category);
+        });
+        updateSummary(type);
+    });
+    
+    // 显示通知
+    let message = `成功导入 ${addedCount} 个项目`;
+    if (skippedCount > 0) {
+        message += `，跳过 ${skippedCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
+}
+
+// 复制空间项目到其他空间
+function copySpaceProjects(type, category, sourceSpace, buttonElement) {
+    // 隐藏复制按钮和显示下拉框的代码保持不变
+    buttonElement.style.display = 'none';
+    
+    // 创建下拉选择框
+    const select = document.createElement('select');
+    select.className = 'space-copy-select';
+    select.style.cssText = `
+        border: 2px solid #10b981;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-size: 13px;
+        font-weight: 600;
+        background: white;
+        color: #059669;
+        cursor: pointer;
+        outline: none;
+        margin-left: 8px;
+        width: 120px;
+    `;
+    
+    // 添加"选择目标空间"选项
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = '选择目标空间';
+    select.appendChild(defaultOption);
+    
+    // 添加分隔线
+    const separator = document.createElement('option');
+    separator.disabled = true;
+    separator.textContent = '──────────';
+    select.appendChild(separator);
+    
+    // 获取同类型的空间列表，排除当前空间
+    const spaces = projectData.spaces[type].filter(space => space !== sourceSpace);
+    
+    // 添加空间选项
+    if (spaces.length === 0) {
+        const emptyOption = document.createElement('option');
+        emptyOption.value = '';
+        emptyOption.textContent = '无其他空间';
+        emptyOption.disabled = true;
+        select.appendChild(emptyOption);
+    } else {
+        spaces.forEach(space => {
+            const option = document.createElement('option');
+            option.value = space;
+            option.textContent = space;
+            select.appendChild(option);
+        });
+    }
+    
+    // 将下拉框插入到按钮的位置
+    buttonElement.parentNode.insertBefore(select, buttonElement);
+    
+    let changeTriggered = false;
+    
+    // 点击外部处理函数
+    const onClickOutside = (e) => {
+        if (buttonElement && buttonElement.parentNode && buttonElement.parentNode.contains(e.target)) {
+            return;
+        }
+        saveChange();
+    };
+    
+    // 保存更改
+    function saveChange() {
+        if (changeTriggered) return;
+        changeTriggered = true;
+        
+        const targetSpace = select.value;
+        
+        if (!targetSpace) {
+            // 恢复按钮
+            if (select && select.parentNode) {
+                select.remove();
+            }
+            if (buttonElement) {
+                buttonElement.style.display = 'inline-flex';
+            }
+            return;
+        }
+        
+      // 确认复制
+if (confirm(`确定将"${sourceSpace}"下的所有项目复制到"${targetSpace}"吗？`)) {
+    // 检查目标空间是否在空间列表中
+    if (!projectData.spaces[currentType].includes(targetSpace)) {
+        projectData.spaces[currentType].push(targetSpace);
+    }
+    
+    // 执行复制
+    const sourceProjects = projectData[type][category].filter(item => item.space === sourceSpace);
+    let copiedCount = 0;
+    let skippedCount = 0;
+    
+    sourceProjects.forEach(project => {
+        // 检查目标空间是否已有同名项目（同一类别下）
+        if (isProjectDuplicate(type, category, targetSpace, project.name)) {
+            skippedCount++;
+            return;
+        }
+        
+        // 创建副本，生成新ID，修改空间
+        const newProject = {
+            ...project,
+            id: generateProjectId(),
+            space: targetSpace
+        };
+        
+        projectData[type][category].push(newProject);
+        copiedCount++;
+    });
+    
+    // 保存数据
+    saveDataToStorage();
+    
+    // 重新渲染列表
+    renderProjectList(type, category);
+    updateSummary(type);
+    
+    // 添加：更新当前类别的空间筛选器
+    updateSpaceFilterOptions(type, category);
+    
+    // 添加：更新多项目添加模态框的空间选项
+    loadMultiSpaceOptions();
+    
+    // 显示通知
+    let message = `已复制 ${copiedCount} 个项目到"${targetSpace}"`;
+    if (skippedCount > 0) {
+        message += `，跳过 ${skippedCount} 个重复项目`;
+    }
+    showNotification(message, 'success');
+    // 修改：折叠当前类别的所有空间组
+    collapseAllSpacesInCategory(type, category);
+   
+}
+        
+        // 恢复按钮
+        if (select && select.parentNode) {
+            select.remove();
+        }
+        if (buttonElement) {
+            buttonElement.style.display = 'inline-flex';
+        }
+        
+        // 移除事件监听器
+        document.removeEventListener('click', onClickOutside);
+    };
+    
+    // 取消编辑
+    function cancelEdit() {
+        if (select && select.parentNode) {
+            select.remove();
+        }
+        if (buttonElement) {
+            buttonElement.style.display = 'inline-flex';
+        }
+        
+        // 移除事件监听器
+        document.removeEventListener('click', onClickOutside);
+    };
+    
+    // 绑定事件
+    select.addEventListener('change', function() {
+        saveChange();
+    });
+    
+    select.addEventListener('blur', function() {
+        saveChange();
+    });
+    
+    select.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            saveChange();
+        } else if (e.key === 'Escape') {
+            cancelEdit();
+        }
+    });
+    
+    // 设置一个延迟，避免立即触发
+    setTimeout(() => {
+        document.addEventListener('click', onClickOutside);
+        select.focus();
+    }, 100);
+}
+function exportData() {
+    try {
+        // 准备要导出的数据
+        const dataToExport = {
+            projectName: projectData.projectName,
+            home: projectData.home,
+            commercial: projectData.commercial,
+            library: projectData.library,
+            spaces: projectData.spaces,
+            exportDate: new Date().toISOString(),
+            version: '1.0'
+        };
+        
+        const dataStr = JSON.stringify(dataToExport, null, 2);
+        const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+        
+        // 生成文件名，包含日期
+        const date = new Date();
+        const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+        const timeStr = date.getHours().toString().padStart(2, '0') + 
+                       date.getMinutes().toString().padStart(2, '0');
+        const projectName = projectData.projectName || '装饰项目数据';
+        const exportFileDefaultName = `${projectName}_${dateStr}_${timeStr}.json`;
+        
+        // 创建下载链接
+        const linkElement = document.createElement('a');
+        linkElement.setAttribute('href', dataUri);
+        linkElement.setAttribute('download', exportFileDefaultName);
+        
+        // 触发下载
+        document.body.appendChild(linkElement);
+        linkElement.click();
+        document.body.removeChild(linkElement);
+        
+        showNotification('数据导出成功', 'success');
+        
+    } catch (error) {
+        console.error('导出数据失败:', error);
+        showNotification('导出数据失败', 'error');
+    }
+}
+
+// 添加快捷键支持
+document.addEventListener('keydown', function(event) {
+    // ALT+1: 全部展开/折叠
+    if (event.altKey && event.key === '1') {
+        event.preventDefault();
+        toggleAllCategories();
+        showNotification(`ALT+1: ${allCategoriesCollapsed ? '全部折叠' : '全部展开'}`, 'info');
+    }
+    
+    // ALT+2: 空间折叠/展开
+    if (event.altKey && event.key === '2') {
+        event.preventDefault();
+        toggleAllSpaces();
+        showNotification(`ALT+2: ${allSpacesCollapsed ? '空间打开' : '空间折叠'}`, 'info');
+    }
+    
+    // ALT+E: 导出Excel
+    if (event.altKey && event.key === 'e') {
+        event.preventDefault();
+        exportToExcel();
+        showNotification('ALT+E: 导出Excel', 'info');
+    }
+    
+    // ALT+I: 导入数据
+    if (event.altKey && event.key === 'i') {
+        event.preventDefault();
+        importData();
+        showNotification('ALT+I: 导入数据', 'info');
+    }
+    
+    // ALT+O: 导出数据
+    if (event.altKey && event.key === 'o') {
+        event.preventDefault();
+        exportData();
+        showNotification('ALT+O: 导出数据', 'info');
+    }
+});
+// 页面加载完成后绑定键盘事件
+document.addEventListener('DOMContentLoaded', function() {
+    // 只在主应用可见时绑定
+    setTimeout(() => {
+        document.addEventListener('keydown', handleKeyDown);
+    }, 1000);
+});
+
+// 页面加载完成后执行初始化
+document.addEventListener('DOMContentLoaded', function() {
+    initPage();
+    
+    // 添加窗口大小变化监听
+    window.addEventListener('resize', function() {
+        detectDeviceAndSetDisplay();
+    });
+});
